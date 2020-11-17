@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Language="en-US" Id="vscode-quarkus" Version="1.5.0" Publisher="redhat"/>
+    <DisplayName>Quarkus</DisplayName>
+    <Description xml:space="preserve">Quarkus Tools for Visual Studio Code</Description>
+    <Tags>java,quarkus,maven,starter,microprofile-properties,MicroProfile properties,quarkus-properties,Quarkus properties,qute-html,Qute HTML,__ext_qutehtml,qute-json,Qute JSON,__ext_qutejson,qute-yaml,Qute YAML,__ext_quteyaml,qute-txt,Qute Text,__ext_qutetxt</Tags>
+    <Categories>Programming Languages,Other</Categories>
+    <GalleryFlags>Public Preview</GalleryFlags>
+    <Badges></Badges>
+    <Properties>
+      <Property Id="Microsoft.VisualStudio.Code.Engine" Value="^1.37.0" />
+      <Property Id="Microsoft.VisualStudio.Code.ExtensionDependencies" Value="redhat.java,vscjava.vscode-java-debug" />
+      <Property Id="Microsoft.VisualStudio.Code.ExtensionPack" Value="" />
+      <Property Id="Microsoft.VisualStudio.Code.LocalizedLanguages" Value="" />
+      
+        <Property Id="Microsoft.VisualStudio.Services.Links.Source" Value="https://github.com/redhat-developer/vscode-quarkus" />
+        <Property Id="Microsoft.VisualStudio.Services.Links.Getstarted" Value="https://github.com/redhat-developer/vscode-quarkus" />
+        
+          <Property Id="Microsoft.VisualStudio.Services.Links.GitHub" Value="https://github.com/redhat-developer/vscode-quarkus" />
+        
+      
+      <Property Id="Microsoft.VisualStudio.Services.Links.Support" Value="https://github.com/redhat-developer/vscode-quarkus/issues" />
+      
+      <Property Id="Microsoft.VisualStudio.Services.Branding.Color" Value="#d8ebff" />
+      <Property Id="Microsoft.VisualStudio.Services.Branding.Theme" Value="light" />
+      <Property Id="Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown" Value="true" />
+      
+      
+    </Properties>
+    <License>extension/LICENSE.txt</License>
+    <Icon>extension/icons/logo.png</Icon>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Code"/>
+  </Installation>
+  <Dependencies/>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.Code.Manifest" Path="extension/package.json" Addressable="true" />
+    <Asset Type="Microsoft.VisualStudio.Services.Content.Details" Path="extension/README.md" Addressable="true" /><Asset Type="Microsoft.VisualStudio.Services.Content.Changelog" Path="extension/CHANGELOG.md" Addressable="true" /><Asset Type="Microsoft.VisualStudio.Services.Content.License" Path="extension/LICENSE.txt" Addressable="true" /><Asset Type="Microsoft.VisualStudio.Services.Icons.Default" Path="extension/icons/logo.png" Addressable="true" />
+  </Assets>
+</PackageManifest>

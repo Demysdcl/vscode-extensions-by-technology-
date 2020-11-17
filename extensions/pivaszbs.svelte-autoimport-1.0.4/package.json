@@ -1,0 +1,110 @@
+{
+	"name": "svelte-autoimport",
+	"displayName": "Svelte Auto Import",
+	"description": "Automatically finds, parses and provides code actions and code completion for all available imports. Works with Typescript, Javascript and svelte files",
+	"repository": "https://github.com/pivaszbs/svelte-autoimport",
+	"version": "1.0.4",
+	"publisher": "pivaszbs",
+	"engines": {
+		"vscode": "^1.17.0"
+	},
+	"galleryBanner": {
+		"color": "#2d4794",
+		"theme": "dark"
+	},
+	"keywords": [
+		"typescript",
+		"svelte",
+		"javascript",
+		"imports",
+		"require",
+		"auto import",
+		"multi-root ready"
+	],
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onLanguage:typescript",
+		"onLanguage:svelte"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.scanNodeModules",
+				"title": "Scan node_modules for imports"
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "Svelte Auto Import configuration",
+			"properties": {
+				"svelte-autoimport.filesToScan": {
+					"type": "string",
+					"default": "**/*.{ts,svelte,js}",
+					"description": "Glob for files to watch and scan, e.g ./src/** ./src/app/**/*.ts. Defaults to **/*.{ts,tsx}"
+				},
+				"svelte-autoimport.showNotifications": {
+					"type": "boolean",
+					"default": false,
+					"description": "Specifies wether to show notifications from Auto Import"
+				},
+				"svelte-autoimport.doubleQuotes": {
+					"type": "boolean",
+					"default": false,
+					"description": "Specifies wether to use double quotes"
+				},
+				"svelte-autoimport.spaceBetweenBraces": {
+					"type": "boolean",
+					"default": true,
+					"description": "Specifies wether to use spaces between first and last brace"
+				},
+				"svelte-autoimport.autoComplete": {
+					"type": "boolean",
+					"default": true,
+					"description": "Adds found items to intellisense and automatically imports then"
+				},
+				"svelte-autoimport.useSemiColon": {
+					"type": "boolean",
+					"default": true,
+					"description": "Use ; at the end of a line e.g Import * from ./app or Import * from ./app; - Default True"
+				},
+				"svelte-autoimport.importWithIntend": {
+					"type": "boolean",
+					"default": true,
+					"description": "Script tag is indented (check this if imports are indented by one indentation level too little)"
+				},
+				"svelte-autoimport.images": {
+					"type": "boolean",
+					"default": false,
+					"description": "Import images under script tag"
+				}
+			}
+		}
+	},
+	"icon": "icon.png",
+	"homepage": "https://github.com/pivaszbs/svelte-autoimport",
+	"scripts": {
+		"vscode:prepublish": "webpack --mode production",
+		"webpack": "webpack --mode development",
+		"webpack-dev": "webpack --mode development --watch",
+		"compile": "tsc -p ./"
+	},
+	"devDependencies": {
+		"@types/node": "^6.0.40",
+		"ts-loader": "^6.2.2",
+		"typescript": "^2.0.3",
+		"vscode": "^1.0.0",
+		"webpack": "^4.42.1",
+		"webpack-cli": "^3.3.11"
+	},
+	"dependencies": {
+		"lodash": "^4.13.1"
+	},
+	"__metadata": {
+		"id": "905ce110-dab5-4222-946d-b79642fcdec5",
+		"publisherId": "d850e511-e4da-4bef-8e9a-db56539c81c3",
+		"publisherDisplayName": "pivaszbs"
+	}
+}

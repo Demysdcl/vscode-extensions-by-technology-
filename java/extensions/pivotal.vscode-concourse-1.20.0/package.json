@@ -1,0 +1,127 @@
+{
+	"name": "vscode-concourse",
+	"displayName": "Concourse CI Pipeline Editor",
+	"description": "Provides validation and content assist for Concourse CI pipeline and task configuration yml files",
+	"icon": "icon.png",
+	"version": "1.20.0",
+	"publisher": "Pivotal",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/spring-projects/sts4.git"
+	},
+	"license": "EPL-1.0",
+	"engines": {
+		"npm": "^6.0.0",
+		"vscode": "^1.41.0"
+	},
+	"categories": [
+		"Programming Languages",
+		"Linters"
+	],
+	"keywords": [
+		"yaml",
+		"concourse",
+		"pipeline.yml"
+	],
+	"activationEvents": [
+		"onLanguage:concourse-pipeline-yaml",
+		"onLanguage:concourse-task-yaml"
+	],
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "Concourse Language Server Options",
+			"properties": {
+				"concourse.ls.logfile": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "The path of a file to write language server logs. If not set or null, then logs are discarded."
+				},
+				"concourse.ls.java.heap": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "Passed as an `-Xmx` argument to the language server JVM process"
+				},
+				"concourse.ls.java.home": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "Overrides JAVA_HOME used for launching the language server JVM process"
+				},
+				"concourse.ls.java.vmargs": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"description": "Additional 'user defined' VM args to pass to the language server process."
+				}
+			}
+		},
+		"languages": [
+			{
+				"id": "concourse-pipeline-yaml",
+				"aliases": [
+					"Concourse Pipeline"
+				],
+				"filenamePatterns": [
+					"*pipeline*.yml"
+				],
+				"firstLine": "^#(\\s)*pipeline(\\s)*",
+				"configuration": "./yaml-support/language-configuration.json"
+			},
+			{
+				"id": "concourse-task-yaml",
+				"aliases": [
+					"Concourse Task"
+				],
+				"filenamePatterns": [
+					"*task.yml",
+					"**/tasks/*.yml"
+				],
+				"firstLine": "^#(\\s)*task(\\s)*",
+				"configuration": "./yaml-support/language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "concourse-pipeline-yaml",
+				"scopeName": "source.yaml",
+				"path": "./yaml-support/yaml.tmLanguage"
+			},
+			{
+				"language": "concourse-task-yaml",
+				"scopeName": "source.yaml",
+				"path": "./yaml-support/yaml.tmLanguage"
+			}
+		]
+	},
+	"main": "./out/lib/Main",
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"clean": "rm -fr node_modules out *.vsix package-lock.json",
+		"preinstall": "./scripts/preinstall.sh",
+		"vsce-package": "vsce package"
+	},
+	"dependencies": {
+		"@pivotal-tools/commons-vscode": "file:../commons-vscode/pivotal-tools-commons-vscode-0.2.3.tgz",
+		"vscode-languageclient": "6.0.0"
+	},
+	"devDependencies": {
+		"vsce": "^1.74.0",
+		"typescript": "3.8.3",
+		"@types/node": "^12.7.9",
+		"@types/vscode": "^1.41.0"
+	},
+	"__metadata": {
+		"id": "8e8d8573-d69a-4c7b-a951-d72a266a5822",
+		"publisherId": "dc949c7c-2584-42c6-811d-74527b53f191",
+		"publisherDisplayName": "Pivotal"
+	}
+}

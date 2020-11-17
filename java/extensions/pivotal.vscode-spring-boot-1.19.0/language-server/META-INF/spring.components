@@ -1,0 +1,10 @@
+org.springframework.ide.vscode.boot.app.BootJavaConfig=org.springframework.stereotype.Component
+org.springframework.ide.vscode.boot.app.BootLanguagServerBootApp=org.springframework.stereotype.Component
+org.springframework.ide.vscode.boot.app.BootLanguageServerInitializer=org.springframework.stereotype.Component
+org.springframework.ide.vscode.boot.app.DollarPropertyCompletionProvider=org.springframework.stereotype.Component
+org.springframework.ide.vscode.boot.app.PropertiesJavaDefinitionHandler=org.springframework.stereotype.Component
+org.springframework.ide.vscode.boot.app.SpringSymbolIndex=org.springframework.stereotype.Component
+org.springframework.ide.vscode.boot.app.SpringSymbolIndexerConfig=org.springframework.stereotype.Component
+org.springframework.ide.vscode.boot.app.XmlBeansConfigDefinitionHandler=org.springframework.stereotype.Component
+org.springframework.ide.vscode.boot.app.YamlPropertiesJavaDefinitionHandler=org.springframework.stereotype.Component
+org.springframework.ide.vscode.boot.configurationmetadata=package-info

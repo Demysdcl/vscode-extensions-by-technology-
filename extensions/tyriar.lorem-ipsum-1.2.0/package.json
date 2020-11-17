@@ -1,0 +1,60 @@
+{
+	"name": "lorem-ipsum",
+	"displayName": "Lorem ipsum",
+	"description": "Generates and inserts lorem ipsum text",
+	"version": "1.2.0",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Tyriar/vscode-lorem-ipsum/issues"
+	},
+	"scripts": {
+		"test": "mocha"
+	},
+	"homepage": "https://github.com/Tyriar/vscode-lorem-ipsum",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Tyriar/vscode-lorem-ipsum"
+	},
+	"publisher": "Tyriar",
+	"engines": {
+		"vscode": "0.10.x"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:lorem-ipsum.line",
+		"onCommand:lorem-ipsum.paragraph",
+		"onCommand:lorem-ipsum.multipleParagraphs"
+	],
+	"main": "./extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "lorem-ipsum.line",
+				"title": "Lorem Ipsum: Insert a line"
+			},
+			{
+				"command": "lorem-ipsum.paragraph",
+				"title": "Lorem Ipsum: Insert a paragraph"
+			},
+			{
+				"command": "lorem-ipsum.multipleParagraphs",
+				"title": "Lorem Ipsum: Insert multiple paragraphs"
+			}
+		]
+	},
+	"devDependencies": {
+		"vscode": "0.10.x",
+		"mocha": "~2.3.3"
+	},
+	"dependencies": {
+		"lorem-ipsum": "^1.0.3"
+	},
+	"icon": "images/icon.png",
+	"__metadata": {
+		"id": "489abeb0-400c-4a08-bde4-cf5d9b863a32",
+		"publisherId": "738ff3bb-8e77-45d5-bd26-7c9ad62959b9",
+		"publisherDisplayName": "Daniel Imms"
+	}
+}

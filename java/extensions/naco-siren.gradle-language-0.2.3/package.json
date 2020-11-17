@@ -1,0 +1,97 @@
+{
+	"name": "gradle-language",
+	"displayName": "Gradle Language Support",
+	"description": "Add Gradle language support for Visual Studio Code",
+	"author": {
+		"name": "Naco Siren",
+		"url": "https://github.com/naco-siren"
+	},
+	"license": "MIT",
+	"version": "0.2.3",
+	"publisher": "naco-siren",
+	"icon": "gradle_icon.png",
+	"readme": "README.md",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/naco-siren/vscode-gradle-language"
+	},
+	"engines": {
+		"vscode": "^1.16.0"
+	},
+	"categories": [
+		"Languages",
+		"Snippets",
+		"Linters",
+		"Formatters"
+	],
+	"activationEvents": [
+		"onLanguage:gradle"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "Server configuration",
+			"properties": {
+				"gradleLang.maxNumberOfProblems": {
+					"scope": "resource",
+					"type": "number",
+					"default": 100,
+					"description": "Controls the maximum number of problems produced by the server."
+				},
+				"gradleLang.trace.server": {
+					"scope": "window",
+					"type": "string",
+					"enum": [
+						"off",
+						"messages",
+						"verbose"
+					],
+					"default": "off",
+					"description": "Traces the communication between VSCode and the language server."
+				}
+			}
+		},
+		"languages": [
+			{
+				"id": "gradle",
+				"extensions": [
+					".gradle"
+				],
+				"aliases": [
+					"Gradle",
+					"gradle"
+				],
+				"configuration": "./language-gradle-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "groovy",
+				"scopeName": "source.groovy",
+				"path": "./syntaxes/groovy.tmLanguage.json"
+			},
+			{
+				"language": "gradle",
+				"scopeName": "source.gradle",
+				"path": "./syntaxes/gradle.tmLanguage.json"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "tsc -p ./",
+		"compile": "tsc -p ./",
+		"watch": "tsc -w -p ./",
+		"update-vscode": "node ./node_modules/vscode/bin/install",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"dependencies": {
+		"vscode": "^1.1.5",
+		"vscode-languageclient": "^3.4.2"
+	},
+	"__metadata": {
+		"id": "1dd7f786-f59f-4199-a147-fc98a56a11f2",
+		"publisherId": "2119e82d-6ba2-458f-b4aa-9c1363564ea4",
+		"publisherDisplayName": "Naco Siren"
+	}
+}

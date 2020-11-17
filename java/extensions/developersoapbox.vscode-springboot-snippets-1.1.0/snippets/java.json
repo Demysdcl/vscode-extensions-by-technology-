@@ -1,0 +1,244 @@
+{
+    "Spring JPA Rest Repository": {
+        "prefix": [
+            "spring-crudrepo"
+        ],
+        "body": [
+            "package ${1:packageName};",
+            "",
+            "import org.springframework.data.repository.CrudRepository;",
+            "import org.springframework.data.rest.core.annotation.RepositoryRestResource;",
+            "",
+            "//Remove @RepositoryRestResource below to disable auto REST api:",
+            "@RepositoryRestResource",
+            "public interface ${2:repositoryName} extends CrudRepository<${3:entityName}, ${4:entityIdType}>{}"
+        ],
+        "description": "JPA CRUD repository with REST api annotation"
+    },
+    "Spring JPA Entity": {
+        "prefix": [
+            "spring-entity"
+        ],
+        "body": [
+            "package ${1:packageName};",
+            "",
+            "import javax.persistence.Entity;",
+            "import javax.persistence.GeneratedValue;",
+            "import javax.persistence.GenerationType;",
+            "import javax.persistence.Id;",
+            "",
+            "@Entity",
+            "class ${2:entityClassName} {",
+            "",
+            "    @Id",
+            "    @GeneratedValue(strategy = GenerationType.IDENTITY)",
+            "    private ${3:entityIdType} id;",
+            "",
+            "    public ${2:entityClassName}() {",
+            "    }",
+            "",
+            "    public ${3:entityIdType} getId() {",
+            "        return id;",
+            "    }",
+            "",
+            "    public void setId(${3:entityIdType} id) {",
+            "        this.id = id;",
+            "    }",
+            "}"
+        ],
+        "description": "JPA entity with ID field"
+    },    
+    "Spring CRUD Controller": {
+        "prefix": [
+            "spring-crudctrl"
+        ],
+        "body": [
+            "package ${1:packageName};",
+            "",
+            "import java.util.ArrayList;",
+            "import java.util.List;",
+            "import java.util.Optional;",
+            "",
+            "import org.springframework.beans.factory.annotation.Autowired;",
+            "import org.springframework.http.HttpStatus;",
+            "import org.springframework.http.ResponseEntity;",
+            "import org.springframework.web.bind.annotation.DeleteMapping;",
+            "import org.springframework.web.bind.annotation.GetMapping;",
+            "import org.springframework.web.bind.annotation.PathVariable;",
+            "import org.springframework.web.bind.annotation.PostMapping;",
+            "import org.springframework.web.bind.annotation.PutMapping;",
+            "import org.springframework.web.bind.annotation.RequestBody;",
+            "import org.springframework.web.bind.annotation.RequestMapping;",
+            "import org.springframework.web.bind.annotation.RestController;",
+            "",
+            "@RestController",
+            "@RequestMapping(\"/${2:resourceRootPath}\")",
+            "class ${3:resourceName}Controller {",
+            "",
+            "    @Autowired",
+            "    ${4:repositoryClassName} repository;",
+            "",
+            "    @GetMapping",
+            "    public ResponseEntity<List<${5:entityClassName}>> getAll() {",
+            "        try {",
+            "            List<${5:entityClassName}> items = new ArrayList<${5:entityClassName}>();",
+            "",
+            "            repository.findAll().forEach(items::add);",
+            "",
+            "            if (items.isEmpty())",
+            "                return new ResponseEntity<>(HttpStatus.NO_CONTENT);",
+            "",
+            "            return new ResponseEntity<>(items, HttpStatus.OK);",
+            "        } catch (Exception e) {",
+            "            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);",
+            "        }",
+            "    }",
+            "",
+            "    @GetMapping(\"{id}\")",
+            "    public ResponseEntity<${5:entityClassName}> getById(@PathVariable(\"id\") ${6:entityIdType} id) {",
+            "        Optional<${5:entityClassName}> existingItemOptional = repository.findById(id);",
+            "",
+            "        if (existingItemOptional.isPresent()) {",
+            "            return new ResponseEntity<>(existingItemOptional.get(), HttpStatus.OK);",
+            "        } else {",
+            "            return new ResponseEntity<>(HttpStatus.NOT_FOUND);",
+            "        }",
+            "    }",
+            "",
+            "    @PostMapping",
+            "    public ResponseEntity<${5:entityClassName}> create(@RequestBody ${5:entityClassName} item) {",
+            "        try {",
+            "            ${5:entityClassName} savedItem = repository.save(item);",
+            "            return new ResponseEntity<>(savedItem, HttpStatus.CREATED);",
+            "        } catch (Exception e) {",
+            "            return new ResponseEntity<>(null, HttpStatus.EXPECTATION_FAILED);",
+            "        }",
+            "    }",
+            "",
+            "    @PutMapping(\"{id}\")",
+            "    public ResponseEntity<${5:entityClassName}> update(@PathVariable(\"id\") ${6:entityIdType} id, @RequestBody ${5:entityClassName} item) {",
+            "        Optional<${5:entityClassName}> existingItemOptional = repository.findById(id);",
+            "        if (existingItemOptional.isPresent()) {",
+            "            ${5:entityClassName} existingItem = existingItemOptional.get();",
+            "            System.out.println(\"TODO for developer - update logic is unique to entity and must be implemented manually.\");",
+            "            //existingItem.setSomeField(item.getSomeField());",
+            "            return new ResponseEntity<>(repository.save(existingItem), HttpStatus.OK);",
+            "        } else {",
+            "            return new ResponseEntity<>(HttpStatus.NOT_FOUND);",
+            "        }",
+            "    }",
+            "",
+            "    @DeleteMapping(\"{id}\")",
+            "    public ResponseEntity<HttpStatus> delete(@PathVariable(\"id\") ${6:entityIdType} id) {",
+            "        try {",
+            "            repository.deleteById(id);",
+            "            return new ResponseEntity<>(HttpStatus.NO_CONTENT);",
+            "        } catch (Exception e) {",
+            "            return new ResponseEntity<>(HttpStatus.EXPECTATION_FAILED);",
+            "        }",
+            "    }",
+            "}"
+        ],
+        "description": "Spring controller with CRUD actions implemented"
+    },
+    "Spring Controller Get All": {
+        "prefix": [
+            "spring-ctrl-getall"
+        ],
+        "body": [
+            "    @GetMapping",
+            "    public ResponseEntity<List<${5:entityClassName}>> getAll() {",
+            "        try {",
+            "            List<${5:entityClassName}> items = new ArrayList<${5:entityClassName}>();",
+            "",
+            "            repository.findAll().forEach(items::add);",
+            "",
+            "            if (items.isEmpty())",
+            "                return new ResponseEntity<>(HttpStatus.NO_CONTENT);",
+            "",
+            "            return new ResponseEntity<>(items, HttpStatus.OK);",
+            "        } catch (Exception e) {",
+            "            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);",
+            "        }",
+            "    }",
+            ""            
+        ],
+        "description": "Spring controller GET action for all records"
+    },
+    "Spring Controller Get One": {
+        "prefix": [
+            "spring-ctrl-getone"
+        ],
+        "body": [
+            "    @GetMapping(\"{id}\")",
+            "    public ResponseEntity<${5:entityClassName}> getById(@PathVariable(\"id\") ${6:entityIdType} id) {",
+            "        Optional<${5:entityClassName}> existingItemOptional = repository.findById(id);",
+            "",
+            "        if (existingItemOptional.isPresent()) {",
+            "            return new ResponseEntity<>(existingItemOptional.get(), HttpStatus.OK);",
+            "        } else {",
+            "            return new ResponseEntity<>(HttpStatus.NOT_FOUND);",
+            "        }",
+            "    }",
+            ""       
+        ],
+        "description": "Spring controller GET action for one record"
+    },    
+    "Spring Controller Post": {
+        "prefix": [
+            "spring-ctrl-post"
+        ],
+        "body": [
+            "    @PostMapping",
+            "    public ResponseEntity<${5:entityClassName}> create(@RequestBody ${5:entityClassName} item) {",
+            "        try {",
+            "            ${5:entityClassName} savedItem = repository.save(item);",
+            "            return new ResponseEntity<>(savedItem, HttpStatus.CREATED);",
+            "        } catch (Exception e) {",
+            "            return new ResponseEntity<>(null, HttpStatus.EXPECTATION_FAILED);",
+            "        }",
+            "    }",
+            ""   
+        ],
+        "description": "Spring controller POST action"
+    },     
+    "Spring Controller Put": {
+        "prefix": [
+            "spring-ctrl-put"
+        ],
+        "body": [
+            "    @PutMapping(\"{id}\")",
+            "    public ResponseEntity<${5:entityClassName}> update(@PathVariable(\"id\") ${6:entityIdType} id, @RequestBody ${5:entityClassName} item) {",
+            "        Optional<${5:entityClassName}> existingItemOptional = repository.findById(id);",
+            "        if (existingItemOptional.isPresent()) {",
+            "            ${5:entityClassName} existingItem = existingItemOptional.get();",
+            "            System.out.println(\"TODO for developer - update logic is unique to entity and must be implemented manually.\");",
+            "            //existingItem.setSomeField(item.getSomeField());",
+            "            return new ResponseEntity<>(repository.save(existingItem), HttpStatus.OK);",
+            "        } else {",
+            "            return new ResponseEntity<>(HttpStatus.NOT_FOUND);",
+            "        }",
+            "    }",
+            ""  
+        ],
+        "description": "Spring controller PUT action"
+    },   
+    "Spring Controller Delete": {
+        "prefix": [
+            "spring-ctrl-delete"
+        ],
+        "body": [
+            "    @DeleteMapping(\"{id}\")",
+            "    public ResponseEntity<HttpStatus> delete(@PathVariable(\"id\") ${6:entityIdType} id) {",
+            "        try {",
+            "            repository.deleteById(id);",
+            "            return new ResponseEntity<>(HttpStatus.NO_CONTENT);",
+            "        } catch (Exception e) {",
+            "            return new ResponseEntity<>(HttpStatus.EXPECTATION_FAILED);",
+            "        }",
+            "    }",
+            ""  
+        ],
+        "description": "Spring controller DELETE action"
+    }          
+}

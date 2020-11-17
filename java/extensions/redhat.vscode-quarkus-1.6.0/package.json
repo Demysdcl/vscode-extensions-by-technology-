@@ -1,0 +1,406 @@
+{
+	"name": "vscode-quarkus",
+	"displayName": "Quarkus",
+	"description": "Quarkus Tools for Visual Studio Code",
+	"version": "1.6.0",
+	"icon": "icons/logo.png",
+	"author": "Red Hat",
+	"publisher": "redhat",
+	"preview": true,
+	"license": "Apache-2.0",
+	"bugs": "https://github.com/redhat-developer/vscode-quarkus/issues",
+	"engines": {
+		"vscode": "^1.37.0"
+	},
+	"galleryBanner": {
+		"color": "#d8ebff",
+		"theme": "light"
+	},
+	"categories": [
+		"Programming Languages",
+		"Other"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/redhat-developer/vscode-quarkus"
+	},
+	"keywords": [
+		"java",
+		"quarkus",
+		"maven",
+		"starter"
+	],
+	"activationEvents": [
+		"onCommand:quarkusTools.createProject",
+		"onCommand:quarkusTools.welcome",
+		"workspaceContains:**/src/main/resources/application.properties",
+		"workspaceContains:**src/main/resources/META-INF/microprofile-config.properties",
+		"workspaceContains:**/src/main/resources/application.yaml",
+		"workspaceContains:**/src/main/resources/application.yml",
+		"onLanguage:microprofile-properties",
+		"onLanguage:quarkus-properties",
+		"onLanguage:java",
+		"onLanguage:qute-html",
+		"onLanguage:qute-json",
+		"onLanguage:qute-yaml",
+		"onLanguage:qute-txt"
+	],
+	"main": "./dist/extension",
+	"extensionDependencies": [
+		"redhat.java",
+		"vscjava.vscode-java-debug"
+	],
+	"contributes": {
+		"javaExtensions": [
+			"./jars/com.redhat.microprofile.jdt.core.jar",
+			"./jars/com.redhat.microprofile.jdt.quarkus.jar"
+		],
+		"languages": [
+			{
+				"id": "microprofile-properties",
+				"aliases": [
+					"MicroProfile properties"
+				],
+				"filenames": [
+					"microprofile-config.properties"
+				],
+				"configuration": "./language-support/properties-support/language-configuration.json"
+			},
+			{
+				"id": "quarkus-properties",
+				"aliases": [
+					"Quarkus properties"
+				],
+				"filenames": [
+					"application.properties"
+				],
+				"configuration": "./language-support/properties-support/language-configuration.json"
+			},
+			{
+				"id": "qute-html",
+				"aliases": [
+					"Qute HTML"
+				],
+				"extensions": [
+					"qute.html"
+				],
+				"configuration": "./language-support/qute/language-configuration.json"
+			},
+			{
+				"id": "qute-json",
+				"aliases": [
+					"Qute JSON"
+				],
+				"extensions": [
+					"qute.json"
+				],
+				"configuration": "./language-support/qute/language-configuration.json"
+			},
+			{
+				"id": "qute-yaml",
+				"aliases": [
+					"Qute YAML"
+				],
+				"extensions": [
+					"qute.yaml"
+				],
+				"configuration": "./language-support/qute/language-configuration.json"
+			},
+			{
+				"id": "qute-txt",
+				"aliases": [
+					"Qute Text"
+				],
+				"extensions": [
+					"qute.txt"
+				],
+				"configuration": "./language-support/qute/language-configuration.json"
+			}
+		],
+		"commands": [
+			{
+				"command": "quarkusTools.createProject",
+				"title": "Quarkus: Generate a Quarkus project"
+			},
+			{
+				"command": "quarkusTools.addExtension",
+				"title": "Quarkus: Add extensions to current project"
+			},
+			{
+				"command": "quarkusTools.debugQuarkusProject",
+				"title": "Quarkus: Debug current Quarkus project"
+			},
+			{
+				"command": "quarkusTools.welcome",
+				"title": "Quarkus: Welcome"
+			}
+		],
+		"configuration": {
+			"title": "Quarkus Tools",
+			"properties": {
+				"quarkus.tools.trace.server": {
+					"type": "string",
+					"enum": [
+						"off",
+						"messages",
+						"verbose"
+					],
+					"default": "off",
+					"description": "Traces the communication between VS Code and the Quarkus language server.",
+					"scope": "window"
+				},
+				"quarkus.tools.debug.terminateProcessOnExit": {
+					"type": "string",
+					"enum": [
+						"Always terminate",
+						"Never terminate",
+						"Ask"
+					],
+					"default": "Ask",
+					"description": "Determines whether to terminate the quarkus:dev task after closing the debug session.",
+					"scope": "window"
+				},
+				"quarkus.tools.alwaysShowWelcomePage": {
+					"type": "boolean",
+					"default": true,
+					"description": "Determines whether to show the welcome page on extension startup."
+				},
+				"quarkus.tools.starter.api": {
+					"type": "string",
+					"default": "http://code.quarkus.io/api",
+					"pattern": "https?://.+",
+					"description": "Quarkus API base URL",
+					"scope": "window"
+				},
+				"quarkus.tools.starter.showExtensionDescriptions": {
+					"type": "boolean",
+					"default": true,
+					"description": "Determines whether to show the Quarkus extension descriptions when selecting Quarkus extensions.",
+					"scope": "window"
+				},
+				"quarkus.tools.propertiesLanguageMismatch": {
+					"type": "string",
+					"enum": [
+						"ignore",
+						"forceQuarkus",
+						"prompt"
+					],
+					"enumDescriptions": [
+						"ignore language mismatch for Quarkus properties",
+						"Automatically correct the language for mismatched Quarkus properties",
+						"Prompt correcting the language for mismatched Quarkus properties"
+					],
+					"default": "forceQuarkus",
+					"description": "Action performed when detected Quarkus properties have an incorrect language.",
+					"scope": "window"
+				},
+				"quarkus.tools.formatting.surroundEqualsWithSpaces": {
+					"type": "boolean",
+					"default": false,
+					"description": "Insert spaces around the equals sign when formatting the application.properties file",
+					"scope": "window"
+				},
+				"quarkus.tools.symbols.showAsTree": {
+					"type": "boolean",
+					"default": true,
+					"description": "Show Quarkus properties as tree.",
+					"scope": "window"
+				},
+				"quarkus.tools.validation.enabled": {
+					"type": "boolean",
+					"default": true,
+					"description": "Enables Quarkus validation",
+					"scope": "window"
+				},
+				"quarkus.tools.validation.duplicate.severity": {
+					"type": "string",
+					"enum": [
+						"none",
+						"warning",
+						"error"
+					],
+					"default": "warning",
+					"markdownDescription": "Validation severity for duplicate properties for Quarkus/MicroProfile `*.properties` files.",
+					"scope": "window"
+				},
+				"quarkus.tools.validation.required.severity": {
+					"type": "string",
+					"enum": [
+						"none",
+						"warning",
+						"error"
+					],
+					"default": "none",
+					"markdownDescription": "Validation severity for required properties for Quarkus/MicroProfile `*.properties` files.",
+					"scope": "window"
+				},
+				"quarkus.tools.validation.unknown.severity": {
+					"type": "string",
+					"enum": [
+						"none",
+						"warning",
+						"error"
+					],
+					"default": "warning",
+					"markdownDescription": "Validation severity for unknown properties for Quarkus/MicroProfile `*.properties` files.",
+					"scope": "window"
+				},
+				"quarkus.tools.validation.syntax.severity": {
+					"type": "string",
+					"enum": [
+						"none",
+						"warning",
+						"error"
+					],
+					"default": "error",
+					"markdownDescription": "Validation severity for property syntax checking for Quarkus/MicroProfile `*.properties` files",
+					"scope": "window"
+				},
+				"quarkus.tools.validation.value.severity": {
+					"type": "string",
+					"enum": [
+						"none",
+						"warning",
+						"error"
+					],
+					"default": "error",
+					"markdownDescription": "Validation severity for property values for Quarkus/MicroProfile `*.properties` files.",
+					"scope": "window"
+				},
+				"quarkus.tools.validation.unknown.excluded": {
+					"type": "array",
+					"default": [
+						"*/mp-rest/providers/*/priority",
+						"mp.openapi.schema.*"
+					],
+					"items": {
+						"type": "string"
+					},
+					"description": "Array of properties to ignore for unknown Quarkus properties validation. Patterns can be used ('*' = any string, '?' = any character)",
+					"scope": "window"
+				},
+				"quarkus.tools.codeLens.urlCodeLensEnabled": {
+					"type": "boolean",
+					"default": true,
+					"description": "Enable/disable the URL code lenses for REST services.",
+					"scope": "window"
+				}
+			}
+		},
+		"menus": {
+			"commandPalette": [
+				{
+					"command": "quarkusTools.addExtension",
+					"when": "quarkusProjectExists"
+				},
+				{
+					"command": "quarkusTools.debugQuarkusProject",
+					"when": "quarkusProjectExists"
+				}
+			]
+		},
+		"grammars": [
+			{
+				"language": "microprofile-properties",
+				"scopeName": "source.java-properties",
+				"path": "./language-support/properties-support/java-properties.tmLanguage.json"
+			},
+			{
+				"language": "quarkus-properties",
+				"scopeName": "source.java-properties",
+				"path": "./language-support/properties-support/java-properties.tmLanguage.json"
+			},
+			{
+				"language": "qute-html",
+				"scopeName": "text.html.qute",
+				"path": "./language-support/qute/qute-html.tmLanguage.json"
+			},
+			{
+				"language": "qute-json",
+				"scopeName": "source.json.qute",
+				"path": "./language-support/qute/qute-json.tmLanguage.json"
+			},
+			{
+				"language": "qute-yaml",
+				"scopeName": "source.yaml.qute",
+				"path": "./language-support/qute/qute-yaml.tmLanguage.json"
+			},
+			{
+				"language": "qute-txt",
+				"scopeName": "text.qute",
+				"path": "./language-support/qute/qute-txt.tmLanguage.json"
+			},
+			{
+				"scopeName": "grammar.qute",
+				"path": "./language-support/qute/qute.tmLanguage.json"
+			}
+		]
+	},
+	"scripts": {
+		"preinstall": "npx npm-force-resolutions",
+		"vscode:prepublish": "webpack --mode production",
+		"compile": "webpack --mode none",
+		"watch": "webpack --mode development --watch --info-verbosity verbose",
+		"test-compile": "tsc -p ./",
+		"pretest": "npm run test-compile",
+		"test": "node ./out/test/vscodeTest/runTest.js",
+		"tslint": "./node_modules/.bin/tslint -p .",
+		"build": "./node_modules/.bin/gulp build",
+		"build-server": "./node_modules/.bin/gulp buildServer",
+		"build-ext": "./node_modules/.bin/gulp buildExtension",
+		"test-ui": "npm run test-compile && npm run test-ui-run",
+		"test-ui-run": "extest setup-and-run 'out/test/vscodeUiTest/suite/*.js' -u -e 'out/test/vscodeUiTest/extensions'",
+		"test-all": "npm test && npm run test-ui-run"
+	},
+	"resolutions": {
+		"minimist": "^1.2.5"
+	},
+	"devDependencies": {
+		"@types/chai": "^4.2.3",
+		"@types/chai-fs": "^2.0.2",
+		"@types/fs-extra": "^7.0.0",
+		"@types/lodash": "^4.14.149",
+		"@types/mocha": "^5.2.6",
+		"@types/node": "^10.14.16",
+		"@types/request": "^2.48.3",
+		"@types/request-promise": "^4.1.44",
+		"@types/semver": "^6.2.0",
+		"@types/vscode": "^1.37.0",
+		"@types/yauzl": "^2.9.1",
+		"chai": "^4.2.0",
+		"chai-fs": "^2.0.0",
+		"gradle-to-js": "^2.0.0",
+		"gulp": "^4.0.2",
+		"gulp-rename": "^1.4.0",
+		"minimist": ">=1.2.5",
+		"mocha": "^6.2.1",
+		"pom-parser": "^1.2.0",
+		"ts-loader": "^6.0.1",
+		"tslint": "^5.20.1",
+		"typescript": "^3.7.2",
+		"typescript-tslint-plugin": "^0.3.1",
+		"vscode-extension-tester": "^3.0.2",
+		"vscode-extension-tester-native": "^3.0.0",
+		"vscode-test": "^1.2.3",
+		"webpack": "^4.32.2",
+		"webpack-cli": "^3.3.2"
+	},
+	"dependencies": {
+		"ejs": "^2.7.1",
+		"expand-home-dir": "0.0.3",
+		"find-java-home": "^1.0.0",
+		"find-up": "^4.1.0",
+		"fs-extra": "^8.0.1",
+		"glob": "^7.1.4",
+		"lodash": "^4.17.15",
+		"request": "^2.88.0",
+		"request-promise": "^4.2.4",
+		"vscode-languageclient": "^5.2.1",
+		"yauzl": "^2.10.0"
+	},
+	"__metadata": {
+		"id": "62c9f526-503d-4361-aefd-82dc50a69146",
+		"publisherId": "eed56242-9699-4317-8bc7-e9f4b9bdd3ff",
+		"publisherDisplayName": "Red Hat"
+	}
+}

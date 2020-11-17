@@ -1,0 +1,1391 @@
+
+	  Welcome to the formatted license file
+       
+  
+    
+      
+    groupId: ch.qos.logback
+      
+    artifactId: logback-classic
+      
+    version: 1.2.3
+      
+        
+          Eclipse Public License - v 1.0
+          http://www.eclipse.org/legal/epl-v10.html
+          eclipse public license - v 1.0 - epl-v10.html
+        
+        
+          GNU Lesser General Public License
+          http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html
+          gnu lesser general public license - lgpl-2.1.html
+        
+      
+    
+    
+      
+    groupId: ch.qos.logback
+      
+    artifactId: logback-core
+      
+    version: 1.2.3
+      
+        
+          Eclipse Public License - v 1.0
+          http://www.eclipse.org/legal/epl-v10.html
+          eclipse public license - v 1.0 - epl-v10.html
+        
+        
+          GNU Lesser General Public License
+          http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html
+          gnu lesser general public license - lgpl-2.1.html
+        
+      
+    
+    
+      
+    groupId: com.fasterxml.jackson.core
+      
+    artifactId: jackson-annotations
+      
+    version: 2.10.3
+      
+        
+          The Apache Software License, Version 2.0
+          http://www.apache.org/licenses/LICENSE-2.0.txt
+          repo
+          the apache software license, version 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: com.fasterxml.jackson.core
+      
+    artifactId: jackson-core
+      
+    version: 2.10.3
+      
+        
+          The Apache Software License, Version 2.0
+          http://www.apache.org/licenses/LICENSE-2.0.txt
+          repo
+          the apache software license, version 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: com.fasterxml.jackson.core
+      
+    artifactId: jackson-databind
+      
+    version: 2.10.3
+      
+        
+          The Apache Software License, Version 2.0
+          http://www.apache.org/licenses/LICENSE-2.0.txt
+          repo
+          the apache software license, version 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: com.fasterxml.jackson.datatype
+      
+    artifactId: jackson-datatype-jsr310
+      
+    version: 2.10.3
+      
+        
+          The Apache Software License, Version 2.0
+          http://www.apache.org/licenses/LICENSE-2.0.txt
+          repo
+          the apache software license, version 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: com.google.code.gson
+      
+    artifactId: gson
+      
+    version: 2.8.6
+      
+        
+          Apache 2.0
+          http://www.apache.org/licenses/LICENSE-2.0.txt
+          the apache software license, version 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: com.google.guava
+      
+    artifactId: guava
+      
+    version: 19.0
+      
+        
+          The Apache Software License, Version 2.0
+          http://www.apache.org/licenses/LICENSE-2.0.txt
+          repo
+          the apache software license, version 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: com.infradna.tool
+      
+    artifactId: bridge-method-annotation
+      
+    version: 1.17
+      
+        
+          MIT License
+          http://www.opensource.org/licenses/mit-license.php
+          repository
+          mit license - mit-license.html
+        
+      
+    
+    
+      
+    groupId: com.jayway.jsonpath
+      
+    artifactId: json-path
+      
+    version: 2.4.0
+      
+        
+          The Apache Software License, Version 2.0
+          http://www.apache.org/licenses/LICENSE-2.0.txt
+          repo
+          the apache software license, version 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: com.kotcrab.remark
+      
+    artifactId: remark
+      
+    version: 1.0.0
+      
+        
+          The Apache License, Version 2.0
+          http://www.apache.org/licenses/LICENSE-2.0.txt
+          the apache software license, version 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: com.vaadin.external.google
+      
+    artifactId: android-json
+      
+    version: 0.0.20131108.vaadin1
+      
+        
+          Apache License 2.0
+          http://www.apache.org/licenses/LICENSE-2.0
+          repo
+          apache license 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: commons-codec
+      
+    artifactId: commons-codec
+      
+    version: 1.13
+      
+        
+          Apache License, Version 2.0
+          https://www.apache.org/licenses/LICENSE-2.0.txt
+          repo
+          the apache software license, version 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: commons-io
+      
+    artifactId: commons-io
+      
+    version: 1.4
+      
+        
+          The Apache Software License, Version 2.0
+          http://www.apache.org/licenses/LICENSE-2.0.txt
+          repo
+          the apache software license, version 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: commons-lang
+      
+    artifactId: commons-lang
+      
+    version: 2.6
+      
+        
+          The Apache Software License, Version 2.0
+          http://www.apache.org/licenses/LICENSE-2.0.txt
+          repo
+          the apache software license, version 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: io.micrometer
+      
+    artifactId: micrometer-core
+      
+    version: 1.3.6
+      
+        
+          The Apache Software License, Version 2.0
+          http://www.apache.org/licenses/LICENSE-2.0.txt
+          repo
+          the apache software license, version 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: io.projectreactor
+      
+    artifactId: reactor-core
+      
+    version: 3.3.4.RELEASE
+      
+        
+          Apache License, Version 2.0
+          https://www.apache.org/licenses/LICENSE-2.0.txt
+          repo
+          the apache software license, version 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: jakarta.activation
+      
+    artifactId: jakarta.activation-api
+      
+    version: 1.2.2
+      
+        
+          EDL 1.0
+          http://www.eclipse.org/org/documents/edl-v10.php
+          repo
+          edl 1.0 - edl-v10.html
+        
+      
+    
+    
+      
+    groupId: jakarta.annotation
+      
+    artifactId: jakarta.annotation-api
+      
+    version: 1.3.5
+      
+        
+          EPL 2.0
+          http://www.eclipse.org/legal/epl-2.0
+          repo
+          epl 2.0 - epl-2.0.html
+        
+        
+          GPL2 w/ CPE
+          https://www.gnu.org/software/classpath/license.html
+          repo
+          gpl2 w_ cpe - license.html
+        
+      
+    
+    
+      
+    groupId: jakarta.xml.bind
+      
+    artifactId: jakarta.xml.bind-api
+      
+    version: 2.3.3
+      
+        
+          Eclipse Distribution License - v 1.0
+          http://www.eclipse.org/org/documents/edl-v10.php
+          repo
+          edl 1.0 - edl-v10.html
+        
+      
+    
+    
+      
+    groupId: javax.inject
+      
+    artifactId: javax.inject
+      
+    version: 1
+      
+        
+          The Apache Software License, Version 2.0
+          http://www.apache.org/licenses/LICENSE-2.0.txt
+          repo
+          the apache software license, version 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: junit
+      
+    artifactId: junit
+      
+    version: 4.12
+      
+        
+          Eclipse Public License 1.0
+          http://www.eclipse.org/legal/epl-v10.html
+          repo
+          eclipse public license - v 1.0 - epl-v10.html
+        
+      
+    
+    
+      
+    groupId: net.bytebuddy
+      
+    artifactId: byte-buddy-agent
+      
+    version: 1.10.8
+      
+        
+          Apache License, Version 2.0
+          http://www.apache.org/licenses/LICENSE-2.0.txt
+          repo
+          the apache software license, version 2.0 - license-2.0.txt
+          A business-friendly OSS license
+        
+      
+    
+    
+      
+    groupId: net.bytebuddy
+      
+    artifactId: byte-buddy
+      
+    version: 1.10.8
+      
+        
+          Apache License, Version 2.0
+          http://www.apache.org/licenses/LICENSE-2.0.txt
+          repo
+          the apache software license, version 2.0 - license-2.0.txt
+          A business-friendly OSS license
+        
+      
+    
+    
+      
+    groupId: net.minidev
+      
+    artifactId: accessors-smart
+      
+    version: 1.2
+      
+        
+          The Apache Software License, Version 2.0
+          http://www.apache.org/licenses/LICENSE-2.0.txt
+          repo
+          the apache software license, version 2.0 - license-2.0.txt
+          All files under Apache 2
+        
+      
+    
+    
+      
+    groupId: net.minidev
+      
+    artifactId: json-smart
+      
+    version: 2.3
+      
+        
+          The Apache Software License, Version 2.0
+          http://www.apache.org/licenses/LICENSE-2.0.txt
+          repo
+          the apache software license, version 2.0 - license-2.0.txt
+          All files under Apache 2
+        
+      
+    
+    
+      
+    groupId: org.apache.commons
+      
+    artifactId: commons-lang3
+      
+    version: 3.9
+      
+        
+          Apache License, Version 2.0
+          https://www.apache.org/licenses/LICENSE-2.0.txt
+          repo
+          the apache software license, version 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: org.apache.logging.log4j
+      
+    artifactId: log4j-api
+      
+    version: 2.12.1
+      
+        
+          Apache License, Version 2.0
+          https://www.apache.org/licenses/LICENSE-2.0.txt
+          repo
+          the apache software license, version 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: org.apache.logging.log4j
+      
+    artifactId: log4j-to-slf4j
+      
+    version: 2.12.1
+      
+        
+          Apache License, Version 2.0
+          https://www.apache.org/licenses/LICENSE-2.0.txt
+          repo
+          the apache software license, version 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: org.apiguardian
+      
+    artifactId: apiguardian-api
+      
+    version: 1.1.0
+      
+        
+          The Apache License, Version 2.0
+          http://www.apache.org/licenses/LICENSE-2.0.txt
+          the apache software license, version 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: org.assertj
+      
+    artifactId: assertj-core
+      
+    version: 3.5.2
+      
+        
+          Apache License, Version 2.0
+          http://www.apache.org/licenses/LICENSE-2.0.txt
+          repo
+          the apache software license, version 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: org.eclipse.lsp4j
+      
+    artifactId: org.eclipse.lsp4j.generator
+      
+    version: 0.9.0
+      
+        
+          Eclipse Public License, Version 2.0
+          https://www.eclipse.org/legal/epl-2.0
+          epl 2.0 - epl-2.0.html
+        
+      
+    
+    
+      
+    groupId: org.eclipse.lsp4j
+      
+    artifactId: org.eclipse.lsp4j.jsonrpc
+      
+    version: 0.9.0
+      
+        
+          Eclipse Public License, Version 2.0
+          https://www.eclipse.org/legal/epl-2.0
+          epl 2.0 - epl-2.0.html
+        
+      
+    
+    
+      
+    groupId: org.eclipse.lsp4j
+      
+    artifactId: org.eclipse.lsp4j
+      
+    version: 0.9.0
+      
+        
+          Eclipse Public License, Version 2.0
+          https://www.eclipse.org/legal/epl-2.0
+          epl 2.0 - epl-2.0.html
+        
+      
+    
+    
+      
+    groupId: org.eclipse.xtend
+      
+    artifactId: org.eclipse.xtend.lib.macro
+      
+    version: 2.19.0
+      
+        
+          Eclipse Public License, Version 1.0
+          http://www.eclipse.org/legal/epl-v10.html
+          eclipse public license - v 1.0 - epl-v10.html
+        
+      
+    
+    
+      
+    groupId: org.eclipse.xtend
+      
+    artifactId: org.eclipse.xtend.lib
+      
+    version: 2.19.0
+      
+        
+          Eclipse Public License, Version 1.0
+          http://www.eclipse.org/legal/epl-v10.html
+          eclipse public license - v 1.0 - epl-v10.html
+        
+      
+    
+    
+      
+    groupId: org.eclipse.xtext
+      
+    artifactId: org.eclipse.xtext.xbase.lib
+      
+    version: 2.19.0
+      
+        
+          Eclipse Public License, Version 1.0
+          http://www.eclipse.org/legal/epl-v10.html
+          eclipse public license - v 1.0 - epl-v10.html
+        
+      
+    
+    
+      
+    groupId: org.hamcrest
+      
+    artifactId: hamcrest-core
+      
+    version: 2.1
+      
+        
+          BSD Licence 3
+          http://opensource.org/licenses/BSD-3-Clause
+          bsd licence 3 - bsd-3-clause.html
+        
+      
+    
+    
+      
+    groupId: org.hamcrest
+      
+    artifactId: hamcrest
+      
+    version: 2.1
+      
+        
+          BSD Licence 3
+          http://opensource.org/licenses/BSD-3-Clause
+          bsd licence 3 - bsd-3-clause.html
+        
+      
+    
+    
+      
+    groupId: org.hdrhistogram
+      
+    artifactId: HdrHistogram
+      
+    version: 2.1.11
+      
+        
+          Public Domain, per Creative Commons CC0
+          http://creativecommons.org/publicdomain/zero/1.0/
+          public domain, per creative commons cc0 - 1.0.html
+          * This code was Written by Gil Tene of Azul Systems, and released to the
+                * public domain, as explained at http://creativecommons.org/publicdomain/zero/1.0/
+        
+        
+          BSD-2-Clause
+          https://opensource.org/licenses/BSD-2-Clause
+          bsd-2-clause - bsd-2-clause.html
+        
+      
+    
+    
+      
+    groupId: org.javolution
+      
+    artifactId: javolution-core-java
+      
+    version: 6.0.0
+      
+        
+          BSD License
+          http://javolution.org/LICENSE.txt
+        
+      
+    
+    
+      
+    groupId: org.jboss
+      
+    artifactId: jandex
+      
+    version: 2.0.5.Final
+      
+        
+          Apache License, Version 2.0
+          http://www.apache.org/licenses/LICENSE-2.0.txt
+          repo
+          the apache software license, version 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: org.jenkins-ci
+      
+    artifactId: annotation-indexer
+      
+    version: 1.4
+      
+        
+      
+    
+    
+      
+    groupId: org.jsoup
+      
+    artifactId: jsoup
+      
+    version: 1.9.2
+      
+        
+          The MIT License
+          https://jsoup.org/license
+          repo
+          the mit license - license.html
+        
+      
+    
+    
+      
+    groupId: org.junit.jupiter
+      
+    artifactId: junit-jupiter-api
+      
+    version: 5.5.2
+      
+        
+          Eclipse Public License v2.0
+          https://www.eclipse.org/legal/epl-v20.html
+          eclipse public license v2.0 - epl-v20.html
+        
+      
+    
+    
+      
+    groupId: org.junit.jupiter
+      
+    artifactId: junit-jupiter-engine
+      
+    version: 5.5.2
+      
+        
+          Eclipse Public License v2.0
+          https://www.eclipse.org/legal/epl-v20.html
+          eclipse public license v2.0 - epl-v20.html
+        
+      
+    
+    
+      
+    groupId: org.junit.jupiter
+      
+    artifactId: junit-jupiter-params
+      
+    version: 5.5.2
+      
+        
+          Eclipse Public License v2.0
+          https://www.eclipse.org/legal/epl-v20.html
+          eclipse public license v2.0 - epl-v20.html
+        
+      
+    
+    
+      
+    groupId: org.junit.jupiter
+      
+    artifactId: junit-jupiter
+      
+    version: 5.5.2
+      
+        
+          Eclipse Public License v2.0
+          https://www.eclipse.org/legal/epl-v20.html
+          eclipse public license v2.0 - epl-v20.html
+        
+      
+    
+    
+      
+    groupId: org.junit.platform
+      
+    artifactId: junit-platform-commons
+      
+    version: 1.5.2
+      
+        
+          Eclipse Public License v2.0
+          https://www.eclipse.org/legal/epl-v20.html
+          eclipse public license v2.0 - epl-v20.html
+        
+      
+    
+    
+      
+    groupId: org.junit.platform
+      
+    artifactId: junit-platform-engine
+      
+    version: 1.5.2
+      
+        
+          Eclipse Public License v2.0
+          https://www.eclipse.org/legal/epl-v20.html
+          eclipse public license v2.0 - epl-v20.html
+        
+      
+    
+    
+      
+    groupId: org.junit.vintage
+      
+    artifactId: junit-vintage-engine
+      
+    version: 5.5.2
+      
+        
+          Eclipse Public License v2.0
+          https://www.eclipse.org/legal/epl-v20.html
+          eclipse public license v2.0 - epl-v20.html
+        
+      
+    
+    
+      
+    groupId: org.kohsuke
+      
+    artifactId: github-api
+      
+    version: 1.90
+      
+        
+          The MIT license
+          http://www.opensource.org/licenses/mit-license.php
+          repo
+          mit license - mit-license.html
+        
+      
+    
+    
+      
+    groupId: org.latencyutils
+      
+    artifactId: LatencyUtils
+      
+    version: 2.0.3
+      
+        
+          Public Domain, per Creative Commons CC0
+          http://creativecommons.org/publicdomain/zero/1.0/
+          public domain, per creative commons cc0 - 1.0.html
+          * This code was Written by Gil Tene of Azul Systems, and released to the
+                * public domain, as explained at http://creativecommons.org/publicdomain/zero/1.0/
+        
+      
+    
+    
+      
+    groupId: org.mockito
+      
+    artifactId: mockito-core
+      
+    version: 3.1.0
+      
+        
+          The MIT License
+          https://github.com/mockito/mockito/blob/master/LICENSE
+          repo
+        
+      
+    
+    
+      
+    groupId: org.mockito
+      
+    artifactId: mockito-junit-jupiter
+      
+    version: 3.1.0
+      
+        
+          The MIT License
+          https://github.com/mockito/mockito/blob/master/LICENSE
+          repo
+        
+      
+    
+    
+      
+    groupId: org.objenesis
+      
+    artifactId: objenesis
+      
+    version: 2.6
+      
+        
+          Apache 2
+          http://www.apache.org/licenses/LICENSE-2.0.txt
+          repo
+          the apache software license, version 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: org.opentest4j
+      
+    artifactId: opentest4j
+      
+    version: 1.2.0
+      
+        
+          The Apache License, Version 2.0
+          http://www.apache.org/licenses/LICENSE-2.0.txt
+          the apache software license, version 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: org.ow2.asm
+      
+    artifactId: asm
+      
+    version: 5.0.4
+      
+        
+          BSD
+          http://asm.objectweb.org/license.html
+        
+      
+    
+    
+      
+    groupId: org.reactivestreams
+      
+    artifactId: reactive-streams
+      
+    version: 1.0.3
+      
+        
+          CC0
+          http://creativecommons.org/publicdomain/zero/1.0/
+          repo
+          public domain, per creative commons cc0 - 1.0.html
+        
+      
+    
+    
+      
+    groupId: org.skyscreamer
+      
+    artifactId: jsonassert
+      
+    version: 1.5.0
+      
+        
+          The Apache Software License, Version 2.0
+          http://www.apache.org/licenses/LICENSE-2.0.txt
+          repo
+          the apache software license, version 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: org.slf4j
+      
+    artifactId: jul-to-slf4j
+      
+    version: 1.7.30
+      
+        
+          MIT License
+          http://www.opensource.org/licenses/mit-license.php
+          repo
+          mit license - mit-license.html
+        
+      
+    
+    
+      
+    groupId: org.slf4j
+      
+    artifactId: slf4j-api
+      
+    version: 1.7.25
+      
+        
+          MIT License
+          http://www.opensource.org/licenses/mit-license.php
+          repo
+          mit license - mit-license.html
+        
+      
+    
+    
+      
+    groupId: org.springframework.boot
+      
+    artifactId: spring-boot-actuator-autoconfigure
+      
+    version: 2.2.6.RELEASE
+      
+        
+          Apache License, Version 2.0
+          https://www.apache.org/licenses/LICENSE-2.0
+          apache license 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: org.springframework.boot
+      
+    artifactId: spring-boot-actuator
+      
+    version: 2.2.6.RELEASE
+      
+        
+          Apache License, Version 2.0
+          https://www.apache.org/licenses/LICENSE-2.0
+          apache license 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: org.springframework.boot
+      
+    artifactId: spring-boot-autoconfigure
+      
+    version: 2.2.6.RELEASE
+      
+        
+          Apache License, Version 2.0
+          https://www.apache.org/licenses/LICENSE-2.0
+          apache license 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: org.springframework.boot
+      
+    artifactId: spring-boot-starter-actuator
+      
+    version: 2.2.6.RELEASE
+      
+        
+          Apache License, Version 2.0
+          https://www.apache.org/licenses/LICENSE-2.0
+          apache license 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: org.springframework.boot
+      
+    artifactId: spring-boot-starter-logging
+      
+    version: 2.2.6.RELEASE
+      
+        
+          Apache License, Version 2.0
+          https://www.apache.org/licenses/LICENSE-2.0
+          apache license 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: org.springframework.boot
+      
+    artifactId: spring-boot-starter-test
+      
+    version: 2.2.6.RELEASE
+      
+        
+          Apache License, Version 2.0
+          https://www.apache.org/licenses/LICENSE-2.0
+          apache license 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: org.springframework.boot
+      
+    artifactId: spring-boot-starter
+      
+    version: 2.2.6.RELEASE
+      
+        
+          Apache License, Version 2.0
+          https://www.apache.org/licenses/LICENSE-2.0
+          apache license 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: org.springframework.boot
+      
+    artifactId: spring-boot-test-autoconfigure
+      
+    version: 2.2.6.RELEASE
+      
+        
+          Apache License, Version 2.0
+          https://www.apache.org/licenses/LICENSE-2.0
+          apache license 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: org.springframework.boot
+      
+    artifactId: spring-boot-test
+      
+    version: 2.2.6.RELEASE
+      
+        
+          Apache License, Version 2.0
+          https://www.apache.org/licenses/LICENSE-2.0
+          apache license 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: org.springframework.boot
+      
+    artifactId: spring-boot
+      
+    version: 2.2.6.RELEASE
+      
+        
+          Apache License, Version 2.0
+          https://www.apache.org/licenses/LICENSE-2.0
+          apache license 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: org.springframework.ide.vscode
+      
+    artifactId: commons-java
+      
+    version: 1.19.0-SNAPSHOT
+      
+        
+          Apache License, Version 2.0
+          https://www.apache.org/licenses/LICENSE-2.0
+          apache license 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: org.springframework.ide.vscode
+      
+    artifactId: commons-language-server
+      
+    version: 1.19.0-SNAPSHOT
+      
+        
+          Apache License, Version 2.0
+          https://www.apache.org/licenses/LICENSE-2.0
+          apache license 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: org.springframework.ide.vscode
+      
+    artifactId: commons-lsp-extensions
+      
+    version: 1.19.0-SNAPSHOT
+      
+        
+          Apache License, Version 2.0
+          https://www.apache.org/licenses/LICENSE-2.0
+          apache license 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: org.springframework.ide.vscode
+      
+    artifactId: commons-util
+      
+    version: 1.19.0-SNAPSHOT
+      
+        
+          Apache License, Version 2.0
+          https://www.apache.org/licenses/LICENSE-2.0
+          apache license 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: org.springframework.ide.vscode
+      
+    artifactId: commons-yaml
+      
+    version: 1.19.0-SNAPSHOT
+      
+        
+          Apache License, Version 2.0
+          https://www.apache.org/licenses/LICENSE-2.0
+          apache license 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: org.springframework.ide.vscode
+      
+    artifactId: language-server-starter
+      
+    version: 1.19.0-SNAPSHOT
+      
+        
+          Apache License, Version 2.0
+          https://www.apache.org/licenses/LICENSE-2.0
+          apache license 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: org.springframework.ide.vscode
+      
+    artifactId: language-server-test-harness
+      
+    version: 1.19.0-SNAPSHOT
+      
+        
+          Apache License, Version 2.0
+          https://www.apache.org/licenses/LICENSE-2.0
+          apache license 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: org.springframework
+      
+    artifactId: spring-aop
+      
+    version: 5.2.5.RELEASE
+      
+        
+          Apache License, Version 2.0
+          https://www.apache.org/licenses/LICENSE-2.0
+          repo
+          apache license 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: org.springframework
+      
+    artifactId: spring-beans
+      
+    version: 5.2.5.RELEASE
+      
+        
+          Apache License, Version 2.0
+          https://www.apache.org/licenses/LICENSE-2.0
+          repo
+          apache license 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: org.springframework
+      
+    artifactId: spring-context
+      
+    version: 5.2.5.RELEASE
+      
+        
+          Apache License, Version 2.0
+          https://www.apache.org/licenses/LICENSE-2.0
+          repo
+          apache license 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: org.springframework
+      
+    artifactId: spring-core
+      
+    version: 5.2.5.RELEASE
+      
+        
+          Apache License, Version 2.0
+          https://www.apache.org/licenses/LICENSE-2.0
+          repo
+          apache license 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: org.springframework
+      
+    artifactId: spring-expression
+      
+    version: 5.2.5.RELEASE
+      
+        
+          Apache License, Version 2.0
+          https://www.apache.org/licenses/LICENSE-2.0
+          repo
+          apache license 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: org.springframework
+      
+    artifactId: spring-jcl
+      
+    version: 5.2.5.RELEASE
+      
+        
+          Apache License, Version 2.0
+          https://www.apache.org/licenses/LICENSE-2.0
+          repo
+          apache license 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: org.springframework
+      
+    artifactId: spring-test
+      
+    version: 5.2.5.RELEASE
+      
+        
+          Apache License, Version 2.0
+          https://www.apache.org/licenses/LICENSE-2.0
+          repo
+          apache license 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: org.xmlunit
+      
+    artifactId: xmlunit-core
+      
+    version: 2.6.4
+      
+        
+          The Apache Software License, Version 2.0
+          http://www.apache.org/licenses/LICENSE-2.0.txt
+          repo
+          the apache software license, version 2.0 - license-2.0.txt
+        
+      
+    
+    
+      
+    groupId: org.yaml
+      
+    artifactId: snakeyaml
+      
+    version: 1.25
+      
+        
+          Apache License, Version 2.0
+          http://www.apache.org/licenses/LICENSE-2.0.txt
+          repo
+          the apache software license, version 2.0 - license-2.0.txt
+        
+      
+    
+  

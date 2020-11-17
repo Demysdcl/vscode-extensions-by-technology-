@@ -1,0 +1,239 @@
+{
+	"name": "vscode-spring-boot",
+	"displayName": "Spring Boot Tools",
+	"description": "Provides validation and content assist for Spring Boot `application.properties`, `application.yml` properties files. As well as Boot-specific support for `.java` files.",
+	"icon": "spring-boot-logo.png",
+	"version": "1.20.0",
+	"publisher": "Pivotal",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/spring-projects/sts4.git"
+	},
+	"license": "EPL-1.0",
+	"engines": {
+		"npm": "^6.0.0",
+		"vscode": "^1.41.0"
+	},
+	"categories": [
+		"Programming Languages",
+		"Linters"
+	],
+	"keywords": [
+		"java-properties",
+		"spring-boot",
+		"java",
+		"application-properties",
+		"application-yaml"
+	],
+	"activationEvents": [
+		"onLanguage:spring-boot-properties",
+		"onLanguage:spring-boot-properties-yaml",
+		"onLanguage:java",
+		"onLanguage:xml"
+	],
+	"contributes": {
+		"javaExtensions": [
+			"./jars/io.projectreactor.reactor-core.jar",
+			"./jars/org.reactivestreams.reactive-streams.jar",
+			"./jars/jdt-ls-commons.jar",
+			"./jars/jdt-ls-extension.jar"
+		],
+		"languages": [
+			{
+				"id": "spring-boot-properties-yaml",
+				"aliases": [
+					"Spring Boot Properties Yaml"
+				],
+				"filenamePatterns": [
+					"application*.yml",
+					"application*.yaml",
+					"bootstrap*.yml",
+					"bootstrap*.yaml"
+				],
+				"configuration": "./yaml-support/language-configuration.json"
+			},
+			{
+				"id": "spring-boot-properties",
+				"aliases": [
+					"Spring Boot Properties"
+				],
+				"filenamePatterns": [
+					"application*.properties",
+					"bootstrap*.properties"
+				],
+				"configuration": "./properties-support/language-configuration.json"
+			}
+		],
+		"commands": [
+			{
+				"command": "vscode-spring-boot.live-hover.connect",
+				"title": "Manage Live Spring Boot Process Connections"
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "Boot-Java Configuration",
+			"properties": {
+				"boot-java.live-information.automatic-tracking.on": {
+					"type": "boolean",
+					"default": false,
+					"description": "Live Information - Automatic Process Tracking Enabled"
+				},
+				"boot-java.live-information.automatic-tracking.delay": {
+					"type": "number",
+					"default": 5000,
+					"description": "Live Information - Automatic Process Tracking Delay in ms"
+				},
+				"boot-java.live-information.fetch-data.max-retries": {
+					"type": "number",
+					"default": 10,
+					"description": "Live Information - Max number of retries (before giving up)"
+				},
+				"boot-java.live-information.fetch-data.retry-delay-in-seconds": {
+					"type": "number",
+					"default": 3,
+					"description": "Live Information - Delay between retries in seconds"
+				},
+				"boot-java.scan-java-test-sources.on": {
+					"type": "boolean",
+					"default": false,
+					"description": "Enable/Disable Java test sources files scanning"
+				},
+				"boot-java.support-spring-xml-config.on": {
+					"type": "boolean",
+					"default": false,
+					"description": "Enable/Disable Support for Spring XML Config files"
+				},
+				"boot-java.support-spring-xml-config.hyperlinks": {
+					"type": "boolean",
+					"description": "Enable/Disable Hyperlinks in Spring XML Config file editor",
+					"default": true
+				},
+				"boot-java.support-spring-xml-config.content-assist": {
+					"type": "boolean",
+					"description": "Enable/Disable Content Assist in Spring XML Config file editor",
+					"default": true
+				},
+				"boot-java.support-spring-xml-config.scan-folders": {
+					"type": "string",
+					"default": "src/main",
+					"description": "Scan Spring XML in folders"
+				},
+				"boot-java.highlight-codelens.on": {
+					"type": "boolean",
+					"default": true,
+					"description": "Enable/Disable Spring running Boot application Code Lenses"
+				},
+				"boot-java.change-detection.on": {
+					"type": "boolean",
+					"default": false,
+					"description": "Enable/Disable detecting changes of running Spring Boot applications"
+				},
+				"boot-java.validation.spel.on": {
+					"type": "boolean",
+					"default": false,
+					"description": "Validation - Validate SpEL Expression Syntax"
+				},
+				"boot-java.remote-apps": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"jmxurl": {
+								"type": "string"
+							},
+							"host": {
+								"type": "string"
+							},
+							"urlScheme": {
+								"type": "string"
+							},
+							"port": {
+								"type": "number"
+							}
+						},
+						"required": [
+							"jmxurl",
+							"host"
+						]
+					},
+					"description": "Array of jmx urls pointing to remote spring boot applications to poll for live hover information. A typical url looks something like this: `service:jmx:rmi://localhost:9111/jndi/rmi://localhost:9111/jmxrmi`"
+				},
+				"spring-boot.ls.logfile": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "The path of a file to write language server logs. If not set or null, then logs are discarded."
+				},
+				"spring-boot.ls.java.home": {
+					"type": [
+						"string",
+						"null"
+					],
+					"default": null,
+					"description": "Override JAVA_HOME used for launching the spring-boot-language-server JVM process."
+				},
+				"spring-boot.ls.java.heap": {
+					"type": [
+						"string",
+						"null"
+					],
+					"default": null,
+					"description": "Max JVM heap value, passed via -Xmx argument when launching spring-boot-language-server JVM process."
+				},
+				"spring-boot.ls.java.vmargs": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"description": "Additional 'user defined' VM args to pass to the language server process."
+				},
+				"spring-boot.ls.checkJVM": {
+					"type": "boolean",
+					"default": true,
+					"description": "Enable/Disable Java VM validation"
+				}
+			}
+		},
+		"grammars": [
+			{
+				"language": "spring-boot-properties-yaml",
+				"scopeName": "source.yaml",
+				"path": "./yaml-support/yaml.tmLanguage"
+			},
+			{
+				"language": "spring-boot-properties",
+				"scopeName": "source.java-properties",
+				"path": "./properties-support/java-properties.tmLanguage"
+			}
+		]
+	},
+	"main": "./out/lib/Main",
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test",
+		"preinstall": "bash ./scripts/preinstall.sh",
+		"vsce-package": "vsce package"
+	},
+	"dependencies": {
+		"@pivotal-tools/commons-vscode": "file:../commons-vscode/pivotal-tools-commons-vscode-0.2.3.tgz",
+		"vscode-languageclient": "6.0.0"
+	},
+	"devDependencies": {
+		"vsce": "^1.74.0",
+		"typescript": "3.8.3",
+		"@types/node": "^12.7.9",
+		"@types/vscode": "^1.41.0"
+	},
+	"extensionDependencies": [
+		"redhat.java"
+	],
+	"__metadata": {
+		"id": "0efda145-8595-4ff7-98ef-1e3abc5e5757",
+		"publisherId": "dc949c7c-2584-42c6-811d-74527b53f191",
+		"publisherDisplayName": "Pivotal"
+	}
+}

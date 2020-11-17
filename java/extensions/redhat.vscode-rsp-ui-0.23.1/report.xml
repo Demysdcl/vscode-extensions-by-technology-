@@ -1,0 +1,689 @@
+<testsuites name="Mocha Tests">
+  <testsuite name="RSPProviderAPI Tests registerRSPProvider" tests="7" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:47" time="0.018">
+    <testcase classname="RSPProviderAPI Tests registerRSPProvider" name="error if rspServer object is undefined" time="0.001">
+    </testcase>
+    <testcase classname="RSPProviderAPI Tests registerRSPProvider" name="error if rspServer type is undefined" time="0.001">
+    </testcase>
+    <testcase classname="RSPProviderAPI Tests registerRSPProvider" name="error if rspServer type id is undefined" time="0">
+    </testcase>
+    <testcase classname="RSPProviderAPI Tests registerRSPProvider" name="check if new output channel is created" time="0.002">
+    </testcase>
+    <testcase classname="RSPProviderAPI Tests registerRSPProvider" name="check if serverExplorer instance is retrieved" time="0.001">
+    </testcase>
+    <testcase classname="RSPProviderAPI Tests registerRSPProvider" name="check if new rsp is added to RSPServerStatus map" time="0.001">
+    </testcase>
+    <testcase classname="RSPProviderAPI Tests registerRSPProvider" name="check if refreshtree is called" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="RSPProviderAPI Tests deregisterRSPProvider" tests="4" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:47" time="0.007">
+    <testcase classname="RSPProviderAPI Tests deregisterRSPProvider" name="error if id is undefined" time="0">
+    </testcase>
+    <testcase classname="RSPProviderAPI Tests deregisterRSPProvider" name="check if serverExplorer instance is retrieved" time="0.001">
+    </testcase>
+    <testcase classname="RSPProviderAPI Tests deregisterRSPProvider" name="error if id is not a valid RSP within RSPServerStatus map" time="0.001">
+    </testcase>
+    <testcase classname="RSPProviderAPI Tests deregisterRSPProvider" name="check if deregister remove rsp from RSPServerStatus map" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Command Handler" tests="1" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:47" time="0.007">
+    <testcase classname="Command Handler" name="activate registers event listeners" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Command Handler startRSP" tests="7" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:47" time="0.056">
+    <testcase classname="Command Handler startRSP" name="check if selectRSP method is called if context is undefined" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler startRSP" name="error if state is different from STOPPED and UNKNOWN" time="0">
+    </testcase>
+    <testcase classname="Command Handler startRSP" name="check if activateExternalProvider is called with right id" time="0.002">
+    </testcase>
+    <testcase classname="Command Handler startRSP" name="error if activateExternalProvider receive id of an extension not installed" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler startRSP" name="check if setRSPListener is called with right params" time="0.002">
+    </testcase>
+    <testcase classname="Command Handler startRSP" name="error if rspProvider.startRSP returns not valid response" time="0">
+    </testcase>
+    <testcase classname="Command Handler startRSP" name="check refreshTree is called once" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="Command Handler stopRSP" tests="11" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:47" time="0.139">
+    <testcase classname="Command Handler stopRSP" name="check if selectRSP method is called with right params if context is undefined and forced is true" time="0">
+    </testcase>
+    <testcase classname="Command Handler stopRSP" name="check if selectRSP method is called with right params if context is undefined and forced is false" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler stopRSP" name="error if state is STOPPED or UNKNOWN" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler stopRSP" name="check if getClient is called with right param" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler stopRSP" name="error if rsp&apos;s client is undefined" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler stopRSP" name="check if updateState is called twice if not forced or forced and no error occured" time="0">
+    </testcase>
+    <testcase classname="Command Handler stopRSP" name="check that shutdown server is called if stop is not forced" time="0">
+    </testcase>
+    <testcase classname="Command Handler stopRSP" name="check if external rsp provider is called if stop is forced" time="0">
+    </testcase>
+    <testcase classname="Command Handler stopRSP" name="error if external rsp provider stopRSP method returns an error" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler stopRSP" name="check if updateState is called three times if forced and error occured" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler stopRSP" name="check if disposeRSp is called with right param" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Command Handler startServer" tests="6" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:47" time="0.033">
+    <testcase classname="Command Handler startServer" name="works with injected context" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler startServer" name="works with injected context" time="0">
+    </testcase>
+    <testcase classname="Command Handler startServer" name="works without injected context" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler startServer" name="errors if the server is already running" time="0">
+    </testcase>
+    <testcase classname="Command Handler startServer" name="error if client doesn&apos;t exist" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler startServer" name="throws any errors coming from the rsp client" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Command Handler debugServer" tests="6" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:47" time="0.038">
+    <testcase classname="Command Handler debugServer" name="error if client doesn&apos;t exist" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler debugServer" name="display error if no debugInfo passed" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler debugServer" name="check if retrieve method called with right params" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler debugServer" name="display error if language is not supported" time="0">
+    </testcase>
+    <testcase classname="Command Handler debugServer" name="starts server &amp; debugging with given server" time="0.002">
+    </testcase>
+    <testcase classname="Command Handler debugServer" name="starts server &amp; debugging without given but prompted server" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Command Handler stopServer" tests="7" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:47" time="0.039">
+    <testcase classname="Command Handler stopServer" name="works with injected context" time="0">
+    </testcase>
+    <testcase classname="Command Handler stopServer" name="works without injected context" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler stopServer" name="errors if the server is already stopped" time="0">
+    </testcase>
+    <testcase classname="Command Handler stopServer" name="error if client doesn&apos;t exist" time="0">
+    </testcase>
+    <testcase classname="Command Handler stopServer" name="check if debugSession.Stop is called if debugger already started" time="0">
+    </testcase>
+    <testcase classname="Command Handler stopServer" name="error if stopServerAsync fails" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler stopServer" name="throws any errors coming from the rsp client" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Command Handler terminateServer" tests="3" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:47" time="0.02">
+    <testcase classname="Command Handler terminateServer" name="works with injected context" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler terminateServer" name="works without injected context" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler terminateServer" name="errors if the server is already stopped" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Command Handler removeServer" tests="5" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:47" time="0.036">
+    <testcase classname="Command Handler removeServer" name="works with injected context" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler removeServer" name="works without injected context" time="0">
+    </testcase>
+    <testcase classname="Command Handler removeServer" name="errors if the server is not stopped" time="0.002">
+    </testcase>
+    <testcase classname="Command Handler removeServer" name="throws any errors coming from the rsp client" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler removeServer" name="wont remove if user does not confirm" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Command Handler showServerOutput" tests="4" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:47" time="0.023">
+    <testcase classname="Command Handler showServerOutput" name="check if showOutput called with context passed as param" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler showServerOutput" name="check if selectRSP is called if no context is passed" time="0">
+    </testcase>
+    <testcase classname="Command Handler showServerOutput" name="check if selectServer is called if no context is passed" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler showServerOutput" name="check if showOutput called with right context if nothing is passed as param" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Command Handler restartServer" tests="5" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:47" time="0.031">
+    <testcase classname="Command Handler restartServer" name="should restart with given server" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler restartServer" name="should restart without given but prompted server" time="0">
+    </testcase>
+    <testcase classname="Command Handler restartServer" name="call startServer method if restart in run_mode" time="0">
+    </testcase>
+    <testcase classname="Command Handler restartServer" name="call debugServer method if restart in debug_mode" time="0">
+    </testcase>
+    <testcase classname="Command Handler restartServer" name="error if mode doesn&apos;t contains a valid value" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Command Handler restartServerInDebug" tests="2" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:47" time="0.01">
+    <testcase classname="Command Handler restartServerInDebug" name="should restart with given server" time="0">
+    </testcase>
+    <testcase classname="Command Handler restartServerInDebug" name="should restart without given but prompted server" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Command Handler addDeployment" tests="5" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:47" time="0.026">
+    <testcase classname="Command Handler addDeployment" name="addDeployment called with right context if context passed as param" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler addDeployment" name="check if selectRSP is called if no context is passed" time="0">
+    </testcase>
+    <testcase classname="Command Handler addDeployment" name="check if selectServer is called if no context is passed" time="0">
+    </testcase>
+    <testcase classname="Command Handler addDeployment" name="check if addDeployment called with right context if nothing is passed as param" time="0">
+    </testcase>
+    <testcase classname="Command Handler addDeployment" name="error if explorer has not been initialized" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Command Handler removeDeployment" tests="5" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:47" time="0.025">
+    <testcase classname="Command Handler removeDeployment" name="removedDeployment called with right context if context passed as param" time="0">
+    </testcase>
+    <testcase classname="Command Handler removeDeployment" name="check if selectRSP is called if no context is passed" time="0">
+    </testcase>
+    <testcase classname="Command Handler removeDeployment" name="check if selectServer is called if no context is passed" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler removeDeployment" name="check if showQuickPick is called if no context is passed" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler removeDeployment" name="removedDeployment called with right context if no context is passed as param" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Command Handler publishServer" tests="4" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:48" time="0.026">
+    <testcase classname="Command Handler publishServer" name="publishServer called with right context if context passed as param" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler publishServer" name="check if selectRSP is called if no context is passed" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler publishServer" name="check if selectServer is called if no context is passed" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler publishServer" name="check if publishServer called with right context if nothing is passed as param" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Command Handler createServer" tests="5" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:48" time="0.039">
+    <testcase classname="Command Handler createServer" name="check if runtime method is called if user picks Yes answer with context passed as param" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler createServer" name="check if addLocation method is called if user picks No answer with context passed as param" time="0">
+    </testcase>
+    <testcase classname="Command Handler createServer" name="check if selectRSP is called if no context is passed" time="0">
+    </testcase>
+    <testcase classname="Command Handler createServer" name="check if runtime method is called if user picks Yes answer without context passed as param" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler createServer" name="check if addLocation method is called if user picks No answer without context passed as param" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Command Handler addLocation" tests="4" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:48" time="0.02">
+    <testcase classname="Command Handler addLocation" name="calls addLocation from server explorer" time="0">
+    </testcase>
+    <testcase classname="Command Handler addLocation" name="errors if server explorer is not initialized" time="0">
+    </testcase>
+    <testcase classname="Command Handler addLocation" name="check if selectRSP is called if no rspId is passed as param" time="0">
+    </testcase>
+    <testcase classname="Command Handler addLocation" name="check if addLocation is called with correct rspId if no rspId is passed as param" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Command Handler serverActions" tests="11" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:48" time="0.054">
+    <testcase classname="Command Handler serverActions" name="check if error thrown if serverexplorer has not been initialized" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler serverActions" name="check if selectRSP is called correctly if context passed is undefined" time="0">
+    </testcase>
+    <testcase classname="Command Handler serverActions" name="check if selectServer is not called if user does not choose a rsp server" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler serverActions" name="check if selectServer is called with right params if user choose a rsp server" time="0">
+    </testcase>
+    <testcase classname="Command Handler serverActions" name="check if getServerStateById is not called if user does not choose a server" time="0">
+    </testcase>
+    <testcase classname="Command Handler serverActions" name="check if getServerStateById is called with right params if user choose a server" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler serverActions" name="check if getClientByRSP is called if context contains valid value" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler serverActions" name="check if error is displayed if client has not been initialized for current rsp" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler serverActions" name="check if chooseServerActions method is called with right param" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler serverActions" name="check if executeServerAction is not called if no action has been chosen by user" time="0">
+    </testcase>
+    <testcase classname="Command Handler serverActions" name="check if correct action is executed after user chose that if doesnt have additional properties" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Command Handler chooseServerActions" tests="3" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:48" time="0.016">
+    <testcase classname="Command Handler chooseServerActions" name="check if listServerActions is called correctly" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler chooseServerActions" name="display message if there are no actions to be displayed" time="0">
+    </testcase>
+    <testcase classname="Command Handler chooseServerActions" name="check if quickpick is called with right params if there are actions to be displayed" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Command Handler executeServerAction" tests="6" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:48" time="0.028">
+    <testcase classname="Command Handler executeServerAction" name="check if executeServerAction method is called with right param" time="0">
+    </testcase>
+    <testcase classname="Command Handler executeServerAction" name="check if handleWorkflow is called with right param" time="0">
+    </testcase>
+    <testcase classname="Command Handler executeServerAction" name="check if executeServerAction is not called second time if status returned by handleWorkflow method is undefined" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler executeServerAction" name="check if executeServerAction is not called second time if status returned by handleWorkflow method is OK" time="0">
+    </testcase>
+    <testcase classname="Command Handler executeServerAction" name="check if executeServerAction is not called second time if status returned by handleWorkflow method is Error" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler executeServerAction" name="check if executeServerAction is called second time with right params" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Command Handler handleWorkflow" tests="4" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:48" time="0.021">
+    <testcase classname="Command Handler handleWorkflow" name="check if Promise resolve if ok status is passed as param" time="0">
+    </testcase>
+    <testcase classname="Command Handler handleWorkflow" name="check if Promise rejects if errorStatus is passed as param" time="0">
+    </testcase>
+    <testcase classname="Command Handler handleWorkflow" name="check if getStrategy is not called if the response does not contain any item" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler handleWorkflow" name="check if Promise resolved if info Status is passed as param" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Command Handler editServer" tests="8" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:48" time="0.062">
+    <testcase classname="Command Handler editServer" name="check if selectRSP is called if no context is passed" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler editServer" name="check if selectServer is called if no context is passed" time="0">
+    </testcase>
+    <testcase classname="Command Handler editServer" name="check if editServer called with right context if nothing is passed as param" time="0">
+    </testcase>
+    <testcase classname="Command Handler editServer" name="errors if server explorer is not initialized" time="0">
+    </testcase>
+    <testcase classname="Command Handler editServer" name="error if RSPClient is undefined" time="0">
+    </testcase>
+    <testcase classname="Command Handler editServer" name="error if server properties object is undefined" time="0">
+    </testcase>
+    <testcase classname="Command Handler editServer" name="error if serverJson property of server properties object is undefined" time="0">
+    </testcase>
+    <testcase classname="Command Handler editServer" name="check showServerJsonResponse is called with right params if no error occurred" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Command Handler selectRSP" tests="3" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:48" time="0.025">
+    <testcase classname="Command Handler selectRSP" name="error if no filter is added and map contains only server with stopped state" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler selectRSP" name="showQuickPick not called with 1 server if filtering for stopped state" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler selectRSP" name="showQuickPick called with 2 server after filtering" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Command Handler selectServer" tests="3" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:48" time="0.015">
+    <testcase classname="Command Handler selectServer" name="getServerStatesByRSP called with correct rspId" time="0.001">
+    </testcase>
+    <testcase classname="Command Handler selectServer" name="error if filter for STOPPED status is passed but map contains only server with STARTED state" time="0">
+    </testcase>
+    <testcase classname="Command Handler selectServer" name="showQuickPick called with original map if filtering is not passed" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="DebugInfo" tests="6" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:48" time="0.01">
+    <testcase classname="DebugInfo" name="Should be java type" time="0">
+    </testcase>
+    <testcase classname="DebugInfo" name="Should get java port value" time="0">
+    </testcase>
+    <testcase classname="DebugInfo" name="Typescript should not be java type" time="0">
+    </testcase>
+    <testcase classname="DebugInfo" name="Empty should not be java type" time="0">
+    </testcase>
+    <testcase classname="DebugInfo" name="Should get null port value" time="0.001">
+    </testcase>
+    <testcase classname="DebugInfo" name="Should retrieve java debug info" time="0.007">
+    </testcase>
+  </testsuite>
+  <testsuite name="Extension Tests" tests="6" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:48" time="0.045">
+    <testcase classname="Extension Tests" name="Extension should be present" time="0.001">
+    </testcase>
+    <testcase classname="Extension Tests" name="Server is started at extension activation time" time="0.002">
+    </testcase>
+    <testcase classname="Extension Tests" name="should register all server commands" time="0.004">
+    </testcase>
+    <testcase classname="Extension Tests" name="deactivation if rsp server doesnt have rsp client defined" time="0">
+    </testcase>
+    <testcase classname="Extension Tests" name="RSP has been stopped on deactivation if spawned here" time="0">
+    </testcase>
+    <testcase classname="Extension Tests" name="RSP has been stopped on disconnected if NOT spawned here" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Job Progress" tests="10" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:48" time="0.071">
+    <testcase classname="Job Progress" name="JobProgress registers onJobAdded listener" time="0">
+    </testcase>
+    <testcase classname="Job Progress" name="onJobAdded notification should open window with progress" time="0.001">
+    </testcase>
+    <testcase classname="Job Progress" name="onJobAdded notification should register listeners for onJobChanged, onJobRemoved" time="0.001">
+    </testcase>
+    <testcase classname="Job Progress" name="onJobChanged notification should be reported incrementally" time="0.002">
+      <system-out><![CDATA[Job papa smurf completion is at 10
+Job papa smurf completion is at 40
+]]></system-out>
+    </testcase>
+    <testcase classname="Job Progress" name="onJobChanged notification should not be reported if other job" time="0.001">
+    </testcase>
+    <testcase classname="Job Progress" name="registers onCancellationRequested listener" time="0.001">
+    </testcase>
+    <testcase classname="Job Progress" name="cancelling CancellationToken cancels job" time="0.002">
+    </testcase>
+    <testcase classname="Job Progress" name="show error that contains message &amp; (start of) trace if job removal ended with error" time="0.002">
+    </testcase>
+    <testcase classname="Job Progress" name="show error that contains only message if there is no trace if job removal ended with error" time="0.002">
+    </testcase>
+    <testcase classname="Job Progress" name="dont show error if job removal ended with success" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Client Tests" tests="4" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:48" time="0.024">
+    <testcase classname="Client Tests" name="initClient - check if rspclient connect is called" time="0.001">
+    </testcase>
+    <testcase classname="Client Tests" name="initClient - check if rspclient onPromptString is called" time="0">
+    </testcase>
+    <testcase classname="Client Tests" name="initClient - check if rspclient registerClientCapabilities is called" time="0.001">
+    </testcase>
+    <testcase classname="Client Tests" name="initClient - check if jobprogress is called with current client" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="ServerEditorAdapter showEditor" tests="5" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:48" time="0.093">
+    <testcase classname="ServerEditorAdapter showEditor" name="check if parse method is called with right params" time="0.016">
+    </testcase>
+    <testcase classname="ServerEditorAdapter showEditor" name="check if openTextDocument is called with right params" time="0.014">
+    </testcase>
+    <testcase classname="ServerEditorAdapter showEditor" name="check if insert method is called with right params" time="0.03">
+    </testcase>
+    <testcase classname="ServerEditorAdapter showEditor" name="check if showTextDocument is called with right param if applyEdit succeed" time="0.001">
+    </testcase>
+    <testcase classname="ServerEditorAdapter showEditor" name="check if showInformationMessage is called with right param if applyEdit fails" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="ServerEditorAdapter showServerJsonResponse" tests="6" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:48" time="0.033">
+    <testcase classname="ServerEditorAdapter showServerJsonResponse" name="Error if server json Response is Empty" time="0">
+    </testcase>
+    <testcase classname="ServerEditorAdapter showServerJsonResponse" name="Error if serverHandle property of server json Response is Empty" time="0">
+    </testcase>
+    <testcase classname="ServerEditorAdapter showServerJsonResponse" name="Error if serverJson property of server json Response is Empty" time="0">
+    </testcase>
+    <testcase classname="ServerEditorAdapter showServerJsonResponse" name="Check if has method is called if jsonResponse passed to method are valid" time="0.001">
+    </testcase>
+    <testcase classname="ServerEditorAdapter showServerJsonResponse" name="check if createTmpFile is called with right params if RSP Server does not exist in map" time="0">
+    </testcase>
+    <testcase classname="ServerEditorAdapter showServerJsonResponse" name="Check if saveAndShowEditor is called if serverProperties doesn&apos;t exist" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="ServerEditorAdapter createTmpFile" tests="6" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:48" time="0.061">
+    <testcase classname="ServerEditorAdapter createTmpFile" name="check if tmp.file is called with right params" time="0">
+    </testcase>
+    <testcase classname="ServerEditorAdapter createTmpFile" name="check if error returned if tmp.file fails to create tmp file" time="0.001">
+    </testcase>
+    <testcase classname="ServerEditorAdapter createTmpFile" name="check if new tmp file is added to existing rsp in RSPServerProperties map" time="0.001">
+    </testcase>
+    <testcase classname="ServerEditorAdapter createTmpFile" name="check if new rsp + tmp file are added in RSPServerProperties if rsp has not been added yet" time="0">
+    </testcase>
+    <testcase classname="ServerEditorAdapter createTmpFile" name="check if saveandShowEditor is called if rsp server already exists in map" time="0">
+    </testcase>
+    <testcase classname="ServerEditorAdapter createTmpFile" name="check if saveAndShowEditor is called if rsp server has just been added to map" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="ServerEditorAdapter saveAndShowEditor" tests="3" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:48" time="0.03">
+    <testcase classname="ServerEditorAdapter saveAndShowEditor" name="check if writeFile is called with right params" time="0">
+    </testcase>
+    <testcase classname="ServerEditorAdapter saveAndShowEditor" name="check if openTextDocument is called correctly" time="0.001">
+    </testcase>
+    <testcase classname="ServerEditorAdapter saveAndShowEditor" name="check if showTextDocument is correctly called if openTextDocument succeed" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="ServerEditorAdapter onDidSaveTextDocument" tests="7" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:48" time="0.039">
+    <testcase classname="ServerEditorAdapter onDidSaveTextDocument" name="Error if doc passed as param is undefined" time="0">
+    </testcase>
+    <testcase classname="ServerEditorAdapter onDidSaveTextDocument" name="Error if doc Uri property of doc passed as param is undefined" time="0.001">
+    </testcase>
+    <testcase classname="ServerEditorAdapter onDidSaveTextDocument" name="check if isTmpServerPropsFile is called with right param" time="0">
+    </testcase>
+    <testcase classname="ServerEditorAdapter onDidSaveTextDocument" name="Error if server id is not found inside RSPServerProperties" time="0">
+    </testcase>
+    <testcase classname="ServerEditorAdapter onDidSaveTextDocument" name="Error if server handle for current (rspId,serverId) is invalid" time="0.001">
+    </testcase>
+    <testcase classname="ServerEditorAdapter onDidSaveTextDocument" name="Check if saveServerProperties is called with right params" time="0.001">
+    </testcase>
+    <testcase classname="ServerEditorAdapter onDidSaveTextDocument" name="Check if showInformationMessage is called if saveServerProperties succeed" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="ServerEditorAdapter saveServerproperties" tests="5" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:48" time="0.027">
+    <testcase classname="ServerEditorAdapter saveServerproperties" name="Error updating server if serverhandle is empty" time="0">
+    </testcase>
+    <testcase classname="ServerEditorAdapter saveServerproperties" name="Error updating server if content is empty" time="0">
+    </testcase>
+    <testcase classname="ServerEditorAdapter saveServerproperties" name="Error if client for specified rspServer has not been initialized" time="0.001">
+    </testcase>
+    <testcase classname="ServerEditorAdapter saveServerproperties" name="Return status ok if server is successfull updated" time="0">
+    </testcase>
+    <testcase classname="ServerEditorAdapter saveServerproperties" name="Return error if server is not updated" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="ServerEditorAdapter onDidCloseTextDocument" tests="3" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:48" time="0.022">
+    <testcase classname="ServerEditorAdapter onDidCloseTextDocument" name="reject if doc is undefined" time="0">
+    </testcase>
+    <testcase classname="ServerEditorAdapter onDidCloseTextDocument" name="unlink if doc is tmp file" time="0.001">
+    </testcase>
+    <testcase classname="ServerEditorAdapter onDidCloseTextDocument" name="don&apos;t do anything if file is not a tmp file" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Server explorer" tests="9" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:48" time="0.52">
+    <testcase classname="Server explorer" name="insertServer call should add server" time="0.001">
+    </testcase>
+    <testcase classname="Server explorer" name="insertServer doesn&apos;t call should add server if client is unavailable" time="0.001">
+    </testcase>
+    <testcase classname="Server explorer" name="removeServer call should remove server" time="0.001">
+    </testcase>
+    <testcase classname="Server explorer" name="removeServer should retrieve channel in serverOutputChannels" time="0.001">
+    </testcase>
+    <testcase classname="Server explorer" name="removeServer should remove channel from serverOutputChannels" time="0">
+    </testcase>
+    <testcase classname="Server explorer" name="showOutput call should show servers output channel" time="0">
+    </testcase>
+    <testcase classname="Server explorer" name="showOutput call should show nothing if output channel doesn&apos;t exist" time="0">
+    </testcase>
+    <testcase classname="Server explorer" name="addServerOutput call should show ServerOutput channel" time="0">
+    </testcase>
+    <testcase classname="Server explorer" name="refresh element should fire event for element" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Server explorer updateServer" tests="4" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:49" time="0.026">
+    <testcase classname="Server explorer updateServer" name="call should update server state to received in state change event (Stopped)" time="0.002">
+    </testcase>
+    <testcase classname="Server explorer updateServer" name="call should update server state to received in state change event (Started)" time="0.001">
+    </testcase>
+    <testcase classname="Server explorer updateServer" name="call should update server state to received in state change event (Debugging)" time="0.001">
+    </testcase>
+    <testcase classname="Server explorer updateServer" name="call should update server state to received in state change event (Unknown)" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Server explorer publish" tests="5" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:49" time="0.141">
+    <testcase classname="Server explorer publish" name="return error if there is no rsp client" time="0.001">
+    </testcase>
+    <testcase classname="Server explorer publish" name="check async publish is called if isAsync param is true" time="0.001">
+    </testcase>
+    <testcase classname="Server explorer publish" name="check sync publish is called if isAsync param is false" time="0.001">
+    </testcase>
+    <testcase classname="Server explorer publish" name="promise rejected with status message if its status is not OK" time="0">
+    </testcase>
+    <testcase classname="Server explorer publish" name="return status if its status is OK" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Server explorer addLocation" tests="4" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:49" time="0.057">
+    <testcase classname="Server explorer addLocation" name="should detect and create the server in a given location" time="0.003">
+    </testcase>
+    <testcase classname="Server explorer addLocation" name="should error if no server detected in provided location" time="0.001">
+    </testcase>
+    <testcase classname="Server explorer addLocation" name="should error if adapter type is empty" time="0">
+    </testcase>
+    <testcase classname="Server explorer addLocation" name="should stop workflow if server name is empty" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Server explorer addDeployment" tests="8" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:49" time="0.082">
+    <testcase classname="Server explorer addDeployment" name="check dialog options are set up correctly when choosing file in Windows" time="0.001">
+    </testcase>
+    <testcase classname="Server explorer addDeployment" name="check dialog options are set up correctly when choosing folder in Windows" time="0.001">
+    </testcase>
+    <testcase classname="Server explorer addDeployment" name="check dialog options are set up correctly when choosing file in Linux" time="0.001">
+    </testcase>
+    <testcase classname="Server explorer addDeployment" name="check dialog options are set up correctly when choosing folder in Linux" time="0.001">
+    </testcase>
+    <testcase classname="Server explorer addDeployment" name="check dialog options are set up correctly when opening dialog with different OSes (like MAC OS)" time="0.001">
+    </testcase>
+    <testcase classname="Server explorer addDeployment" name="check nothing is made if os picker is closed without choosing" time="0.001">
+    </testcase>
+    <testcase classname="Server explorer addDeployment" name="check if user doesn&apos;t choose any file from dialog" time="0">
+    </testcase>
+    <testcase classname="Server explorer addDeployment" name="check if user terminate before adding optional deployment parameters" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Server explorer removeDeployment" tests="3" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:49" time="0.018">
+    <testcase classname="Server explorer removeDeployment" name="check if removeDeployable is called once" time="0">
+    </testcase>
+    <testcase classname="Server explorer removeDeployment" name="check if deployable is removed correctly" time="0">
+    </testcase>
+    <testcase classname="Server explorer removeDeployment" name="check if promise is rejected when removeDeployable fails" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Server explorer getClientByRSP" tests="2" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:49" time="0.011">
+    <testcase classname="Server explorer getClientByRSP" name="check if return nothing if rsp server doesn&apos;t exists in map" time="0">
+    </testcase>
+    <testcase classname="Server explorer getClientByRSP" name="check if return right client when called with existing rsp id" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Server explorer getRSPOutputChannel" tests="2" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:49" time="0.014">
+    <testcase classname="Server explorer getRSPOutputChannel" name="check if return nothing if rsp server doesn&apos;t exists in map" time="0">
+    </testcase>
+    <testcase classname="Server explorer getRSPOutputChannel" name="check if return right output channel when called with existing rsp id" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Server explorer getRSPErrorChannel" tests="2" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:49" time="0.011">
+    <testcase classname="Server explorer getRSPErrorChannel" name="check if return nothing if rsp server doesn&apos;t exists in map" time="0">
+    </testcase>
+    <testcase classname="Server explorer getRSPErrorChannel" name="check if return right output channel when called with existing rsp id" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Server explorer getTreeItem" tests="4" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:49" time="0.032">
+    <testcase classname="Server explorer getTreeItem" name="return undefined if element is not a valid one" time="0">
+    </testcase>
+    <testcase classname="Server explorer getTreeItem" name="return valid node if RSPState is passed" time="0.001">
+    </testcase>
+    <testcase classname="Server explorer getTreeItem" name="return valid node if ServerStateNode is passed" time="0">
+    </testcase>
+    <testcase classname="Server explorer getTreeItem" name="return valid node if DeployableStateNode is passed" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Server explorer getChildren" tests="4" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:49" time="0.021">
+    <testcase classname="Server explorer getChildren" name="return RSPState nodes if undefined is passed" time="0">
+    </testcase>
+    <testcase classname="Server explorer getChildren" name="return list ServerState children nodes if rsp node is passed" time="0">
+    </testcase>
+    <testcase classname="Server explorer getChildren" name="return list DeployableState children nodes if server node is passed" time="0">
+    </testcase>
+    <testcase classname="Server explorer getChildren" name="return empty array if DeployableStateNode is passed" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Server explorer getParent" tests="3" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:49" time="0.015">
+    <testcase classname="Server explorer getParent" name="return rsp element if serverState node is passed" time="0">
+    </testcase>
+    <testcase classname="Server explorer getParent" name="return serverState element if deployablestate node is passed" time="0">
+    </testcase>
+    <testcase classname="Server explorer getParent" name="return undefined if rspState node is passed" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Server explorer getServerStateById" tests="1" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:49" time="0.008">
+    <testcase classname="Server explorer getServerStateById" name="return serverStateNode by passing rsp id and server id" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Server explorer getServerStatesByRSP" tests="1" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:49" time="0.006">
+    <testcase classname="Server explorer getServerStatesByRSP" name="return serverStateNode array by passing rsp id" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Server explorer disposeRSPProperties" tests="3" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:49" time="0.025">
+    <testcase classname="Server explorer disposeRSPProperties" name="check if disconnect client is called if client exists" time="0.001">
+    </testcase>
+    <testcase classname="Server explorer disposeRSPProperties" name="check if dispose stdout output channel if exist" time="0.001">
+    </testcase>
+    <testcase classname="Server explorer disposeRSPProperties" name="check if dispose stderr output channel if exist" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Server explorer updateRSPServer" tests="2" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:49" time="0.021">
+    <testcase classname="Server explorer updateRSPServer" name="check if value is updated for rsp state" time="0.001">
+    </testcase>
+    <testcase classname="Server explorer updateRSPServer" name="check if refresh function is called correctly" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Utils activateExternalProvider" tests="3" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:49" time="0.004">
+    <testcase classname="Utils activateExternalProvider" name="return error message if no extension found" time="0.001">
+    </testcase>
+    <testcase classname="Utils activateExternalProvider" name="check activate method is called after getExtension" time="0.001">
+    </testcase>
+    <testcase classname="Utils activateExternalProvider" name="return error if no rspProvider found when activating external extension" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Utils getIcon" tests="4" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:49" time="0.009">
+    <testcase classname="Utils getIcon" name="return null is rspId is not valid" time="0">
+    </testcase>
+    <testcase classname="Utils getIcon" name="check that activateExternalProvider is called with correct id" time="0">
+    </testcase>
+    <testcase classname="Utils getIcon" name="check if showErrorMessage method is called if activateExternalProvider fails" time="0.005">
+    </testcase>
+    <testcase classname="Utils getIcon" name="check if getImage method is called if extension is activated correctly" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Utils promptUser" tests="10" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:49" time="0.097">
+    <testcase classname="Utils promptUser" name="check if prompt value contains the correct message when item passed has both label and content properties set" time="0.038">
+    </testcase>
+    <testcase classname="Utils promptUser" name="check if prompt placeholder contains correct message if item doesnt have content prop set" time="0.025">
+    </testcase>
+    <testcase classname="Utils promptUser" name="check if value returned is true if no showQuickPick item is selected" time="0.025">
+    </testcase>
+    <testcase classname="Utils promptUser" name="check if showQuickPick is called with correct params when responseType is boolean" time="0">
+    </testcase>
+    <testcase classname="Utils promptUser" name="check if showQuickPick is called with correct params when responseType is neither bool nor none and there are validResponses" time="0">
+    </testcase>
+    <testcase classname="Utils promptUser" name="check if showQuickPick is not called but the showInputox is called if responseItem is neither bool nor none and there are no validResponses" time="0.001">
+    </testcase>
+    <testcase classname="Utils promptUser" name="check if workflowMap is filled correctly if responeType is bool" time="0.001">
+    </testcase>
+    <testcase classname="Utils promptUser" name="check if workflowMap is filled correctly if responeType is neither bool not none and validResponse field is filled" time="0">
+    </testcase>
+    <testcase classname="Utils promptUser" name="check if workflowMap is filled correctly if responeType is int" time="0">
+    </testcase>
+    <testcase classname="Utils promptUser" name="check if workflowMap is filled correctly if responeType is string but there are no validResponses" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="WorkflowResponseStrategyBrowser doAction" tests="3" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:49" time="0.003">
+    <testcase classname="WorkflowResponseStrategyBrowser doAction" name="return true if no item is passed as param" time="0">
+    </testcase>
+    <testcase classname="WorkflowResponseStrategyBrowser doAction" name="executeCommand is called with right param if an item is passed to method" time="0.001">
+    </testcase>
+    <testcase classname="WorkflowResponseStrategyBrowser doAction" name="return false if item if method is called with valid item" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="WorkflowResponseStrategyEditor doAction" tests="5" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:49" time="0.173">
+    <testcase classname="WorkflowResponseStrategyEditor doAction" name="return true if no item is passed as param" time="0.001">
+    </testcase>
+    <testcase classname="WorkflowResponseStrategyEditor doAction" name="getInstance explorer if a valid item is passed to method" time="0.109">
+    </testcase>
+    <testcase classname="WorkflowResponseStrategyEditor doAction" name="check if showEditor is called with right params" time="0.001">
+    </testcase>
+    <testcase classname="WorkflowResponseStrategyEditor doAction" name="check if return true if showEditor fails" time="0">
+    </testcase>
+    <testcase classname="WorkflowResponseStrategyEditor doAction" name="return false if no error occurs" time="0.06">
+    </testcase>
+  </testsuite>
+  <testsuite name="WorkflowResponseStrategyManager" tests="3" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:50" time="0.002">
+    <testcase classname="WorkflowResponseStrategyManager" name="check if strategies array contains all available strategies when new Manager is created" time="0.001">
+    </testcase>
+    <testcase classname="WorkflowResponseStrategyManager" name="check if getStrategy returns right strategy if name is undefined" time="0">
+    </testcase>
+    <testcase classname="WorkflowResponseStrategyManager" name="check if getStrategy returns right strategy if name is defined" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="WorkflowResponseStrategyPromptSmall doAction" tests="8" errors="0" failures="0" skipped="0" timestamp="2020-07-17T14:22:50" time="0.033">
+    <testcase classname="WorkflowResponseStrategyPromptSmall doAction" name="return true if no item is passed as param" time="0.001">
+    </testcase>
+    <testcase classname="WorkflowResponseStrategyPromptSmall doAction" name="getInstance explorer if a valid item is passed to method" time="0.008">
+    </testcase>
+    <testcase classname="WorkflowResponseStrategyPromptSmall doAction" name="check if isMultilineText is called with right params" time="0.017">
+    </testcase>
+    <testcase classname="WorkflowResponseStrategyPromptSmall doAction" name="check if showEditor is called if content is multiline" time="0">
+    </testcase>
+    <testcase classname="WorkflowResponseStrategyPromptSmall doAction" name="check if return true if showEditor fails" time="0">
+    </testcase>
+    <testcase classname="WorkflowResponseStrategyPromptSmall doAction" name="check if promptUser is called if isMultilineText method returns false" time="0.001">
+    </testcase>
+    <testcase classname="WorkflowResponseStrategyPromptSmall doAction" name="check if return true if promptUser returns true" time="0.001">
+    </testcase>
+    <testcase classname="WorkflowResponseStrategyPromptSmall doAction" name="return false if no error occurs" time="0.001">
+    </testcase>
+  </testsuite>
+</testsuites>
