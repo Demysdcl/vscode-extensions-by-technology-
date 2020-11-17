@@ -1,1 +1,0 @@
-*Optional*. Skip downloading object from S3. Same parameter as source configuration but used to define/override by get.

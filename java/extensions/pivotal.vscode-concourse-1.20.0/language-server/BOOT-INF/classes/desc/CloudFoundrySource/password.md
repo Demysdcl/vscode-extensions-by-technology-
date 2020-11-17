@@ -1,1 +1,0 @@
-*Required*. The password used to authenticate.
