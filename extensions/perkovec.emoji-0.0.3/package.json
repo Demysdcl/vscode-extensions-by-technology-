@@ -1,0 +1,58 @@
+{
+	"name": "emoji",
+	"displayName": "Emoji",
+	"description": "Plugin to insert emoji from the command palette",
+	"version": "0.0.3",
+	"publisher": "Perkovec",
+	"icon": "icon.png",
+	"bugs": {
+		"url": "https://github.com/Perkovec/Emoji/issues"
+	},
+	"keywords": [
+		"emoji",
+		"swift",
+		"smiles",
+		"command",
+		"palette",
+		"unicode"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Perkovec/Emoji.git"
+	},
+	"homepage": "https://github.com/Perkovec/Emoji",
+	"engines": {
+		"vscode": "^1.0.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:emoji.indertEmoji",
+		"onCommand:emoji.insertUnicode"
+	],
+	"main": "./extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "emoji.indertEmoji",
+				"title": "Emoji: Insert emoji"
+			},
+			{
+				"command": "emoji.insertUnicode",
+				"title": "Emoji: Insert emoji unicode"
+			}
+		]
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"devDependencies": {
+		"vscode": "^0.11.0"
+	},
+	"__metadata": {
+		"id": "a9151cd6-3338-48bc-bc6e-ba97e22489dd",
+		"publisherId": "7ba0dd26-d787-4997-a440-c1aee5ce8c1c",
+		"publisherDisplayName": "Perkovec"
+	}
+}
