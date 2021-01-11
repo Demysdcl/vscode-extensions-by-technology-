@@ -2,10 +2,10 @@
 
 ## My favorities extensions by technology
 
-*   Java
 *   Vue
 *   Svelte
 *   React
+*   Kotlin
 
 ## How to use?
 
