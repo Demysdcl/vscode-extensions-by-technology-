@@ -113,7 +113,7 @@ vscodeextk() {
 }
 
 vscodeext() {
-       rm -rf $HOME/.vscode/extensions && cp -r $HOME/.vscode/$1/extensions $HOME/.vscode && cp -a $HOME/.vscode/default/. $HOME/.vscode/extensions && code 
+       rm -rf $HOME/.vscode/extensions && cp -r $HOME/.vscode/$1/extensions $HOME/.vscode && cp -a $HOME/.vscode/default/. $HOME/.vscode/extensions && code && exit
 }
 
 
