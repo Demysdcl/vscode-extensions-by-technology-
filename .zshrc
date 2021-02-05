@@ -113,7 +113,11 @@ vscodeextk() {
 }
 
 vscodeext() {
-       rm -rf $HOME/.vscode/extensions && cp -r $HOME/.vscode/$1/extensions $HOME/.vscode && cp -a $HOME/.vscode/default/. $HOME/.vscode/extensions && code && exit
+       rm -rf $HOME/.vscode/extensions 
+       cp -r $HOME/.vscode/$1/extensions $HOME/.vscode 
+       cp -a $HOME/.vscode/default/. $HOME/.vscode/extensions 
+       code 
+       exit
 }
 
 
@@ -123,3 +127,11 @@ eval "$(rbenv init -)"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/snowmanlabs/.sdkman"
 [[ -s "/home/snowmanlabs/.sdkman/bin/sdkman-init.sh" ]] && source "/home/snowmanlabs/.sdkman/bin/sdkman-init.sh"
+
+###-tns-completion-start-###
+if [ -f /home/snowmanlabs/.tnsrc ]; then 
+    source /home/snowmanlabs/.tnsrc 
+fi
+###-tns-completion-end-###
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

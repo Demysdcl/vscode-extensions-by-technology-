@@ -1,0 +1,93 @@
+{
+	"name": "vue-vscode-snippets",
+	"displayName": "Vue VSCode Snippets",
+	"description": "Snippets that will supercharge your Vue workflow",
+	"icon": "images/vue-logo.png",
+	"version": "2.1.5",
+	"publisher": "sdras",
+	"engines": {
+		"vscode": "^1.14.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/sdras/vue-vscode-snippets.git"
+	},
+	"scripts": {
+		"build": "vsce package -o vue-vscode-snippets-$npm_package_version.vsix",
+		"install": "yarn build && code --install-extension vue-vscode-snippets-$npm_package_version.vsix"
+	},
+	"keywords": [
+		"Vue",
+		"Vue 3",
+		"Vue 2",
+		"Composition API",
+		"Vue Snippets"
+	],
+	"extensionDependencies": [
+		"octref.vetur"
+	],
+	"categories": [
+		"Snippets"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "vue",
+				"path": "./snippets/vue.json"
+			},
+			{
+				"language": "jade",
+				"path": "./snippets/vue-pug.json"
+			},
+			{
+				"language": "html",
+				"path": "./snippets/vue-template.json"
+			},
+			{
+				"language": "vue-html",
+				"path": "./snippets/vue-template.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/vue-script.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/vue-script-vuex.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/vue-script-router.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/nuxt-config.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/nuxt-script.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/vue-script.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/vue-script-vuex.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/vue-script-router.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/nuxt-config.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "c8d95916-cf54-455f-b324-cbd887b7d3a8",
+		"publisherId": "addae8ad-0041-44f2-a2d4-cbebe4912d50",
+		"publisherDisplayName": "sarah.drasner"
+	}
+}
