@@ -1,0 +1,43 @@
+{
+	"name": "python-ultisnippets",
+	"displayName": "Python UltiSnippets",
+	"description": "A set of Python snippets for VSCode",
+	"icon": "img/icon.png",
+	"version": "2.7.0",
+	"engines": {
+		"vscode": "^1.35.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/EliazBobadilla/Python-UltiSnippets-VSCode-Extension.git"
+	},
+	"author": {
+		"name": "Eliaz Bobadilla",
+		"email": "eliaz.bobadilladev@gmail.com"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"publisher": "eliazbobadilla",
+	"keywords": [
+		"snippets",
+		"python",
+		"python3",
+		"autocompletion",
+		"completion"
+	],
+	"license": "MIT",
+	"contributes": {
+		"snippets": [
+			{
+				"language": "python",
+				"path": "python.code-snippets"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "74d92e33-4717-42b4-bd88-8842490ea48e",
+		"publisherId": "58b78c3e-415c-47f2-bd5f-e70d027f0663",
+		"publisherDisplayName": "Eliaz Bobadilla"
+	}
+}

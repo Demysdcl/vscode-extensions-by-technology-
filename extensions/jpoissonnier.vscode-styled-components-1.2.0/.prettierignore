@@ -1,6 +1,0 @@
-package-lock.json
-.github
-node_modules
-.vscode-test
-src/tests
-dist
