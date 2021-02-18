@@ -6,6 +6,7 @@
 *   Svelte
 *   React
 *   Kotlin
+*   Python
 
 ## How to use?
 
