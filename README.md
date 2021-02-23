@@ -7,6 +7,7 @@
 *   React
 *   Kotlin
 *   Python
+*   Ruby
 
 ## How to use?
 
