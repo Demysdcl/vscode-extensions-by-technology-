@@ -1,0 +1,59 @@
+{
+	"name": "ruby",
+	"displayName": "Ruby Language Colorization",
+	"description": "Adds support for Ruby colorization to Visual Studio Code",
+	"version": "0.1.0",
+	"publisher": "groksrc",
+	"engines": {
+		"vscode": "^0.10.1"
+	},
+	"icon": "images/ruby.png",
+	"categories": [
+		"Languages"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/groksrc/ruby_colors_for_vscode"
+	},
+	"contributes": {
+		"languages": [
+			{
+				"id": "ruby",
+				"aliases": [
+					"Ruby",
+					"ruby"
+				],
+				"extensions": [
+					".rb",
+					".rbx",
+					".rjs",
+					".Rakefile",
+					".rake",
+					".cgi",
+					".fcgi",
+					".gemspec",
+					".irbrc",
+					".capfile",
+					".ru",
+					".prawn",
+					".Gemfile",
+					".Guardfile",
+					".Vagrantfile"
+				],
+				"configuration": "./ruby.configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "ruby",
+				"scopeName": "source.ruby",
+				"path": "./syntaxes/ruby.tmLanguage"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "45cf15f1-1616-44f2-b9f4-34c77af2dce4",
+		"publisherId": "3123305d-88e7-49f1-9133-815fe4f433be",
+		"publisherDisplayName": "Drew Cain"
+	}
+}
