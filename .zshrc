@@ -108,10 +108,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-vscodeextk() {
-	killall code && rm -rf $HOME/.vscode/extensions && cp -r $HOME/.vscode/$1/extensions $HOME/.vscode && cp -a $HOME/.vscode/default/. $HOME/.vscode/extensions && code
-}
-
 vscodeext() {
        rm -rf $HOME/.vscode/extensions 
        cp -r $HOME/.vscode/$1/extensions $HOME/.vscode 
