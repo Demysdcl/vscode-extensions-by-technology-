@@ -2,6 +2,21 @@
 sudo apt-get update
 sudo apt-get upgrade -y
 
+# Utils
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb
+sudo add-apt-repository ppa:peek-developers/stable
+sudo apt-get update
+sudo apt-get install peek
+sudo apt-get install -y deepin-screenshot
+
+
+# Install DBeaver
+wget -O - https://dbeaver.io/debs/dbeaver.gpg.key | apt-key add -
+echo "deb https://dbeaver.io/debs/dbeaver-ce /" | tee /etc/apt/sources.list.d/dbeaver.list
+sudo apt-get update -y
+sudo apt-get install dbeaver-ce -y
+
 # Install gdebi
 sudo apt-get install gdebi
 
@@ -18,6 +33,15 @@ sdk install java 11.0.5-amzn
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash
 nvm install 8
 nvm install 12
+nvm install 14
+nvm use 14
+
+# Install yarn
+npm i -g yarn
+
+#IDEs
+sudo snap install --classic code
+sudo snap install intellij-idea-community --classic --edge
 
 # Install docker
 sudo apt-get install apt-transport-https ca-certificates software-properties-common
