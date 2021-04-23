@@ -1,0 +1,26 @@
+{
+  "name": "Qute YAML",
+  "injections": {
+    "L:entity.name.tag.yaml, L:string.unquoted, L:string.quoted": {
+      "comment": "Qute patterns to inject in the entity.name.tag.yaml, string.unquoted and string.quoted scopes",
+      "patterns": [
+        {
+          "include": "grammar.qute#templates"
+        },
+        {
+          "include": "grammar.qute#comment"
+        }
+      ]
+    }
+  },
+  "patterns": [
+    {
+      "include": "grammar.qute"
+    },
+    {
+      "include": "source.yaml"
+    }
+  ],
+  "scopeName": "source.yaml.qute",
+  "uuid": "3a51bb50-65bb-41e3-8d5b-d5af19b6f74d"
+}

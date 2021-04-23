@@ -1,0 +1,192 @@
+{
+	"name": "vscode-spring-initializr",
+	"displayName": "Spring Initializr Java Support",
+	"description": "A lightweight extension based on Spring Initializr to generate quick start Spring Boot Java projects.",
+	"version": "0.7.0",
+	"icon": "resources/logo.png",
+	"publisher": "vscjava",
+	"aiKey": [
+		"c6b120cb-a893-4187-8db5-0e28734c3910",
+		"AIF-d9b70cd4-b9f9-4d70-929b-a071c400b217"
+	],
+	"homepage": "https://github.com/Microsoft/vscode-spring-initializr",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Microsoft/vscode-spring-initializr.git"
+	},
+	"engines": {
+		"vscode": "^1.30.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:spring.initializr.maven-project",
+		"onCommand:spring.initializr.gradle-project",
+		"onCommand:spring.initializr.addStarters",
+		"onCommand:spring.initializr.createProject"
+	],
+	"main": "./dist/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "spring.initializr.createProject",
+				"title": "Create a Spring Boot Project...",
+				"category": "Spring Initializr"
+			},
+			{
+				"command": "spring.initializr.maven-project",
+				"title": "Create a Maven Project...",
+				"category": "Spring Initializr"
+			},
+			{
+				"command": "spring.initializr.gradle-project",
+				"title": "Create a Gradle Project...",
+				"category": "Spring Initializr"
+			},
+			{
+				"command": "spring.initializr.addStarters",
+				"title": "Add Starters...",
+				"category": "Spring Initializr"
+			}
+		],
+		"menus": {
+			"commandPalette": [
+				{
+					"command": "spring.initializr.createProject",
+					"when": "never"
+				}
+			],
+			"editor/context": [
+				{
+					"when": "resourceFilename == pom.xml",
+					"command": "spring.initializr.addStarters",
+					"group": "SpringInitializr"
+				}
+			],
+			"explorer/context": [
+				{
+					"when": "resourceFilename == pom.xml",
+					"command": "spring.initializr.addStarters",
+					"group": "SpringInitializr"
+				}
+			]
+		},
+		"configuration": {
+			"title": "Spring Initializr",
+			"properties": {
+				"spring.initializr.serviceUrl": {
+					"default": [
+						"https://start.spring.io/"
+					],
+					"type": [
+						"string",
+						"array"
+					],
+					"pattern": "https?://.+",
+					"scope": "window",
+					"description": "Spring Initializr Service URL(s). If more than one url is specified, it requires you to select one every time you create a project."
+				},
+				"spring.initializr.defaultLanguage": {
+					"default": "",
+					"type": "string",
+					"enum": [
+						"",
+						"Java",
+						"Kotlin",
+						"Groovy"
+					],
+					"scope": "window",
+					"description": "Default language."
+				},
+				"spring.initializr.defaultJavaVersion": {
+					"default": "",
+					"type": "string",
+					"enum": [
+						"",
+						"11",
+						"15",
+						"8"
+					],
+					"scope": "window",
+					"description": "Default Java version."
+				},
+				"spring.initializr.defaultGroupId": {
+					"default": "com.example",
+					"type": "string",
+					"scope": "window",
+					"description": "Default value for Group Id."
+				},
+				"spring.initializr.defaultArtifactId": {
+					"default": "demo",
+					"type": "string",
+					"scope": "window",
+					"description": "Default value for Artifact Id."
+				},
+				"spring.initializr.defaultPackaging": {
+					"default": "",
+					"type": "string",
+					"enum": [
+						"",
+						"JAR",
+						"WAR"
+					],
+					"scope": "window",
+					"description": "Default packaging."
+				},
+				"spring.initializr.defaultOpenProjectMethod": {
+					"default": "",
+					"type": "string",
+					"scope": "window",
+					"description": "Default method of opening newly generated project",
+					"enum": [
+						"",
+						"Open",
+						"Add to Workspace"
+					]
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "webpack --mode production",
+		"compile": "webpack --mode development",
+		"tslint": "tslint -t verbose src/*.ts",
+		"watch": "webpack --mode development --watch --info-verbosity verbose",
+		"test": "npm run compile && tsc -p . && node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/fs-extra": "^5.1.0",
+		"@types/glob": "^7.1.1",
+		"@types/lodash": "^4.14.136",
+		"@types/md5": "^2.1.33",
+		"@types/mocha": "^5.2.7",
+		"@types/node": "^10.14.13",
+		"@types/vscode": "1.30.0",
+		"@types/xml-zero-lexer": "^2.1.0",
+		"@types/xml2js": "^0.4.4",
+		"glob": "^7.1.4",
+		"mocha": "^7.1.1",
+		"ts-loader": "^4.4.2",
+		"tslint": "^5.18.0",
+		"typescript": "^4.2.3",
+		"vscode-test": "^1.2.0",
+		"webpack": "^4.42.0",
+		"webpack-cli": "^3.3.12"
+	},
+	"dependencies": {
+		"extract-zip": "^1.7.0",
+		"fs-extra": "^5.0.0",
+		"lodash": "^4.17.19",
+		"md5": "^2.2.1",
+		"vscode-extension-telemetry-wrapper": "0.9.0",
+		"xml-zero-lexer": "^2.1.0",
+		"xml2js": "^0.4.19"
+	},
+	"__metadata": {
+		"id": "a205ad34-542b-4c67-a9ed-f645103ad9c0",
+		"publisherId": "bae08b87-578e-41ec-ab1c-0b036e7add88",
+		"publisherDisplayName": "Microsoft",
+		"installedTimestamp": 1619185246691
+	}
+}

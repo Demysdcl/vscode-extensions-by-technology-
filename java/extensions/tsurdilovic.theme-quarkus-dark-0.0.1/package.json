@@ -1,0 +1,41 @@
+{
+	"name": "theme-quarkus-dark",
+	"displayName": "%displayName%",
+	"description": "%description%",
+	"version": "0.0.1",
+	"icon": "resources/logo.png",
+	"publisher": "tsurdilovic",
+	"author": "Tihomir Surdilovic",
+	"license": "Apache-2.0",
+	"engines": {
+		"vscode": "*"
+	},
+	"keywords": [
+		"Quarkus",
+		"Java"
+	],
+	"categories": [
+		"Themes"
+	],
+	"homepage": "https://github.com/tsurdilo/theme-quarkus-dark/blob/master/README.md",
+	"readmeFilename": "README.md",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/tsurdilo/theme-quarkus-dark.git"
+	},
+	"contributes": {
+		"themes": [
+			{
+				"label": "Quarkus Dark",
+				"uiTheme": "vs-dark",
+				"path": "./themes/quarkus-dark-color-theme.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "e378fbc0-61c9-4269-bcbe-99ea87266f40",
+		"publisherId": "263edc84-a572-43e8-bf3b-e6492a2c6838",
+		"publisherDisplayName": "Tihomir Surdilovic",
+		"installedTimestamp": 1619185426715
+	}
+}

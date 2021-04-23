@@ -1,0 +1,86 @@
+{
+    "Datasource PostgreSQL": {
+        "prefix": [
+            "datasource-postgresql"
+        ],
+        "description": "Add datasource to your configuration",
+        "body": [
+            "quarkus.datasource.db-kind = postgresql",
+            "quarkus.datasource.${1|jdbc,reactive|}.url = jdbc:postgresql://${2:db}:${3:5432}/${4:db}",
+            "quarkus.hibernate-orm.database.generation = ${5|update,drop-and-create,none,create,drop|}",
+            "%dev.quarkus.datasource.username = ${6:user}",
+            "%dev.quarkus.datasource.password = ${7:superSecret}",
+            "%dev.quarkus.hibernate-orm.log.sql = true",
+            ""
+        ]
+    },
+    "Datasource MySQL": {
+        "prefix": [
+            "datasource-mysql"
+        ],
+        "description": "Add datasource to your configuration",
+        "body": [
+            "quarkus.datasource.db-kind = mysql",
+            "quarkus.datasource.${1|jdbc,reactive|}.url = jdbc:mysql://${2:db}:${3:3306}/${4:db}",
+            "quarkus.hibernate-orm.database.generation = ${5|update,drop-and-create,none,create,drop|}",
+            "%dev.quarkus.datasource.username = ${6:user}",
+            "%dev.quarkus.datasource.password = ${7:superSecret}",
+            "%dev.quarkus.hibernate-orm.log.sql = true",
+            ""
+        ]
+    },
+    "Datasource MariaDB": {
+        "prefix": [
+            "datasource-mariadb"
+        ],
+        "description": "Add datasource to your configuration",
+        "body": [
+            "quarkus.datasource.db-kind = mariadb",
+            "quarkus.datasource.jdbc.url = jdbc:mariadb://${1:db}:${2:3306}/${3:db}",
+            "quarkus.hibernate-orm.database.generation = ${4|update,drop-and-create,none,create,drop|}",
+            "%dev.quarkus.datasource.username = ${5:user}",
+            "%dev.quarkus.datasource.password = ${6:superSecret}",
+            "%dev.quarkus.hibernate-orm.log.sql = true",
+            ""
+        ]
+    },
+    "Datasource Microsoft SQL Server": {
+        "prefix": [
+            "datasource-mssql"
+        ],
+        "description": "Add datasource to your configuration",
+        "body": [
+            "quarkus.datasource.db-kind = mssql",
+            "quarkus.datasource.url = jdbc:sqlserver://${1:db}:${2:1433};databaseName=${3:db}",
+            "quarkus.hibernate-orm.database.generation = ${4|update,drop-and-create,none,create,drop|}",
+            "%dev.quarkus.datasource.username = ${5:user}",
+            "%dev.quarkus.datasource.password = ${6:superSecret}",
+            "%dev.quarkus.hibernate-orm.log.sql = true",
+            ""
+        ]
+    },
+    "Datasource H2": {
+        "prefix": [
+            "datasource-h2"
+        ],
+        "description": "Add datasource to your configuration",
+        "body": [
+            "quarkus.datasource.db-kind = h2",
+            "quarkus.datasource.url = jdbc:h2:mem:${1:db}",
+            "%dev.quarkus.hibernate-orm.log.sql = true",
+            ""
+        ]
+    },
+    "Datasource Derby": {
+        "prefix": [
+            "datasource-derby"
+        ],
+        "description": "Add datasource to your configuration",
+        "body": [
+            "quarkus.datasource.db-kind = derby",
+            "quarkus.datasource.url = jdbc:derby:memory:${1:db};create=true",
+            "%dev.quarkus.hibernate-orm.log.sql = true",
+            ""
+        ]
+    }
+}

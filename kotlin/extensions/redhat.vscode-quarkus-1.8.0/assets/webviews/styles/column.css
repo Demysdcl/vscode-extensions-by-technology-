@@ -1,0 +1,23 @@
+/* https://www.w3schools.cm/howto/howto_css_two_columns.asp */
+
+.column {
+  float: left;
+}
+
+@media all and (max-width: 850px) {
+  .column {
+    width: 50%;
+  }
+}
+
+@media all and (min-width: 850px) {
+  .column {
+    width: 35%;
+  }
+}
+
+.row {
+  display: flex;
+  clear: both;
+  float: none;
+}

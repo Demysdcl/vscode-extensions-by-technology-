@@ -1,0 +1,32 @@
+{
+  "groups": [
+    {
+      "name": "languageserver.boot",
+      "type": "org.springframework.ide.vscode.boot.app.BootLsConfigProperties",
+      "sourceType": "org.springframework.ide.vscode.boot.app.BootLsConfigProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "languageserver.boot.enable-jandex-index",
+      "type": "java.lang.Boolean",
+      "description": "Enables\/disables Jandex indexing of Java types. When disabled JDT LS will be used for type and package searches, type finding for FQ name etc.",
+      "sourceType": "org.springframework.ide.vscode.boot.app.BootLsConfigProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "languageserver.boot.symbol-cache-dir",
+      "type": "java.lang.String",
+      "description": "The path to the cache directory where the language server stores symbol information",
+      "sourceType": "org.springframework.ide.vscode.boot.app.BootLsConfigProperties"
+    },
+    {
+      "name": "languageserver.boot.symbol-cache-enabled",
+      "type": "java.lang.Boolean",
+      "description": "Enable's or disables disk-based symbol cache. This is enabled by default.",
+      "sourceType": "org.springframework.ide.vscode.boot.app.BootLsConfigProperties",
+      "defaultValue": true
+    }
+  ],
+  "hints": []
+}

@@ -1,0 +1,51 @@
+@import url("button.css");
+@import url("column.css");
+
+h2 {
+  font-weight: 400;
+}
+
+.title-header {
+  font-size: 26px;
+}
+
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px; /* This is from .title-header */
+}
+
+.no-bottom-margin {
+  margin-bottom: 0px;
+}
+
+.section-title {
+  margin-bottom: 0px;
+  font-size: 18px;
+}
+
+.section-div {
+  padding: 3px 25px;
+}
+
+.section-link {
+  display: block;
+  margin: 0;
+}
+
+#showWhenUsingQuarkusTools {
+  vertical-align: middle;
+  margin-left: 0px;
+}
+
+/* See vscode extensionEditor.css */
+.preview {
+	background: rgb(214, 63, 38);
+	font-size: 10px;
+	font-style: italic;
+	margin-left: 10px;
+	padding: 3px 4px;
+	border-radius: 4px;
+	user-select: none;
+	-webkit-user-select: none;
+}
