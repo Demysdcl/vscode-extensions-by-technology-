@@ -1,7 +1,0 @@
-{
-  "rules": {
-    "no-unused-variable": true,
-    "no-unused-expression": true,
-    "ordered-imports": true
-  }
-}
