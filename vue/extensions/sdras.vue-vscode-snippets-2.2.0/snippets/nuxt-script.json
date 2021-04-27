@@ -1,0 +1,61 @@
+{
+  "Nuxt Async": {
+    "prefix": "nasyncdata",
+    "body": [
+      "async asyncData ({ ${1:params} }) {",
+      "\tconst { data } = await fetch(`${2:endpoint}`).then(res => res.json())",
+      "\treturn { ${3:key}:${4:value} }",
+      "},"
+    ],
+    "description": "Nuxt asyncData"
+  },
+  "Nuxt Async": {
+    "prefix": "nasyncdataaxios",
+    "body": [
+      "async asyncData ({ ${1:$axios}, { ${2:params} }) {",
+      "\tconst data = await $axios.$get(`${3:endpoint/${params.slug}}`)",
+      "\treturn { data }",
+      "},"
+    ],
+    "description": "Nuxt asyncData with Axios module"
+  },
+  "Nuxt Fetch": {
+    "prefix": "nfetch",
+    "body": [
+      "async fetch ({ store, ${1:params} }) {",
+      "\tlet { data } = await fetch('${2:endpoint}').then(res => res.json())",
+      "\tstore.commit('${3:MUTATION_TYPE}', data)",
+      "},"
+    ],
+    "description": "Nuxt Fetch"
+  },
+  "Nuxt Fetch with Axios": {
+    "prefix": "nfetchaxios",
+    "body": [
+      "async fetch () {",
+      "\tlet this.data = await this.$axios.$get('${1:endpoint/${this.$route.params.slug}}')",
+      "},"
+    ],
+    "description": "Nuxt Fetch with Axios module"
+  },
+  "Nuxt Route Params": {
+    "prefix": "nparam",
+    "body": ["this.$route.params.${1:id}"],
+    "description": "Nuxt Route Params"
+  },
+  "Nuxt Head": {
+    "prefix": "nhead",
+    "body": [
+      "head () {",
+      "\treturn {",
+      "\t\ttitle: ${1:'Page Title'},",
+      "\t\tmeta: [",
+      "\t\t\t// hid is used as unique identifier. Do not use `vmid` for it as it will not work",
+      "\t\t\t{ hid: 'description', name: 'description', content: ${2:'My custom description'} }",
+      "\t\t]",
+      "\t}",
+      "},"
+    ],
+    "description": "Nuxt Head"
+  }
+}
