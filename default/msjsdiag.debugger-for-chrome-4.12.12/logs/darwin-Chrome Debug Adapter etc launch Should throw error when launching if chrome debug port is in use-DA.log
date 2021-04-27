@@ -1,0 +1,90 @@
+2020-5-21, 15:44:48.401 UTC
+[15:44:48.401 UTC] OS: darwin x64
+[15:44:48.401 UTC] Adapter node: v12.16.1 x64
+[15:44:48.401 UTC] vscode-chrome-debug-core: 6.8.9
+[15:44:48.401 UTC] debugger-for-chrome: 4.12.8
+[15:44:48.401 UTC] From client: initialize({"adapterID":"chrome","linesStartAt1":true,"columnsStartAt1":true,"pathFormat":"path"})
+[15:44:48.401 UTC] To client: {"seq":0,"type":"response","request_seq":1,"command":"initialize","success":true,"body":{"exceptionBreakpointFilters":[{"label":"All Exceptions","filter":"all","default":false},{"label":"Uncaught Exceptions","filter":"uncaught","default":false}],"supportsConfigurationDoneRequest":true,"supportsSetVariable":true,"supportsConditionalBreakpoints":true,"supportsCompletionsRequest":true,"supportsHitConditionalBreakpoints":true,"supportsRestartFrame":true,"supportsExceptionInfoRequest":true,"supportsDelayedStackTraceLoading":true,"supportsValueFormattingOptions":true,"supportsEvaluateForHovers":true,"supportsLoadedSourcesRequest":true,"supportsBreakpointLocationsRequest":true,"supportsRestartRequest":true,"supportsSetExpression":true,"supportsLogPoints":true}}
+[15:44:48.401 UTC] To client: {"seq":0,"type":"event","event":"output","body":{"category":"telemetry","output":"ClientRequest/initialize","data":{"Versions.DebugAdapterCore":"6.8.9","Versions.DebugAdapter":"4.12.8","successful":"true","timeTakenInMilliseconds":"1.873952","requestType":"request"}}}
+[15:44:48.401 UTC] From client: launch({"url":"http://localhost:7890","timeout":2000,"webRoot":"/Users/roblou/code/vscode-chrome-debug/testdata/intervalDebugger","port":9222,"trace":"verbose","logTimestamps":true,"disableNetworkCache":true,"logFilePath":"/Users/roblou/code/vscode-chrome-debug/logs/darwin-Chrome Debug Adapter etc launch Should throw error when launching if chrome debug port is in use-DA.log","runtimeExecutable":"/Users/roblou/code/vscode-chrome-debug/node_modules/puppeteer/.local-chromium/mac-686378/chrome-mac/Chromium.app/Contents/MacOS/Chromium","userDataDir":"/var/folders/tx/p0ycbfpj37786p760wwdg6y80000gn/T/chrome2-3540dR7ISdd3amI4"})
+[15:44:48.401 UTC] To client: {"seq":0,"type":"event","event":"output","body":{"category":"telemetry","output":"debugStarted","data":{"Versions.DebugAdapterCore":"6.8.9","Versions.DebugAdapter":"4.12.8","request":"launch","args":["url","timeout","webRoot","port","trace","logTimestamps","disableNetworkCache","logFilePath","runtimeExecutable","userDataDir","breakOnLoadStrategy","pathMapping","sourceMaps","sourceMapPathOverrides","skipFileRegExps","targetFilter","smartStep","showAsyncStacks"]}}}
+[15:44:48.401 UTC] spawn('/Users/roblou/code/vscode-chrome-debug/node_modules/puppeteer/.local-chromium/mac-686378/chrome-mac/Chromium.app/Contents/MacOS/Chromium', ["--remote-debugging-port=9222","--no-first-run","--no-default-browser-check","--user-data-dir=/var/folders/tx/p0ycbfpj37786p760wwdg6y80000gn/T/chrome2-3540dR7ISdd3amI4","about:blank"])
+[15:44:48.401 UTC] Getting browser and debug protocol version via http://127.0.0.1:9222/json/version
+[15:44:48.401 UTC] Discovering targets via http://127.0.0.1:9222/json/list
+[15:44:48.404 UTC] Got browser version: Chrome/78.0.3882.0
+[15:44:48.404 UTC] Got debug protocol version: 1.3
+[15:44:48.404 UTC] To client: {"seq":0,"type":"event","event":"output","body":{"category":"telemetry","output":"targetDebugProtocolVersion","data":{"Versions.DebugAdapterCore":"6.8.9","Versions.DebugAdapter":"4.12.8"}}}
+[15:44:48.405 UTC] To client: {"seq":0,"type":"event","event":"output","body":{"category":"telemetry","output":"targetCount","data":{"Versions.DebugAdapterCore":"6.8.9","Versions.DebugAdapter":"4.12.8","numTargets":1}}}
+[15:44:48.611 UTC] Getting browser and debug protocol version via http://127.0.0.1:9222/json/version
+[15:44:48.612 UTC] Discovering targets via http://127.0.0.1:9222/json/list
+[15:44:48.613 UTC] Got browser version: Chrome/78.0.3882.0
+[15:44:48.613 UTC] Got debug protocol version: 1.3
+[15:44:48.613 UTC] To client: {"seq":0,"type":"event","event":"output","body":{"category":"telemetry","output":"targetDebugProtocolVersion","data":{"Versions.DebugAdapterCore":"6.8.9","Versions.DebugAdapter":"4.12.8"}}}
+[15:44:48.614 UTC] To client: {"seq":0,"type":"event","event":"output","body":{"category":"telemetry","output":"targetCount","data":{"Versions.DebugAdapterCore":"6.8.9","Versions.DebugAdapter":"4.12.8","numTargets":1}}}
+[15:44:48.818 UTC] Getting browser and debug protocol version via http://127.0.0.1:9222/json/version
+[15:44:48.819 UTC] Discovering targets via http://127.0.0.1:9222/json/list
+[15:44:48.821 UTC] Got browser version: Chrome/78.0.3882.0
+[15:44:48.821 UTC] Got debug protocol version: 1.3
+[15:44:48.821 UTC] To client: {"seq":0,"type":"event","event":"output","body":{"category":"telemetry","output":"targetDebugProtocolVersion","data":{"Versions.DebugAdapterCore":"6.8.9","Versions.DebugAdapter":"4.12.8"}}}
+[15:44:48.822 UTC] To client: {"seq":0,"type":"event","event":"output","body":{"category":"telemetry","output":"targetCount","data":{"Versions.DebugAdapterCore":"6.8.9","Versions.DebugAdapter":"4.12.8","numTargets":1}}}
+[15:44:49.023 UTC] Getting browser and debug protocol version via http://127.0.0.1:9222/json/version
+[15:44:49.024 UTC] Discovering targets via http://127.0.0.1:9222/json/list
+[15:44:49.026 UTC] Got browser version: Chrome/78.0.3882.0
+[15:44:49.026 UTC] Got debug protocol version: 1.3
+[15:44:49.026 UTC] To client: {"seq":0,"type":"event","event":"output","body":{"category":"telemetry","output":"targetDebugProtocolVersion","data":{"Versions.DebugAdapterCore":"6.8.9","Versions.DebugAdapter":"4.12.8"}}}
+[15:44:49.027 UTC] To client: {"seq":0,"type":"event","event":"output","body":{"category":"telemetry","output":"targetCount","data":{"Versions.DebugAdapterCore":"6.8.9","Versions.DebugAdapter":"4.12.8","numTargets":1}}}
+[15:44:49.234 UTC] Getting browser and debug protocol version via http://127.0.0.1:9222/json/version
+[15:44:49.234 UTC] Discovering targets via http://127.0.0.1:9222/json/list
+[15:44:49.251 UTC] HTTP GET failed: Error: read ECONNRESET
+[15:44:49.251 UTC] There was an error connecting to http://127.0.0.1:9222/json/version : read ECONNRESET
+[15:44:49.252 UTC] HTTP GET failed: Error: read ECONNRESET
+[15:44:49.252 UTC] Discovering targets via http://127.0.0.1:9222/json
+[15:44:49.253 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:49.454 UTC] Getting browser and debug protocol version via http://127.0.0.1:9222/json/version
+[15:44:49.454 UTC] Discovering targets via http://127.0.0.1:9222/json/list
+[15:44:49.455 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:49.455 UTC] There was an error connecting to http://127.0.0.1:9222/json/version : connect ECONNREFUSED 127.0.0.1:9222
+[15:44:49.455 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:49.455 UTC] Discovering targets via http://127.0.0.1:9222/json
+[15:44:49.456 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:49.657 UTC] Getting browser and debug protocol version via http://127.0.0.1:9222/json/version
+[15:44:49.657 UTC] Discovering targets via http://127.0.0.1:9222/json/list
+[15:44:49.658 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:49.658 UTC] There was an error connecting to http://127.0.0.1:9222/json/version : connect ECONNREFUSED 127.0.0.1:9222
+[15:44:49.658 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:49.658 UTC] Discovering targets via http://127.0.0.1:9222/json
+[15:44:49.659 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:49.864 UTC] Getting browser and debug protocol version via http://127.0.0.1:9222/json/version
+[15:44:49.864 UTC] Discovering targets via http://127.0.0.1:9222/json/list
+[15:44:49.865 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:49.865 UTC] There was an error connecting to http://127.0.0.1:9222/json/version : connect ECONNREFUSED 127.0.0.1:9222
+[15:44:49.865 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:49.865 UTC] Discovering targets via http://127.0.0.1:9222/json
+[15:44:49.866 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:50.067 UTC] Getting browser and debug protocol version via http://127.0.0.1:9222/json/version
+[15:44:50.068 UTC] Discovering targets via http://127.0.0.1:9222/json/list
+[15:44:50.068 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:50.068 UTC] There was an error connecting to http://127.0.0.1:9222/json/version : connect ECONNREFUSED 127.0.0.1:9222
+[15:44:50.068 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:50.068 UTC] Discovering targets via http://127.0.0.1:9222/json
+[15:44:50.069 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:50.272 UTC] Getting browser and debug protocol version via http://127.0.0.1:9222/json/version
+[15:44:50.272 UTC] Discovering targets via http://127.0.0.1:9222/json/list
+[15:44:50.273 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:50.273 UTC] There was an error connecting to http://127.0.0.1:9222/json/version : connect ECONNREFUSED 127.0.0.1:9222
+[15:44:50.275 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:50.275 UTC] Discovering targets via http://127.0.0.1:9222/json
+[15:44:50.276 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:50.277 UTC] To client: {"seq":0,"type":"event","event":"output","body":{"category":"telemetry","output":"ClientRequest/launch","data":{"Versions.DebugAdapterCore":"6.8.9","Versions.DebugAdapter":"4.12.8","successful":"false","exceptionType":"firstChance","exceptionName":"Error","timeTakenInMilliseconds":"1900.67615","requestType":"request","!exceptionStack":"Error: Cannot connect to runtime process, timeout after {_timeout} ms - (reason: {_error}).\n    at Object.runtimeConnectionTimeout (/Users/roblou/code/vscode-chrome-debug/node_modules/vscode-chrome-debug-core/out/src/errors.js:91:12)\n    at /Users/roblou/code/vscode-chrome-debug/node_modules/vscode-chrome-debug-core/out/src/chrome/chromeConnection.js:110:49\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)","!exceptionMessage":"Cannot connect to runtime process, timeout after {_timeout} ms - (reason: {_error}).","!exceptionId":"2010"}}}
+[15:44:50.277 UTC] To client: {"seq":0,"type":"response","request_seq":2,"command":"launch","success":false,"message":"Cannot connect to runtime process, timeout after 2000 ms - (reason: Cannot connect to the target: connect ECONNREFUSED 127.0.0.1:9222).","body":{"error":{"id":2010,"format":"Cannot connect to runtime process, timeout after {_timeout} ms - (reason: {_error}).","variables":{"_error":"Cannot connect to the target: connect ECONNREFUSED 127.0.0.1:9222","_timeout":"2000"}}}}
+[15:44:50.313 UTC] From client: disconnect(undefined)
+[15:44:50.313 UTC] To client: {"seq":0,"type":"event","event":"output","body":{"category":"telemetry","output":"FullSessionStatistics/SourceMaps/Overrides","data":{"Versions.DebugAdapterCore":"6.8.9","Versions.DebugAdapter":"4.12.8","aspNetClientAppFallbackCount":0}}}
+[15:44:50.314 UTC] To client: {"seq":0,"type":"event","event":"output","body":{"category":"telemetry","output":"report-start-up-timings","data":{"Versions.DebugAdapterCore":"6.8.9","Versions.DebugAdapter":"4.12.8","RequestedContentWasDetected":"false","Steps":"[\"BeforeFirstStep\",\"ClientRequest/initialize\",\"ClientRequest/launch\",\"LaunchTarget.LaunchExe\",\"Attach\",\"Attach.RequestDebuggerTargetsInformation\",\"Attach.ProcessDebuggerTargetsInformation\",\"Attach.RequestDebuggerTargetsInformation\",\"Attach.ProcessDebuggerTargetsInformation\",\"Attach.RequestDebuggerTargetsInformation\",\"Attach.ProcessDebuggerTargetsInformation\",\"Attach.RequestDebuggerTargetsInformation\",\"Attach.ProcessDebuggerTargetsInformation\",\"Attach.RequestDebuggerTargetsInformation\",\"Attach.RequestDebuggerTargetsInformation\",\"Attach.RequestDebuggerTargetsInformation\",\"Attach.RequestDebuggerTargetsInformation\",\"Attach.RequestDebuggerTargetsInformation\",\"Attach.RequestDebuggerTargetsInformation\"]","All":"7712.047446","BeforeFirstStep":"[5771.562404]","WaitingAfter.ClientRequest/initialize":"[5773.332216]","ClientRequest/initialize":"[2.353946]","ClientRequest/launch":"[2.608187]","LaunchTarget.LaunchExe":"[11.079664]","Attach":"[7.247636]","Attach.RequestDebuggerTargetsInformation":"[7.718579,1.691745,2.881243,3.138713,219.64483,203.28754,206.690021,203.560637,204.423979,41.744546]","Attach.ProcessDebuggerTargetsInformation":"[207.212079,205.196346,202.000511,207.642387]","WaitingAfter.ClientRequest/launch":"[7674.644141]","RequestedContentWasNotDetectedReason":"shutdown"}}}
+[15:44:50.314 UTC] Terminated: Got disconnect request
+[15:44:50.314 UTC] Waiting for any pending steps or log messages.
+[15:44:50.315 UTC] Killing Chrome process
+[15:44:50.315 UTC] To client: {"seq":0,"type":"response","request_seq":3,"command":"disconnect","success":true}
+[15:44:50.315 UTC] To client: {"seq":0,"type":"event","event":"output","body":{"category":"telemetry","output":"ClientRequest/disconnect","data":{"Versions.DebugAdapterCore":"6.8.9","Versions.DebugAdapter":"4.12.8","successful":"true","timeTakenInMilliseconds":"2.183668","requestType":"request"}}}
+[15:44:50.315 UTC] Current step and log messages complete
+[15:44:50.315 UTC] To client: {"seq":0,"type":"event","event":"output","body":{"category":"telemetry","output":"debugStopped","data":{"Versions.DebugAdapterCore":"6.8.9","Versions.DebugAdapter":"4.12.8","reason":"Got disconnect request"}}}
+[15:44:50.315 UTC] To client: {"seq":0,"type":"event","event":"terminated"}

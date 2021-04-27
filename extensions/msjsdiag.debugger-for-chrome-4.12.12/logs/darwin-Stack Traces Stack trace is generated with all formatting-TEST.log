@@ -1,0 +1,11 @@
+2020-5-21, 15:47:57.716 UTC
+[15:48:04.140 UTC] START            10003: PuppeteerPage.waitForSelector(#button)
+[15:48:04.141 UTC] PROMISE-RETURNED 10003: PuppeteerPage.waitForSelector(#button)
+[15:48:04.141 UTC] END              10003: PuppeteerPage.waitForSelector(#button)  async  threw Error: Protocol error (Runtime.callFunctionOn): Session closed. Most likely the page has been closed.
+[15:48:04.174 UTC] Default test clean-up
+[15:48:04.177 UTC] Default test clean-up finished
+[15:48:04.177 UTC] Closing puppeteer and chrome
+[15:48:04.177 UTC] Failed to close puppeteer: Error: WebSocket is not open: readyState 3 (CLOSED)
+[15:48:04.177 UTC] Closing web-server
+[15:48:04.177 UTC] Web-server closed
+[15:48:04.177 UTC] teardown finished

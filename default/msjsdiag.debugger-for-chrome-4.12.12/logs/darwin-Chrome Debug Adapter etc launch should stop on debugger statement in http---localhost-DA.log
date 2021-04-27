@@ -1,0 +1,172 @@
+2020-5-21, 15:44:06.502 UTC
+[15:44:06.503 UTC] OS: darwin x64
+[15:44:06.503 UTC] Adapter node: v12.16.1 x64
+[15:44:06.503 UTC] vscode-chrome-debug-core: 6.8.9
+[15:44:06.503 UTC] debugger-for-chrome: 4.12.8
+[15:44:06.503 UTC] From client: initialize({"adapterID":"chrome","linesStartAt1":true,"columnsStartAt1":true,"pathFormat":"path"})
+[15:44:06.503 UTC] To client: {"seq":0,"type":"response","request_seq":1,"command":"initialize","success":true,"body":{"exceptionBreakpointFilters":[{"label":"All Exceptions","filter":"all","default":false},{"label":"Uncaught Exceptions","filter":"uncaught","default":false}],"supportsConfigurationDoneRequest":true,"supportsSetVariable":true,"supportsConditionalBreakpoints":true,"supportsCompletionsRequest":true,"supportsHitConditionalBreakpoints":true,"supportsRestartFrame":true,"supportsExceptionInfoRequest":true,"supportsDelayedStackTraceLoading":true,"supportsValueFormattingOptions":true,"supportsEvaluateForHovers":true,"supportsLoadedSourcesRequest":true,"supportsBreakpointLocationsRequest":true,"supportsRestartRequest":true,"supportsSetExpression":true,"supportsLogPoints":true}}
+[15:44:06.503 UTC] To client: {"seq":0,"type":"event","event":"output","body":{"category":"telemetry","output":"ClientRequest/initialize","data":{"Versions.DebugAdapterCore":"6.8.9","Versions.DebugAdapter":"4.12.8","successful":"true","timeTakenInMilliseconds":"1.624128","requestType":"request"}}}
+[15:44:06.503 UTC] From client: launch({"url":"http://localhost:7890","webRoot":"/Users/roblou/code/vscode-chrome-debug/testdata/intervalDebugger","trace":"verbose","logTimestamps":true,"disableNetworkCache":true,"logFilePath":"/Users/roblou/code/vscode-chrome-debug/logs/darwin-Chrome Debug Adapter etc launch should stop on debugger statement in http---localhost-DA.log","runtimeExecutable":"/Users/roblou/code/vscode-chrome-debug/node_modules/puppeteer/.local-chromium/mac-686378/chrome-mac/Chromium.app/Contents/MacOS/Chromium","userDataDir":"/var/folders/tx/p0ycbfpj37786p760wwdg6y80000gn/T/chrome2-3540EsMOoC1Hfuph"})
+[15:44:06.503 UTC] To client: {"seq":0,"type":"event","event":"output","body":{"category":"telemetry","output":"debugStarted","data":{"Versions.DebugAdapterCore":"6.8.9","Versions.DebugAdapter":"4.12.8","request":"launch","args":["url","webRoot","trace","logTimestamps","disableNetworkCache","logFilePath","runtimeExecutable","userDataDir","breakOnLoadStrategy","pathMapping","sourceMaps","sourceMapPathOverrides","skipFileRegExps","targetFilter","smartStep","showAsyncStacks"]}}}
+[15:44:06.503 UTC] spawn('/Users/roblou/code/vscode-chrome-debug/node_modules/puppeteer/.local-chromium/mac-686378/chrome-mac/Chromium.app/Contents/MacOS/Chromium', ["--remote-debugging-port=9222","--no-first-run","--no-default-browser-check","--user-data-dir=/var/folders/tx/p0ycbfpj37786p760wwdg6y80000gn/T/chrome2-3540EsMOoC1Hfuph","about:blank"])
+[15:44:06.503 UTC] Getting browser and debug protocol version via http://127.0.0.1:9222/json/version
+[15:44:06.503 UTC] Discovering targets via http://127.0.0.1:9222/json/list
+[15:44:06.503 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:06.503 UTC] There was an error connecting to http://127.0.0.1:9222/json/version : connect ECONNREFUSED 127.0.0.1:9222
+[15:44:06.503 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:06.503 UTC] Discovering targets via http://127.0.0.1:9222/json
+[15:44:06.503 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:06.709 UTC] Getting browser and debug protocol version via http://127.0.0.1:9222/json/version
+[15:44:06.709 UTC] Discovering targets via http://127.0.0.1:9222/json/list
+[15:44:06.710 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:06.710 UTC] There was an error connecting to http://127.0.0.1:9222/json/version : connect ECONNREFUSED 127.0.0.1:9222
+[15:44:06.710 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:06.710 UTC] Discovering targets via http://127.0.0.1:9222/json
+[15:44:06.711 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:06.912 UTC] Getting browser and debug protocol version via http://127.0.0.1:9222/json/version
+[15:44:06.912 UTC] Discovering targets via http://127.0.0.1:9222/json/list
+[15:44:06.913 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:06.913 UTC] There was an error connecting to http://127.0.0.1:9222/json/version : connect ECONNREFUSED 127.0.0.1:9222
+[15:44:06.913 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:06.913 UTC] Discovering targets via http://127.0.0.1:9222/json
+[15:44:06.914 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:07.118 UTC] Getting browser and debug protocol version via http://127.0.0.1:9222/json/version
+[15:44:07.119 UTC] Discovering targets via http://127.0.0.1:9222/json/list
+[15:44:07.121 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:07.121 UTC] There was an error connecting to http://127.0.0.1:9222/json/version : connect ECONNREFUSED 127.0.0.1:9222
+[15:44:07.121 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:07.121 UTC] Discovering targets via http://127.0.0.1:9222/json
+[15:44:07.122 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:07.322 UTC] Getting browser and debug protocol version via http://127.0.0.1:9222/json/version
+[15:44:07.322 UTC] Discovering targets via http://127.0.0.1:9222/json/list
+[15:44:07.323 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:07.323 UTC] There was an error connecting to http://127.0.0.1:9222/json/version : connect ECONNREFUSED 127.0.0.1:9222
+[15:44:07.323 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:07.323 UTC] Discovering targets via http://127.0.0.1:9222/json
+[15:44:07.323 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:07.529 UTC] Getting browser and debug protocol version via http://127.0.0.1:9222/json/version
+[15:44:07.529 UTC] Discovering targets via http://127.0.0.1:9222/json/list
+[15:44:07.530 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:07.530 UTC] There was an error connecting to http://127.0.0.1:9222/json/version : connect ECONNREFUSED 127.0.0.1:9222
+[15:44:07.530 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:07.530 UTC] Discovering targets via http://127.0.0.1:9222/json
+[15:44:07.530 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:07.736 UTC] Getting browser and debug protocol version via http://127.0.0.1:9222/json/version
+[15:44:07.736 UTC] Discovering targets via http://127.0.0.1:9222/json/list
+[15:44:07.737 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:07.737 UTC] There was an error connecting to http://127.0.0.1:9222/json/version : connect ECONNREFUSED 127.0.0.1:9222
+[15:44:07.737 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:07.737 UTC] Discovering targets via http://127.0.0.1:9222/json
+[15:44:07.737 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:07.941 UTC] Getting browser and debug protocol version via http://127.0.0.1:9222/json/version
+[15:44:07.942 UTC] Discovering targets via http://127.0.0.1:9222/json/list
+[15:44:07.942 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:07.942 UTC] There was an error connecting to http://127.0.0.1:9222/json/version : connect ECONNREFUSED 127.0.0.1:9222
+[15:44:07.943 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:07.943 UTC] Discovering targets via http://127.0.0.1:9222/json
+[15:44:07.943 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:08.144 UTC] Getting browser and debug protocol version via http://127.0.0.1:9222/json/version
+[15:44:08.144 UTC] Discovering targets via http://127.0.0.1:9222/json/list
+[15:44:08.145 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:08.145 UTC] There was an error connecting to http://127.0.0.1:9222/json/version : connect ECONNREFUSED 127.0.0.1:9222
+[15:44:08.145 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:08.145 UTC] Discovering targets via http://127.0.0.1:9222/json
+[15:44:08.145 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:08.346 UTC] Getting browser and debug protocol version via http://127.0.0.1:9222/json/version
+[15:44:08.346 UTC] Discovering targets via http://127.0.0.1:9222/json/list
+[15:44:08.347 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:08.347 UTC] There was an error connecting to http://127.0.0.1:9222/json/version : connect ECONNREFUSED 127.0.0.1:9222
+[15:44:08.347 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:08.347 UTC] Discovering targets via http://127.0.0.1:9222/json
+[15:44:08.348 UTC] HTTP GET failed: Error: connect ECONNREFUSED 127.0.0.1:9222
+[15:44:08.549 UTC] Getting browser and debug protocol version via http://127.0.0.1:9222/json/version
+[15:44:08.550 UTC] Discovering targets via http://127.0.0.1:9222/json/list
+[15:44:13.949 UTC] Got browser version: Chrome/78.0.3882.0
+[15:44:13.949 UTC] Got debug protocol version: 1.3
+[15:44:13.949 UTC] To client: {"seq":0,"type":"event","event":"output","body":{"category":"telemetry","output":"targetDebugProtocolVersion","data":{"Versions.DebugAdapterCore":"6.8.9","Versions.DebugAdapter":"4.12.8"}}}
+[15:44:13.950 UTC] To client: {"seq":0,"type":"event","event":"output","body":{"category":"telemetry","output":"targetCount","data":{"Versions.DebugAdapterCore":"6.8.9","Versions.DebugAdapter":"4.12.8","numTargets":1}}}
+[15:44:13.951 UTC] Attaching to target: {"description":"","devtoolsFrontendUrl":"/devtools/inspector.html?ws=localhost/devtools/page/1E1941F7C6F9F6606A94BC32436CD264","id":"1E1941F7C6F9F6606A94BC32436CD264","title":"","type":"page","url":"about:blank","webSocketDebuggerUrl":"ws://127.0.0.1:9222/devtools/page/1E1941F7C6F9F6606A94BC32436CD264","version":{}}
+[15:44:13.951 UTC] WebSocket Url: ws://127.0.0.1:9222/devtools/page/1E1941F7C6F9F6606A94BC32436CD264
+[15:44:13.979 UTC] → To target: "{\"id\":1,\"method\":\"Console.enable\"}"
+[15:44:13.979 UTC] → To target: "{\"id\":2,\"method\":\"Debugger.enable\"}"
+[15:44:13.979 UTC] → To target: "{\"id\":3,\"method\":\"Runtime.enable\"}"
+[15:44:13.980 UTC] → To target: "{\"id\":4,\"method\":\"Log.enable\"}"
+[15:44:13.980 UTC] → To target: "{\"id\":5,\"method\":\"Runtime.runIfWaitingForDebugger\"}"
+[15:44:13.980 UTC] → To target: "{\"id\":6,\"method\":\"Runtime.run\"}"
+[15:44:13.980 UTC] → To target: "{\"id\":7,\"method\":\"Page.enable\"}"
+[15:44:13.981 UTC] → To target: "{\"id\":8,\"method\":\"Network.enable\",\"params\":{}}"
+[15:44:14.021 UTC] ← From target: {"id":1,"result":{}}
+[15:44:14.022 UTC] ← From target: {"id":2,"result":{"debuggerId":"(FB8F4FC0C527F9F78B2B091B523DE340)"}}
+[15:44:14.022 UTC] ← From target: {"method":"Runtime.executionContextCreated","params":{"context":{"id":1,"origin":"://","name":"","auxData":{"isDefault":true,"type":"default","frameId":"1E1941F7C6F9F6606A94BC32436CD264"}}}}
+[15:44:14.023 UTC] ← From target: {"id":3,"result":{}}
+[15:44:14.023 UTC] ← From target: {"id":4,"result":{}}
+[15:44:14.023 UTC] ← From target: {"id":5,"result":{}}
+[15:44:14.024 UTC] ← From target: {"error":{"code":-32601,"message":"'Runtime.run' wasn't found"},"id":6}
+[15:44:14.024 UTC] ← From target: {"id":7,"result":{}}
+[15:44:14.024 UTC] ← From target: {"id":8,"result":{}}
+[15:44:14.025 UTC] → To target: "{\"id\":9,\"method\":\"Debugger.setBlackboxPatterns\",\"params\":{\"patterns\":[\"^chrome-extension:.*\"]}}"
+[15:44:14.025 UTC] → To target: "{\"id\":10,\"method\":\"Schema.getDomains\"}"
+[15:44:14.025 UTC] ← From target: {"method":"Page.frameResized","params":{}}
+[15:44:14.026 UTC] ← From target: {"id":10,"result":{"domains":[{"name":"Inspector","version":"1.2"},{"name":"Memory","version":"1.2"},{"name":"Page","version":"1.2"},{"name":"Emulation","version":"1.2"},{"name":"Security","version":"1.2"},{"name":"Network","version":"1.2"},{"name":"Database","version":"1.2"},{"name":"IndexedDB","version":"1.2"},{"name":"CacheStorage","version":"1.2"},{"name":"DOMStorage","version":"1.2"},{"name":"CSS","version":"1.2"},{"name":"ApplicationCache","version":"1.2"},{"name":"DOM","version":"1.2"},{"name":"IO","version":"1.2"},{"name":"DOMDebugger","version":"1.2"},{"name":"DOMSnapshot","version":"1.2"},{"name":"ServiceWorker","version":"1.2"},{"name":"Input","version":"1.2"},{"name":"LayerTree","version":"1.2"},{"name":"DeviceOrientation","version":"1.2"},{"name":"Tracing","version":"1.2"},{"name":"Animation","version":"1.2"},{"name":"Accessibility","version":"1.2"},{"name":"Storage","version":"1.2"},{"name":"Log","version":"1.2"},{"name":"Runtime","version":"1.2"},{"name":"Debugger","version":"1.2"},{"name":"Profiler","version":"1.2"},{"name":"HeapProfiler","version":"1.2"},{"name":"Schema","version":"1.2"},{"name":"Target","version":"1.2"},{"name":"Overlay","version":"1.2"},{"name":"Performance","version":"1.2"},{"name":"Audits","version":"1.2"},{"name":"HeadlessExperimental","version":"1.2"}]}}
+[15:44:14.026 UTC] → To target: "{\"id\":11,\"method\":\"Debugger.setAsyncCallStackDepth\",\"params\":{\"maxDepth\":4}}"
+[15:44:14.026 UTC] ← From target: {"id":9,"result":{}}
+[15:44:14.027 UTC] ← From target: {"id":11,"result":{}}
+[15:44:14.027 UTC] → To target: "{\"id\":12,\"method\":\"Runtime.evaluate\",\"params\":{\"expression\":\"navigator.userAgent\",\"silent\":true}}"
+[15:44:14.027 UTC] → To target: "{\"id\":13,\"method\":\"Browser.getVersion\"}"
+[15:44:14.027 UTC] To client: {"seq":0,"type":"response","request_seq":2,"command":"launch","success":true}
+[15:44:14.028 UTC] To client: {"seq":0,"type":"event","event":"output","body":{"category":"telemetry","output":"ClientRequest/launch","data":{"Versions.DebugAdapterCore":"6.8.9","Versions.DebugAdapter":"4.12.8","successful":"true","timeTakenInMilliseconds":"7549.332674","requestType":"request"}}}
+[15:44:14.028 UTC] ← From target: {"id":13,"result":{"protocolVersion":"1.3","product":"Chrome/78.0.3882.0","revision":"@19d4547535ab5aba70b4730443f84e8153052174","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3882.0 Safari/537.36","jsVersion":"7.8.89"}}
+[15:44:14.029 UTC] To client: {"seq":0,"type":"event","event":"output","body":{"category":"telemetry","output":"target-version","data":{"Versions.DebugAdapterCore":"6.8.9","Versions.DebugAdapter":"4.12.8","Versions.Target.CRDPVersion":"1.3","Versions.Target.Revision":"@19d4547535ab5aba70b4730443f84e8153052174","Versions.Target.UserAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3882.0 Safari/537.36","Versions.Target.V8":"7.8.89","Versions.Target.Project":"Chrome","Versions.Target.Version":"78.0.3882.0"}}}
+[15:44:14.029 UTC] ← From target: {"method":"Debugger.scriptParsed","params":{"scriptId":"13","url":"","startLine":0,"startColumn":0,"endLine":0,"endColumn":19,"executionContextId":1,"hash":"3a6f8cb8708878331cc2be2ec90de0ab25738855","executionContextAuxData":{"isDefault":true,"type":"default","frameId":"1E1941F7C6F9F6606A94BC32436CD264"},"isLiveEdit":false,"sourceMapURL":"","hasSourceURL":false,"isModule":false,"length":19}}
+[15:44:14.032 UTC] → To target: "{\"id\":14,\"method\":\"Debugger.getPossibleBreakpoints\",\"params\":{\"start\":{\"scriptId\":\"13\",\"lineNumber\":0,\"columnNumber\":0},\"end\":{\"scriptId\":\"13\",\"lineNumber\":1,\"columnNumber\":0},\"restrictToFunction\":false}}"
+[15:44:14.034 UTC] ← From target: {"id":12,"result":{"result":{"type":"string","value":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3882.0 Safari/537.36"}}}
+[15:44:14.035 UTC] Target userAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3882.0 Safari/537.36
+[15:44:14.035 UTC] → To target: "{\"id\":15,\"method\":\"Network.setCacheDisabled\",\"params\":{\"cacheDisabled\":true}}"
+[15:44:14.036 UTC] ← From target: {"id":14,"result":{"locations":[{"scriptId":"13","lineNumber":0,"columnNumber":0}]}}
+[15:44:14.037 UTC] To client: {"seq":0,"type":"event","event":"initialized"}
+[15:44:14.038 UTC] To client: {"seq":0,"type":"event","event":"loadedSource","body":{"reason":"new","source":{"name":"VM13","path":"<eval>/VM13","sourceReference":1000}}}
+[15:44:14.038 UTC] From client: configurationDone(undefined)
+[15:44:14.038 UTC] → To target: "{\"id\":16,\"method\":\"Page.navigate\",\"params\":{\"url\":\"http://localhost:7890\"}}"
+[15:44:14.038 UTC] To client: {"seq":0,"type":"response","request_seq":3,"command":"configurationDone","success":true}
+[15:44:14.039 UTC] To client: {"seq":0,"type":"event","event":"output","body":{"category":"telemetry","output":"ClientRequest/configurationDone","data":{"Versions.DebugAdapterCore":"6.8.9","Versions.DebugAdapter":"4.12.8","Versions.Target.CRDPVersion":"1.3","Versions.Target.Revision":"@19d4547535ab5aba70b4730443f84e8153052174","Versions.Target.UserAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3882.0 Safari/537.36","Versions.Target.V8":"7.8.89","Versions.Target.Project":"Chrome","Versions.Target.Version":"78.0.3882.0","successful":"true","timeTakenInMilliseconds":"0.51564","requestType":"request"}}}
+[15:44:14.039 UTC] ← From target: {"id":15,"result":{}}
+[15:44:14.059 UTC] ← From target: {"id":16,"result":{"frameId":"1E1941F7C6F9F6606A94BC32436CD264","loaderId":"1C3EA00D24BDF0C1702823B7EA06CFF0"}}
+[15:44:14.084 UTC] ← From target: {"method":"Page.frameStartedLoading","params":{"frameId":"1E1941F7C6F9F6606A94BC32436CD264"}}
+[15:44:14.087 UTC] ← From target: {"method":"Runtime.executionContextDestroyed","params":{"executionContextId":1}}
+[15:44:14.091 UTC] ← From target: {"method":"Runtime.executionContextsCleared","params":{}}
+[15:44:14.092 UTC] To client: {"seq":0,"type":"event","event":"loadedSource","body":{"reason":"removed","source":{"name":"VM13","path":"<eval>/VM13","sourceReference":1000}}}
+[15:44:14.093 UTC] ← From target: {"method":"Page.frameNavigated","params":{"frame":{"id":"1E1941F7C6F9F6606A94BC32436CD264","loaderId":"1C3EA00D24BDF0C1702823B7EA06CFF0","url":"http://localhost:7890/","securityOrigin":"http://localhost:7890","mimeType":"text/html"}}}
+[15:44:14.094 UTC] ← From target: {"method":"Runtime.executionContextCreated","params":{"context":{"id":2,"origin":"http://localhost:7890","name":"","auxData":{"isDefault":true,"type":"default","frameId":"1E1941F7C6F9F6606A94BC32436CD264"}}}}
+[15:44:14.274 UTC] ← From target: {"method":"Debugger.scriptParsed","params":{"scriptId":"14","url":"http://localhost:7890/out/app.js","startLine":0,"startColumn":0,"endLine":4,"endColumn":31,"executionContextId":2,"hash":"317239527e2f91835e5e28114ab7fc0350aa5a36","executionContextAuxData":{"isDefault":true,"type":"default","frameId":"1E1941F7C6F9F6606A94BC32436CD264"},"isLiveEdit":false,"sourceMapURL":"app.js.map","hasSourceURL":false,"isModule":false,"length":115}}
+[15:44:14.275 UTC] Paths.scriptParsed: resolved http://localhost:7890/out/app.js to /Users/roblou/code/vscode-chrome-debug/testdata/intervalDebugger/out/app.js. pathMapping/webroot: {"/":"/Users/roblou/code/vscode-chrome-debug/testdata/intervalDebugger"}
+[15:44:14.275 UTC] SourceMaps.getMapForGeneratedPath: Finding SourceMap for /Users/roblou/code/vscode-chrome-debug/testdata/intervalDebugger/out/app.js by URI: app.js.map and webRoot/pathMapping: {"/":"/Users/roblou/code/vscode-chrome-debug/testdata/intervalDebugger"}
+[15:44:14.276 UTC] SourceMaps.loadSourceMapContents: Reading local sourcemap file from /Users/roblou/code/vscode-chrome-debug/testdata/intervalDebugger/out/app.js.map
+[15:44:14.276 UTC] To client: {"seq":0,"type":"event","event":"loadedSource","body":{"reason":"new","source":{"name":"app.js","path":"http://localhost:7890/out/app.js","sourceReference":1001}}}
+[15:44:14.277 UTC] ← From target: {"method":"Page.loadEventFired","params":{"timestamp":1398047.277619}}
+[15:44:14.277 UTC] SourceMap: creating for /Users/roblou/code/vscode-chrome-debug/testdata/intervalDebugger/out/app.js
+[15:44:14.277 UTC] SourceMap: sourceRoot: 
+[15:44:14.277 UTC] SourceMap: sources: ["../src/app.ts"]
+[15:44:14.277 UTC] SourceMap: pathMapping: {"/":"/Users/roblou/code/vscode-chrome-debug/testdata/intervalDebugger"}
+[15:44:14.278 UTC] SourceMap: no sourceRoot specified, using script dirname: /Users/roblou/code/vscode-chrome-debug/testdata/intervalDebugger/out
+[15:44:14.280 UTC] SourceMaps.scriptParsed: /Users/roblou/code/vscode-chrome-debug/testdata/intervalDebugger/out/app.js was just loaded and has mapped sources: ["/Users/roblou/code/vscode-chrome-debug/testdata/intervalDebugger/src/app.ts"]
+[15:44:14.280 UTC] ← From target: {"method":"Page.frameStoppedLoading","params":{"frameId":"1E1941F7C6F9F6606A94BC32436CD264"}}
+[15:44:14.280 UTC] ← From target: {"method":"Page.domContentEventFired","params":{"timestamp":1398047.458059}}
+[15:44:14.281 UTC] ← From target: {"method":"Debugger.paused","params":{"callFrames":[{"callFrameId":"{\"ordinal\":0,\"injectedScriptId\":2}","functionName":"debuggerStatement","functionLocation":{"scriptId":"14","lineNumber":0,"columnNumber":26},"location":{"scriptId":"14","lineNumber":1,"columnNumber":4},"url":"http://localhost:7890/out/app.js","scopeChain":[{"type":"local","object":{"type":"object","className":"Object","description":"Object","objectId":"{\"injectedScriptId\":2,\"id\":1}"},"name":"debuggerStatement","startLocation":{"scriptId":"14","lineNumber":0,"columnNumber":26},"endLocation":{"scriptId":"14","lineNumber":2,"columnNumber":1}},{"type":"global","object":{"type":"object","className":"Window","description":"Window","objectId":"{\"injectedScriptId\":2,\"id\":2}"}}],"this":{"type":"object","className":"Window","description":"Window","objectId":"{\"injectedScriptId\":2,\"id\":3}"}}],"reason":"other","hitBreakpoints":[],"asyncStackTrace":{"description":"setInterval","callFrames":[{"functionName":"","scriptId":"14","url":"http://localhost:7890/out/app.js","lineNumber":3,"columnNumber":0}]}}}
+[15:44:14.282 UTC] To client: {"seq":0,"type":"event","event":"stopped","body":{"reason":"debugger_statement","threadId":1,"description":"Paused on debugger statement"}}
+[15:44:14.282 UTC] → To target: "{\"id\":17,\"method\":\"Overlay.setPausedInDebuggerMessage\",\"params\":{\"message\":\"Paused in Visual Studio Code\"}}"
+[15:44:14.283 UTC] From client: stackTrace({"threadId":1})
+[15:44:14.286 UTC] To client: {"seq":0,"type":"response","request_seq":4,"command":"stackTrace","success":true,"body":{"stackFrames":[{"id":1000,"name":"debuggerStatement","source":{"name":"app.ts","path":"/Users/roblou/code/vscode-chrome-debug/testdata/intervalDebugger/src/app.ts"},"line":2,"column":5},{"id":1002,"name":"[ setInterval ]","presentationHint":"label"},{"id":1001,"name":"(anonymous function)","source":{"name":"app.ts","path":"/Users/roblou/code/vscode-chrome-debug/testdata/intervalDebugger/src/app.ts"},"line":5,"column":1}],"totalFrames":3}}
+[15:44:14.286 UTC] To client: {"seq":0,"type":"event","event":"output","body":{"category":"telemetry","output":"ClientRequest/stackTrace","data":{"Versions.DebugAdapterCore":"6.8.9","Versions.DebugAdapter":"4.12.8","Versions.Target.CRDPVersion":"1.3","Versions.Target.Revision":"@19d4547535ab5aba70b4730443f84e8153052174","Versions.Target.UserAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3882.0 Safari/537.36","Versions.Target.V8":"7.8.89","Versions.Target.Project":"Chrome","Versions.Target.Version":"78.0.3882.0","successful":"true","timeTakenInMilliseconds":"3.267793","requestType":"request"}}}
+[15:44:14.287 UTC] From client: disconnect(undefined)
+[15:44:14.288 UTC] To client: {"seq":0,"type":"event","event":"output","body":{"category":"telemetry","output":"FullSessionStatistics/SourceMaps/Overrides","data":{"Versions.DebugAdapterCore":"6.8.9","Versions.DebugAdapter":"4.12.8","Versions.Target.CRDPVersion":"1.3","Versions.Target.Revision":"@19d4547535ab5aba70b4730443f84e8153052174","Versions.Target.UserAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3882.0 Safari/537.36","Versions.Target.V8":"7.8.89","Versions.Target.Project":"Chrome","Versions.Target.Version":"78.0.3882.0","aspNetClientAppFallbackCount":0}}}
+[15:44:14.288 UTC] To client: {"seq":0,"type":"event","event":"output","body":{"category":"telemetry","output":"target/notification/onScriptParsed","data":{"Versions.DebugAdapterCore":"6.8.9","Versions.DebugAdapter":"4.12.8","Versions.Target.CRDPVersion":"1.3","Versions.Target.Revision":"@19d4547535ab5aba70b4730443f84e8153052174","Versions.Target.UserAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3882.0 Safari/537.36","Versions.Target.V8":"7.8.89","Versions.Target.Project":"Chrome","Versions.Target.Version":"78.0.3882.0","aggregated.startTime":"[\"1590075854029\",\"1590075854274\"]","aggregated.successful":"[\"true\",\"true\"]","aggregated.timeTakenInMilliseconds":"[\"3.963616\",\"5.739685\"]"}}}
+[15:44:14.288 UTC] To client: {"seq":0,"type":"event","event":"output","body":{"category":"telemetry","output":"target/notification/onPaused","data":{"Versions.DebugAdapterCore":"6.8.9","Versions.DebugAdapter":"4.12.8","Versions.Target.CRDPVersion":"1.3","Versions.Target.Revision":"@19d4547535ab5aba70b4730443f84e8153052174","Versions.Target.UserAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3882.0 Safari/537.36","Versions.Target.V8":"7.8.89","Versions.Target.Project":"Chrome","Versions.Target.Version":"78.0.3882.0","aggregated.startTime":"[\"1590075854281\"]","aggregated.successful":"[\"true\"]","aggregated.timeTakenInMilliseconds":"[\"1.53312\"]"}}}
+[15:44:14.289 UTC] To client: {"seq":0,"type":"event","event":"output","body":{"category":"telemetry","output":"report-start-up-timings","data":{"Versions.DebugAdapterCore":"6.8.9","Versions.DebugAdapter":"4.12.8","Versions.Target.CRDPVersion":"1.3","Versions.Target.Revision":"@19d4547535ab5aba70b4730443f84e8153052174","Versions.Target.UserAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3882.0 Safari/537.36","Versions.Target.V8":"7.8.89","Versions.Target.Project":"Chrome","Versions.Target.Version":"78.0.3882.0","RequestedContentWasDetected":"false","Steps":"[\"BeforeFirstStep\",\"ClientRequest/initialize\",\"ClientRequest/launch\",\"LaunchTarget.LaunchExe\",\"Attach\",\"Attach.RequestDebuggerTargetsInformation\",\"Attach.RequestDebuggerTargetsInformation\",\"Attach.RequestDebuggerTargetsInformation\",\"Attach.RequestDebuggerTargetsInformation\",\"Attach.RequestDebuggerTargetsInformation\",\"Attach.RequestDebuggerTargetsInformation\",\"Attach.RequestDebuggerTargetsInformation\",\"Attach.RequestDebuggerTargetsInformation\",\"Attach.RequestDebuggerTargetsInformation\",\"Attach.RequestDebuggerTargetsInformation\",\"Attach.RequestDebuggerTargetsInformation\",\"Attach.ProcessDebuggerTargetsInformation\",\"Attach.AttachToTargetDebuggerWebsocket\",\"Attach.ConfigureDebuggingSession.Internal\",\"Attach.ConfigureDebuggingSession.Target\",\"Attach.ConfigureDebuggingSession.End\"]","All":"7822.449257","Request.ClientRequest/configurationDone.startTime":"[1590075854038]","Request.ClientRequest/configurationDone.timeTakenInMilliseconds":"[0.51564]","Request.ClientRequest/stackTrace.startTime":"[1590075854283]","Request.ClientRequest/stackTrace.timeTakenInMilliseconds":"[3.267793]","BeforeFirstStep":"[9.849411]","WaitingAfter.ClientRequest/initialize":"[11.413076]","ClientRequest/initialize":"[2.053498]","ClientRequest/launch":"[2.397522]","LaunchTarget.LaunchExe":"[9.392048]","Attach":"[5.420299]","Attach.RequestDebuggerTargetsInformation":"[213.254565,203.204429,206.604867,203.174508,207.208414,206.892439,205.661857,202.318014,202.186892,203.365097,5400.163554]","Attach.ProcessDebuggerTargetsInformation":"[1.494065]","Attach.AttachToTargetDebuggerWebsocket":"[4.149821]","Attach.ConfigureDebuggingSession.Internal":"[0.760239]","Attach.ConfigureDebuggingSession.Target":"[70.776405]","WaitingAfter.ClientRequest/launch":"[7561.273678]","WaitingAfter.NotifyInitialized":"[7570.418709]","RequestedNavigateToUserPage":"[7592.821874]","Attach.ConfigureDebuggingSession.End":"[261.708069]","RequestedContentWasNotDetectedReason":"shutdown"}}}
+[15:44:14.289 UTC] Terminated: Got disconnect request
+[15:44:14.289 UTC] Waiting for any pending steps or log messages.
+[15:44:14.289 UTC] Killing Chrome process
+[15:44:14.290 UTC] To client: {"seq":0,"type":"response","request_seq":5,"command":"disconnect","success":true}
+[15:44:14.290 UTC] To client: {"seq":0,"type":"event","event":"output","body":{"category":"telemetry","output":"ClientRequest/disconnect","data":{"Versions.DebugAdapterCore":"6.8.9","Versions.DebugAdapter":"4.12.8","Versions.Target.CRDPVersion":"1.3","Versions.Target.Revision":"@19d4547535ab5aba70b4730443f84e8153052174","Versions.Target.UserAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3882.0 Safari/537.36","Versions.Target.V8":"7.8.89","Versions.Target.Project":"Chrome","Versions.Target.Version":"78.0.3882.0","successful":"true","timeTakenInMilliseconds":"2.487884","requestType":"request"}}}
+[15:44:14.290 UTC] Current step and log messages complete
+[15:44:14.290 UTC] To client: {"seq":0,"type":"event","event":"output","body":{"category":"telemetry","output":"debugStopped","data":{"Versions.DebugAdapterCore":"6.8.9","Versions.DebugAdapter":"4.12.8","Versions.Target.CRDPVersion":"1.3","Versions.Target.Revision":"@19d4547535ab5aba70b4730443f84e8153052174","Versions.Target.UserAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3882.0 Safari/537.36","Versions.Target.V8":"7.8.89","Versions.Target.Project":"Chrome","Versions.Target.Version":"78.0.3882.0","reason":"Got disconnect request"}}}
+[15:44:14.290 UTC] To client: {"seq":0,"type":"event","event":"terminated"}

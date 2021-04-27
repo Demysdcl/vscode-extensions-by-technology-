@@ -1,0 +1,13 @@
+2020-5-21, 15:47:51.197 UTC
+[15:47:57.656 UTC] START            10002: PuppeteerPage.waitForSelector(#button)
+[15:47:57.656 UTC] PROMISE-RETURNED 10002: PuppeteerPage.waitForSelector(#button)
+[15:47:57.668 UTC] END              10002: PuppeteerPage.waitForSelector(#button)  async  threw Error: Protocol error (Runtime.callFunctionOn): Target closed.
+[15:47:57.689 UTC] Default test clean-up
+[15:47:57.693 UTC] Default test clean-up finished
+[15:47:57.693 UTC] Closing puppeteer and chrome
+[15:47:57.693 UTC] Failed to close puppeteer: Error: WebSocket is not open: readyState 3 (CLOSED)
+[15:47:57.693 UTC] Closing web-server
+[15:47:57.693 UTC] Web-server closed
+[15:47:57.693 UTC] teardown finished
+[15:47:57.695 UTC] Verbose logs are written to:
+[15:47:57.695 UTC] /Users/roblou/code/vscode-chrome-debug/logs/darwin-Stack Traces Stack trace is generated with all formatting-TEST.log

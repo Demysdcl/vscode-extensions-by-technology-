@@ -1,0 +1,179 @@
+{
+	"name": "sass-indented",
+	"displayName": "Sass",
+	"description": "Indented Sass syntax Highlighting, Autocomplete & Formatter",
+	"version": "1.8.16",
+	"icon": "resources/images/sass-logo-seal.png",
+	"publisher": "syler",
+	"scripts": {
+		"pre:distribute": "yarn test && yarn build",
+		"distribute": "ts-node ./src/distribute.ts",
+		"build": "tsc -b && suf && webpack --mode production",
+		"watch": "webpack --mode development",
+		"test": "ts-node src/test/test.ts",
+		"test:watch": "nodemon src/test/test.ts -- DEV_MODE"
+	},
+	"private": true,
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/TheRealSyler/vscode-sass-indented"
+	},
+	"bugs": "https://github.com/TheRealSyler/vscode-sass-indented/issues/new?assignees=TheRealSyler&labels=bug&template=bug_report.md&title=",
+	"engines": {
+		"vscode": "^1.48.0"
+	},
+	"activationEvents": [
+		"onLanguage:sass",
+		"onLanguage:vue",
+		"onLanguage:svelte"
+	],
+	"main": "./dist/extension",
+	"categories": [
+		"Programming Languages",
+		"Formatters"
+	],
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "Sass (Indented)",
+			"properties": {
+				"sass.disableAutoIndent": {
+					"type": "boolean",
+					"default": false,
+					"description": "Stop the extension from automatically indenting when pressing Enter"
+				},
+				"sass.disableUnitCompletion": {
+					"type": "boolean",
+					"default": true,
+					"description": "adds units to the intellisense completions if false."
+				},
+				"sass.format.enabled": {
+					"type": "boolean",
+					"default": true,
+					"description": "enables the sass formatter."
+				},
+				"sass.format.deleteWhitespace": {
+					"type": "boolean",
+					"default": true,
+					"description": "removes trailing whitespace."
+				},
+				"sass.format.deleteEmptyRows": {
+					"type": "boolean",
+					"default": true,
+					"description": "removes empty rows."
+				},
+				"sass.format.setPropertySpace": {
+					"type": "boolean",
+					"default": true,
+					"description": "If true space between the property: value, is always set to 1."
+				},
+				"sass.format.convert": {
+					"type": "boolean",
+					"default": true,
+					"description": "Convert scss/css to sass."
+				},
+				"sass.format.debug": {
+					"type": "boolean",
+					"default": false,
+					"description": "enables debug mode."
+				},
+				"sass.lint.enable": {
+					"type": "boolean",
+					"default": false,
+					"description": "Enables sass lint."
+				},
+				"sass.andStared": {
+					"type": "array",
+					"default": [
+						"active",
+						"focus",
+						"hover",
+						"nth-child"
+					],
+					"description": "items in this array will be at the top of the completion list (only for items that show after the & sign)"
+				}
+			}
+		},
+		"languages": [
+			{
+				"id": "sass",
+				"aliases": [
+					"Sass",
+					"sass-indented"
+				],
+				"extensions": [
+					".sass",
+					".sass.erb"
+				],
+				"configuration": "./sass.configuration.json"
+			},
+			{
+				"id": "sass.hover",
+				"extensions": [
+					".sass.hover"
+				],
+				"configuration": "./sass.configuration.json"
+			},
+			{
+				"id": "vue",
+				"aliases": [
+					"Vue",
+					"vue"
+				],
+				"extensions": [
+					".vue"
+				]
+			},
+			{
+				"id": "svelte",
+				"aliases": [
+					"Svelte",
+					"svelte"
+				],
+				"extensions": [
+					".svelte"
+				]
+			}
+		],
+		"grammars": [
+			{
+				"language": "sass",
+				"scopeName": "source.sass",
+				"path": "./syntaxes/sass.tmLanguage.json"
+			},
+			{
+				"language": "sass.hover",
+				"scopeName": "source.sass.hover",
+				"path": "./syntaxes/sass.hover.highlighting.json"
+			}
+		]
+	},
+	"devDependencies": {
+		"@types/node": "^8.10.59",
+		"@types/vscode": "^1.48.0",
+		"dotenv": "^8.2.0",
+		"nodemon": "2.0.0",
+		"ovsx": "^0.1.0-next.9b4e999",
+		"suf-node": "^1.1.1",
+		"ts-loader": "^6.2.2",
+		"ts-node": "^8.8.2",
+		"tslib": "^1.11.1",
+		"typescript": "^3.8.3",
+		"vscode-test": "^1.4.0",
+		"webpack": "^4.42.1",
+		"webpack-cli": "^3.3.11"
+	},
+	"dependencies": {
+		"s.color": "0.0.13",
+		"sass-formatter": "^0.7.1",
+		"suf-cli": "^0.1.1",
+		"suf-regex": "^0.0.20",
+		"test-grammar": "^1.0.3"
+	},
+	"license": "MIT",
+	"__metadata": {
+		"id": "466468c3-1861-4ad1-bf3e-f9ad46545ebb",
+		"publisherId": "e88a3a32-0abb-4d89-a45b-aff60e1432f5",
+		"publisherDisplayName": "Syler"
+	}
+}
