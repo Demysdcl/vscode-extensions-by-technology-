@@ -9,6 +9,7 @@ sudo add-apt-repository ppa:peek-developers/stable
 sudo apt-get update
 sudo apt-get install peek
 sudo apt-get install -y deepin-screenshot
+sudo apt-get install xclip
 
 
 # Install DBeaver
