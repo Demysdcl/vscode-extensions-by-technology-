@@ -10,6 +10,10 @@ sudo apt-get update
 sudo apt-get install peek
 sudo apt-get install -y deepin-screenshot
 sudo apt-get install xclip
+sudo apt install yarn
+mkdir -p ~/.local/share/fonts
+for type in Bold Light Medium Regular Retina; do wget -O ~/.local/share/fonts/FiraCode-$type.ttf "https://github.com/tonsky/FiraCode/blob/master/distr/ttf/FiraCode-$type.ttf?raw=true"; done
+fc-cache -f
 
 
 # Install DBeaver
@@ -27,18 +31,10 @@ sudo apt-get install curl
 # Install sdkman
 curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
-sdk install java 8.0.232-trava
-sdk install java 11.0.5-amzn
 
 # Install nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash
-nvm install 8
-nvm install 12
-nvm install 14
-nvm use 14
 
-# Install yarn
-npm i -g yarn
 
 #IDEs
 sudo snap install --classic code
@@ -58,3 +54,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 # Create docker group and add current user in it
 sudo groupadd docker
 sudo usermod -aG docker $USER
+
+# after finish reopen the terminal and run:
+# nvm install NODE_VERSION
+# sdk install java JAVA_VERSION
