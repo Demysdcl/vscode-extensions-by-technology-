@@ -1,20 +1,36 @@
 # Update
+sudo add-apt-repository universe
 sudo apt-get update
 sudo apt-get upgrade -y
 
-# Utils
+#Fira-code and cascadia fonts
+sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe"
+sudo apt-get update
+sudo apt-get install fonts-firacode
+sudo apt-get install fonts-cascadia-code
+
+# Install curl
+sudo apt-get install curl
+
+# Oh My Shell
+sudo apt install zsh -y
+chsh -s /usr/bin/zsh root
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+
+# Utilities
+sudo apt-get install python
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo apt install ./google-chrome-stable_current_amd64.deb
+sudo apt-get install ./google-chrome-stable_current_amd64.deb
 sudo add-apt-repository ppa:peek-developers/stable
 sudo apt-get update
 sudo apt-get install peek
 sudo apt-get install -y deepin-screenshot
 sudo apt-get install xclip
 sudo apt install yarn
-mkdir -p ~/.local/share/fonts
-for type in Bold Light Medium Regular Retina; do wget -O ~/.local/share/fonts/FiraCode-$type.ttf "https://github.com/tonsky/FiraCode/blob/master/distr/ttf/FiraCode-$type.ttf?raw=true"; done
-fc-cache -f
-
+sudo snap install discord
+sudo snap install rambox
 
 # Install DBeaver
 wget -O - https://dbeaver.io/debs/dbeaver.gpg.key | apt-key add -
@@ -25,8 +41,6 @@ sudo apt-get install dbeaver-ce -y
 # Install gdebi
 sudo apt-get install gdebi
 
-# Install curl
-sudo apt-get install curl
 
 # Install sdkman
 curl -s "https://get.sdkman.io" | bash
@@ -54,6 +68,8 @@ sudo chmod +x /usr/local/bin/docker-compose
 # Create docker group and add current user in it
 sudo groupadd docker
 sudo usermod -aG docker $USER
+
+ssh-keygen
 
 # after finish reopen the terminal and run:
 # nvm install NODE_VERSION
