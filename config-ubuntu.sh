@@ -12,6 +12,9 @@ sudo apt-get install fonts-cascadia-code
 # Install curl
 sudo apt-get install curl
 
+# Install golang
+sudo apt-get install golang -y
+
 # Oh My Shell
 sudo apt install zsh -y
 chsh -s /usr/bin/zsh root
