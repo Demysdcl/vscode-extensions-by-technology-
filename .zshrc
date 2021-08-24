@@ -12,7 +12,14 @@ export PATH="$PATH:$JAVA_HOME/bin"
 export PATH="$PATH:/home/.deno/bin"
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/snowmanlabs/.oh-my-zsh"
+export ZSH="/home/snowman/.oh-my-zsh"
+
+export DENO_INSTALL="/home/snowman/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -109,25 +116,46 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 vscodeext() {
-       rm -rf $HOME/.vscode/extensions 
-       cp -r $HOME/.vscode/$1/extensions $HOME/.vscode 
-       cp -a $HOME/.vscode/default/. $HOME/.vscode/extensions 
-       code 
-       exit
+	echo "Removing $HOME/.vscode/extensions"
+	rm -rf $HOME/.vscode/extensions 
+	
+	echo "Copying default extensions"
+	cp -a $HOME/.vscode/default/. $HOME/.vscode/extensions
+
+	echo "Copying $1"
+	cp -r $HOME/.vscode/$1/extensions $HOME/.vscode 
+	
+	if [  ! -z "\$2" ]
+	then
+	   	echo "Copying $2"
+	   	cp -r $HOME/.vscode/$2/extensions $HOME/.vscode    
+	fi
+	code 
+	exit
 }
 
-
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+createConflict() {
+	git checkout $1
+	git pull origin $1
+	git branch -D conflict/$2
+	git checkout -b conflict/$2
+	
+}
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/snowmanlabs/.sdkman"
-[[ -s "/home/snowmanlabs/.sdkman/bin/sdkman-init.sh" ]] && source "/home/snowmanlabs/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="/home/snowman/.sdkman"
+[[ -s "/home/snowman/.sdkman/bin/sdkman-init.sh" ]] && source "/home/snowman/.sdkman/bin/sdkman-init.sh"
 
 ###-tns-completion-start-###
-if [ -f /home/snowmanlabs/.tnsrc ]; then 
-    source /home/snowmanlabs/.tnsrc 
+if [ -f /home/snowman/.tnsrc ]; then 
+    source /home/snowman/.tnsrc 
 fi
 ###-tns-completion-end-###
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/snowman/google-cloud-sdk/path.zsh.inc' ]; then . '/home/snowman/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/snowman/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/snowman/google-cloud-sdk/completion.zsh.inc'; fi
