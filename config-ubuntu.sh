@@ -44,7 +44,6 @@ sudo apt-get install dbeaver-ce -y
 # Install gdebi
 sudo apt-get install gdebi
 
-
 # Install sdkman
 curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
@@ -52,10 +51,10 @@ source "$HOME/.sdkman/bin/sdkman-init.sh"
 # Install nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash
 
-
 #IDEs
 sudo snap install --classic code
 sudo snap install intellij-idea-community --classic --edge
+sudo apt install android-studio -y
 
 # Install docker
 sudo apt-get install apt-transport-https ca-certificates software-properties-common
@@ -71,9 +70,10 @@ sudo chmod +x /usr/local/bin/docker-compose
 # Create docker group and add current user in it
 sudo groupadd docker
 sudo usermod -aG docker $USER
+newgrp docker
 
 ssh-keygen
 
-# after finish reopen the terminal and run:
-# nvm install NODE_VERSION
-# sdk install java JAVA_VERSION
+sudo apt-get update
+gnome-terminal -- nvm install 14
+gnome-terminal -- sdk install java 11
