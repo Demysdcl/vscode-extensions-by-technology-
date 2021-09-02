@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
+export PATH=$HOME/bin:/usr/local/bin:$PATH.
+export PATH=$HOME/.local/bin:$PATH
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
@@ -134,12 +134,28 @@ vscodeext() {
 	exit
 }
 
-createConflict() {
+git_create_release() {
+	git checkout master
+	git pull origin master
+	git checkout -b feature/$1
+}
+
+git_create_conflict() {
 	git checkout $1
 	git pull origin $1
 	git branch -D conflict/$2
 	git checkout -b conflict/$2
 	
+	if [  ! -z "\$3" ]
+	then
+	   	git pull origin feature/$2   
+	fi
+	
+}
+
+git_check_pull() {
+	git checkout $1
+	git pull origin $1
 }
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
