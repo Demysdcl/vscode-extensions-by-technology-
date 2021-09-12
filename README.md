@@ -21,7 +21,7 @@ Copy '.zshrc' to your user system folder.
 
 In your terminal type 'vscodeext desired_technology'
 
-## How it is possible?
+## How is it possible?
 
 Oh My Shell has aliases and we can create alias as a function, so I create a function that copy the extensions from the informaded technology.
 
