@@ -1,0 +1,85 @@
+{
+	"name": "regexp-preview",
+	"displayName": "Regexp Explain",
+	"description": "explain regex in vscode",
+	"keywords": [
+		"vscode",
+		"regexp",
+		"javascript"
+	],
+	"license": "MIT",
+	"version": "0.1.5",
+	"publisher": "LouisWT",
+	"engines": {
+		"vscode": "^1.32.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"icon": "images/icon.png",
+	"activationEvents": [
+		"onCommand:regexExplainer.previewRegExp",
+		"onCommand:regexExplainer.regExpEditor",
+		"onCommand:regexExplainer.getExplainRegexHtml"
+	],
+	"main": "./src/extension.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/LouisWT/vscode-regexp-preivew.git"
+	},
+	"contributes": {
+		"commands": [
+			{
+				"command": "regexExplainer.previewRegExp",
+				"title": "RegExp Explain"
+			},
+			{
+				"command": "regexExplainer.regExpEditor",
+				"title": "RegExp Editor"
+			},
+			{
+				"command": "regexExplainer.getExplainRegexHtml",
+				"title": "RegExp Get Html"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "regexExplainer.regExpEditor",
+				"key": "ctrl+f10",
+				"mac": "cmd+f10"
+			}
+		],
+		"menus": {
+			"commandPalette": [
+				{
+					"command": "regexExplainer.getExplainRegexHtml",
+					"when": "never"
+				}
+			],
+			"editor/context": [
+				{
+					"when": "editorHasSelection",
+					"command": "regexExplainer.previewRegExp",
+					"group": "1_modification"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"@types/mocha": "^7.0.2",
+		"@types/node": "^13.9.0",
+		"eslint": "^6.8.0",
+		"typescript": "^3.8.3",
+		"vscode": "^1.1.36"
+	},
+	"__metadata": {
+		"id": "5a755e10-8942-4d75-bb56-6d7435d3b500",
+		"publisherId": "131bc538-7904-44f3-a0ab-3505b7084c64",
+		"publisherDisplayName": "LouisWT",
+		"installedTimestamp": 1631020509546
+	}
+}
