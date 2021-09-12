@@ -1,1 +1,0 @@
-*Optional*. If `true` all incoming tags will be deleted. This is useful if you want to push tags, but have reasonable doubts that the tags cached with the resource are outdated. The default value is `false`.

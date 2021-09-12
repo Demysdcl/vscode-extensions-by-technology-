@@ -1,1 +1,0 @@
-*Required.* The type of the resource. Usually `docker-image`.

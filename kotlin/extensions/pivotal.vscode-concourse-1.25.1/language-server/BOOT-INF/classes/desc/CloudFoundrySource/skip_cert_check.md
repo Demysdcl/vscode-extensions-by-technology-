@@ -1,1 +1,0 @@
-*Optional*. Check the validity of the CF SSL cert. Defaults to `false`.

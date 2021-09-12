@@ -1,0 +1,163 @@
+{
+	"name": "vscode-devtools-for-chrome",
+	"displayName": "DevTools for Chrome",
+	"description": "Open the chrome devtools as a dockable webview",
+	"version": "0.0.7",
+	"preview": true,
+	"license": "SEE LICENSE IN LICENSE",
+	"publisher": "codemooseus",
+	"icon": "icon.png",
+	"aiKey": "3ec4c1b4-542f-4adf-830a-a4b04370fa3f",
+	"homepage": "https://github.com/CodeMooseUS/vscode-devtools/blob/master/README.md",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/CodeMooseUS/vscode-devtools"
+	},
+	"bugs": {
+		"url": "https://github.com/CodeMooseUS/vscode-devtools/issues"
+	},
+	"galleryBanner": {
+		"color": "#5c2d91",
+		"theme": "dark"
+	},
+	"keywords": [
+		"browser",
+		"console",
+		"debugger",
+		"dom",
+		"remote"
+	],
+	"engines": {
+		"vscode": "^1.34.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:devtools-for-chrome.launch",
+		"onCommand:devtools-for-chrome.attach",
+		"onWebviewPanel:devtools-for-chrome",
+		"onDebug"
+	],
+	"main": "./out/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "devtools-for-chrome.launch",
+				"title": "Launch Chrome and then attach to a target",
+				"category": "DevTools for Chrome"
+			},
+			{
+				"command": "devtools-for-chrome.attach",
+				"title": "Attach to a target",
+				"category": "DevTools for Chrome"
+			}
+		],
+		"debuggers": [
+			{
+				"type": "devtools-for-chrome",
+				"label": "DevTools for Chrome",
+				"configurationAttributes": {
+					"launch": {
+						"properties": {
+							"url": {
+								"type": "string",
+								"description": "Absolute uri to launch.",
+								"default": "http://localhost:8080"
+							},
+							"file": {
+								"type": "string",
+								"description": "File path to launch.",
+								"default": "${workspaceFolder}/index.html"
+							},
+							"chromePath": {
+								"type": "string",
+								"description": "Absolute path to the Chrome instance to launch.",
+								"default": ""
+							}
+						}
+					},
+					"attach": {
+						"properties": {
+							"url": {
+								"type": "string",
+								"description": "Absolute uri to launch.",
+								"default": "http://localhost:8080"
+							},
+							"file": {
+								"type": "string",
+								"description": "File path to launch.",
+								"default": "${workspaceFolder}/index.html"
+							},
+							"chromePath": {
+								"type": "string",
+								"description": "Absolute path to the Chrome instance to launch.",
+								"default": ""
+							}
+						}
+					}
+				}
+			}
+		],
+		"configuration": {
+			"title": "DevTools for Chrome",
+			"type": "object",
+			"properties": {
+				"vscode-devtools-for-chrome.hostname": {
+					"type": "string",
+					"default": "localhost",
+					"description": "The hostname on which to search for remote debuggable chrome instances"
+				},
+				"vscode-devtools-for-chrome.port": {
+					"type": "number",
+					"default": 9222,
+					"description": "The port on which to search for remote debuggable chrome instances"
+				},
+				"vscode-devtools-for-chrome.chromePath": {
+					"type": "string",
+					"default": null,
+					"description": "The path to Chrome to be used rather than searching for the default"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"package": "npx vsce package --out vscode-devtools.vsix",
+		"vscode:prepublish": "npm run build",
+		"build": "npm run build-wp && npm run build-post",
+		"build-wp": "webpack",
+		"build-post": "npx ts-node postBuildStep.ts",
+		"build-watch": "npm run build && npm run watch",
+		"watch": "npm run watch-wp",
+		"watch-wp": "webpack --watch"
+	},
+	"dependencies": {
+		"applicationinsights": "1.6.0",
+		"ws": "7.2.1"
+	},
+	"devDependencies": {
+		"@types/fs-extra": "8.0.1",
+		"@types/node": "13.5.0",
+		"@types/shelljs": "0.8.6",
+		"@types/ws": "7.2.0",
+		"@types/vscode": "1.34.0",
+		"@types/applicationinsights": "0.20.0",
+		"chrome-devtools-frontend": "1.0.602557",
+		"fs-extra": "8.1.0",
+		"shelljs": "0.8.3",
+		"ts-node": "8.6.2",
+		"ts-loader": "6.0.4",
+		"tslint": "6.0.0",
+		"typescript": "3.7.5",
+		"vsce": "1.71.0",
+		"vscode": "1.1.37",
+		"webpack": "4.41.5",
+		"webpack-cli": "3.3.10"
+	},
+	"__metadata": {
+		"id": "c0327c8d-f70c-4f75-988a-f099b08fb582",
+		"publisherId": "4d58f736-4afd-4ba3-9884-3380918102a8",
+		"publisherDisplayName": "codemooseus",
+		"installedTimestamp": 1631455904177
+	}
+}

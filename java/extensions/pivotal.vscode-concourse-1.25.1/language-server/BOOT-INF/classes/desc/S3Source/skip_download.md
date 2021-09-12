@@ -1,1 +1,0 @@
-*Optional*. Skip downloading object from S3. Useful to only trigger the pipeline without using the object.
