@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH.
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
@@ -127,10 +127,14 @@ vscodeext() {
 	
 	if [  ! -z "\$2" ]
 	then
-	   	echo "Copying $2"
-	   	cp -r $HOME/.vscode/$2/extensions $HOME/.vscode    
+	  echo "Copying $2"
+	  cp -r $HOME/.test/$2/extensions $HOME/.test
 	fi
-	code 
+	
+	echo "opening vscode"
+	code
+	
+	echo "Bye bye!!!"
 	exit
 }
 
