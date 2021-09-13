@@ -144,6 +144,12 @@ git_create_release() {
 	git checkout -b feature/$1
 }
 
+git_create_feature() {
+	git checkout master
+	git pull origin master
+	git checkout -b feature/$1
+}
+
 git_create_conflict() {
 	git checkout $1
 	git pull origin $1
