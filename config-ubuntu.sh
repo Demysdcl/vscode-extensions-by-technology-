@@ -15,13 +15,6 @@ sudo apt-get install curl
 # Install golang
 sudo apt-get install golang -y
 
-# Oh My Shell
-sudo apt install zsh -y
-chsh -s /usr/bin/zsh root
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
-
 # Utilities
 sudo apt-get install python
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -77,3 +70,11 @@ ssh-keygen
 sudo apt-get update
 gnome-terminal -- nvm install 14
 gnome-terminal -- sdk install java 11
+
+# Oh My Shell
+sudo apt install zsh -y
+chsh -s /usr/bin/zsh root
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)  | sh; zsh"   
+git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+sudo usermod --shell $(which zsh) $USER
