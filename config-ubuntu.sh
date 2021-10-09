@@ -16,7 +16,6 @@ sudo apt-get install curl
 sudo apt-get install golang -y
 
 # Utilities
-sudo apt-get install python
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt-get install ./google-chrome-stable_current_amd64.deb
 sudo add-apt-repository ppa:peek-developers/stable
@@ -44,6 +43,9 @@ source "$HOME/.sdkman/bin/sdkman-init.sh"
 # Install nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash
 
+# Install Python, VENV and PIP
+sudo apt install python3 python3-venv python3-pip -y
+
 #IDEs
 sudo snap install --classic code
 sudo snap install intellij-idea-community --classic --edge
@@ -65,6 +67,7 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker
 
+#Create SSH Keys
 ssh-keygen
 
 sudo apt-get update
