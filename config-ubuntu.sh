@@ -23,7 +23,6 @@ sudo apt-get update
 sudo apt-get install peek
 sudo apt-get install -y deepin-screenshot
 sudo apt-get install xclip
-sudo apt install yarn
 sudo snap install discord
 sudo snap install rambox
 
@@ -62,22 +61,19 @@ sudo apt-get install docker-ce
 sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 
+#Create SSH Keys
+ssh-keygen
+
+# Oh My Shell
+sudo apt install zsh -y
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+sudo chsh -s /usr/bin/zsh root
+sudo usermod --shell $(which zsh) $USER
+
 # Create docker group and add current user in it
 sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker
-
-#Create SSH Keys
-ssh-keygen
-
-sudo apt-get update
-gnome-terminal -- nvm install 14
-gnome-terminal -- sdk install java 11
-
-# Oh My Shell
-sudo apt install zsh -y
-chsh -s /usr/bin/zsh root
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)  | sh; zsh"   
-git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
-sudo usermod --shell $(which zsh) $USER

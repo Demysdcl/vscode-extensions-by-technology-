@@ -12,9 +12,9 @@ export PATH="$PATH:$JAVA_HOME/bin"
 export PATH="$PATH:/home/.deno/bin"
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/snowman/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
-export DENO_INSTALL="/home/snowman/.deno"
+export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
@@ -85,7 +85,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zsh-autosuggestions git npm node mvn gradle yarn docker brew aws copydir copyfile cp docker-compose docker-machine dotenv emoji flutter gcloud nvm postgres rails redis-cli ruby sdk spring sudo ubuntu vscode)
+plugins=(zsh-autosuggestions zsh-syntax-highlighting git npm node mvn gradle yarn docker brew aws copydir copyfile cp docker-compose docker-machine dotenv emoji flutter gcloud nvm postgres rails redis-cli ruby sdk spring sudo ubuntu vscode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -169,19 +169,19 @@ git_check_pull() {
 }
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/snowman/.sdkman"
-[[ -s "/home/snowman/.sdkman/bin/sdkman-init.sh" ]] && source "/home/snowman/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 ###-tns-completion-start-###
-if [ -f /home/snowman/.tnsrc ]; then 
-    source /home/snowman/.tnsrc 
+if [ -f $HOME/.tnsrc ]; then 
+    source $HOME/.tnsrc 
 fi
 ###-tns-completion-end-###
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/snowman/google-cloud-sdk/path.zsh.inc' ]; then . '/home/snowman/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '$HOME/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/home/snowman/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/snowman/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/google-cloud-sdk/completion.zsh.inc'; fi
