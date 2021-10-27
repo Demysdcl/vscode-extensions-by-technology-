@@ -115,6 +115,55 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+start_feature() {
+	git flow feature start $1
+}
+
+finish_feature() {
+	git flow feature finish $1
+}
+
+publish_feature() {
+	git flow feature publish $1
+}
+
+pull_feature() {
+	git flow feature pull $1
+}
+
+start_release() {
+	git flow release start RELEASE $1
+}
+
+publish_release() {
+	git flow release publish RELEASE
+}
+
+pull_release() {
+	git flow release pull RELEASE
+}
+
+finish_release() {
+	git flow release finish RELEASE
+}
+
+start_hotfix() {
+	git flow hotfix start VERSION $1
+}
+
+publish_hotfix() {
+	git flow hotfix publish VERSION
+}
+
+pull_hotfix() {
+	git flow hotfix pull VERSION
+}
+
+finish_hotfix() {
+	git flow hotfix finish VERSION
+}
+
+
 vscodeext() {
 	echo "Removing $HOME/.vscode/extensions"
 	rm -rf $HOME/.vscode/extensions 
