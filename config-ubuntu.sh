@@ -12,30 +12,27 @@ sudo apt-get install fonts-cascadia-code
 # Install curl
 sudo apt-get install curl
 
-# Install golang
-sudo apt-get install golang -y
+# Install languages
+sudo snap install go --classic
+sudo snap install flutter --classic
+sudo snap install kotlin --classic
 
 # Utilities
 sudo apt-get install peek
 sudo apt-get install xclip
 sudo snap install discord
 sudo snap install slack
+sudo snap install gimp
 
 # Install Browsers
-sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-sudo apt update
-sudo apt install brave-browser
+sudo snap install brave
 
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt-get install ./google-chrome-stable_current_amd64.deb
 sudo add-apt-repository ppa:peek-developers/stable
 
 # Install DBeaver
-wget -O - https://dbeaver.io/debs/dbeaver.gpg.key | apt-key add -
-echo "deb https://dbeaver.io/debs/dbeaver-ce /" | tee /etc/apt/sources.list.d/dbeaver.list
-sudo apt-get update -y
-sudo apt-get install dbeaver-ce -y
+sudo snap install dbeaver-ce
 
 # Install gdebi
 sudo apt-get install gdebi
@@ -43,8 +40,6 @@ sudo apt-get install gdebi
 # Install sdkman
 curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-
 
 # Install nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash
