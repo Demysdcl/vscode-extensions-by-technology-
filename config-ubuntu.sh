@@ -44,11 +44,7 @@ sudo apt-get install gdebi
 curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-# Android Studio
-sudo apt install openjdk-11-jdk
-sudo add-apt-repository ppa:maarten-fonville/android-studio
-sudo apt update
-sudo apt install android-studio -y
+
 
 # Install nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash
@@ -57,9 +53,9 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash
 sudo apt install python3 python3-venv python3-pip -y
 
 # IDEs
-sudo snap install --classic code
+sudo snap install code --classic
 sudo snap install intellij-idea-community --classic --edge
-sudo apt install android-studio -y
+sudo snap install android-studio --classic
 
 # Install docker
 sudo apt-get install apt-transport-https ca-certificates software-properties-common
@@ -71,7 +67,6 @@ sudo apt-get install docker-ce
 # Install docker-composer
 sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
-
 
 # Create SSH Keys
 ssh-keygen
