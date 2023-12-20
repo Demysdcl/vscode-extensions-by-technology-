@@ -3,7 +3,7 @@ sudo add-apt-repository universe
 sudo apt-get update
 sudo apt-get upgrade -y
 
-#Fira-code and cascadia fonts
+# Fira-code and cascadia fonts
 sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe"
 sudo apt-get update
 sudo apt-get install fonts-firacode
@@ -16,15 +16,20 @@ sudo apt-get install curl
 sudo apt-get install golang -y
 
 # Utilities
+sudo apt-get install peek
+sudo apt-get install xclip
+sudo snap install discord
+sudo snap install slack
+
+# Install Browsers
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+sudo apt update
+sudo apt install brave-browser
+
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt-get install ./google-chrome-stable_current_amd64.deb
 sudo add-apt-repository ppa:peek-developers/stable
-sudo apt-get update
-sudo apt-get install peek
-sudo apt-get install -y deepin-screenshot
-sudo apt-get install xclip
-sudo snap install discord
-sudo snap install rambox
 
 # Install DBeaver
 wget -O - https://dbeaver.io/debs/dbeaver.gpg.key | apt-key add -
@@ -39,13 +44,19 @@ sudo apt-get install gdebi
 curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+# Android Studio
+sudo apt install openjdk-11-jdk
+sudo add-apt-repository ppa:maarten-fonville/android-studio
+sudo apt update
+sudo apt install android-studio -y
+
 # Install nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash
 
 # Install Python, VENV and PIP
 sudo apt install python3 python3-venv python3-pip -y
 
-#IDEs
+# IDEs
 sudo snap install --classic code
 sudo snap install intellij-idea-community --classic --edge
 sudo apt install android-studio -y
@@ -61,7 +72,8 @@ sudo apt-get install docker-ce
 sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 
-#Create SSH Keys
+
+# Create SSH Keys
 ssh-keygen
 
 # Oh My Shell
